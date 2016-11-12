@@ -137,7 +137,7 @@ function sendGenericMessage(recipientId) {
             buttons: [{
               type: "web_url",
               url: "https://www.oculus.com/en-us/rift/",
-              title: "Open Web URL"
+              title: "เลือกอัลบัมสาวๆ"
             }, {
               type: "postback",
               title: "Call Postback",
