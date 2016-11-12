@@ -147,7 +147,7 @@ function sendGenericMessage(recipientId) {
             title: "touch",
             subtitle: "Your Hands, Now in VR",
             item_url: "https://www.oculus.com/en-us/touch/",               
-            image_url: "http://messengerdemo.parseapp.com/img/touch.png",
+            image_url: "https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/14947604_1702144870100553_5946651151060590195_n.jpg?oh=aa1e827aa465fab6c06a3dafe7b029fb&oe=58940335",
             buttons: [{
               type: "web_url",
               url: "https://www.oculus.com/en-us/touch/",
