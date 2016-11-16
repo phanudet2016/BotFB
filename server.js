@@ -82,15 +82,6 @@ function receivedMessage(event) {
   }
 }
 
-function sleep(milliseconds) {
-  var start = new Date().getTime();
-  for (var i = 0; i < 1e7; i++) {
-    if ((new Date().getTime() - start) > milliseconds){
-      break;
-    }
-  }
-}
-
 function receivedPostback(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
@@ -106,7 +97,7 @@ function receivedPostback(event) {
     var result = "gg";
   }
   else if(payload == 'noThank'){
-    sendTextMessage(senderID, ":("+"\n"+"แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ"+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย"
+    sendTextMessage(senderID, ":("+"\n"+"แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ"+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
   } else {
     var result = "";
   }
