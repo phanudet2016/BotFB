@@ -100,13 +100,9 @@ function receivedPostback(event) {
 
 function sendGenericMessage(recipientId, messageText) {
   var messageData = {
-    sender : {
-      id : senderID
-    },
     recipient: {
       id: recipientId
     },
-    timestamp :1458692752478,
     message: {
       attachment: {
         type: "template",
@@ -136,10 +132,17 @@ function sendGenericMessage(recipientId, messageText) {
               url: "https://www.oculus.com/en-us/touch/",
               title: "Open Web URL"
             }, {
-              type: "postback",
-              title: "Call Postback",
-              payload: "Payload for second bubble",
-            }]
+  "sender":{
+    "id": senderID
+  },
+  "recipient":{
+    "id": recipientId
+  },
+  "timestamp":1458692752478,
+  "postback":{
+    "payload":"USER_DEFINED_PAYLOAD"
+  }
+} ]
           }]
         }
       }
