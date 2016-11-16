@@ -99,7 +99,7 @@ function receivedPostback(event) {
   else if(payload == 'noThank'){
     var timer1 =setTimeout(function() { alert(“Test”); }, 1000);
     sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
-    timer1
+    var timer1 =setTimeout(function() { alert(“Test”); }, 1000);
     sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ")
     sendTextMessage(senderID, ":(")
   } else {
