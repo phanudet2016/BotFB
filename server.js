@@ -99,8 +99,8 @@ function receivedPostback(event) {
   else if(payload == 'noThank'){
     //var emoji = ":(";
    // var result = "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ";
-    sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ";
-    sendTextMessage(senderID, ":(";
+    sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ")
+    sendTextMessage(senderID, ":(")
   } else {
     var result = "";
   }
