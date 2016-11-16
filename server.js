@@ -57,30 +57,15 @@ function receivedMessage(event) {
   console.log(JSON.stringify(message));
 
   var messageId = message.mid;
-  var isEcho = message.is_echo;
-  var appId = message.app_id;
-  var metadata = message.metadata;
+
   var messageText = message.text;
   var messageAttachments = message.attachments;
 
-  if (isEcho) {
-    // Just logging message echoes to console
-    console.log("Received echo for message %s and app %d with metadata %s", 
-      messageId, appId, metadata);
-    return;
-  } else if (quickReply) {
-    var quickReplyPayload = quickReply.payload;
-    console.log("Quick reply for message %s with payload %s",
-      messageId, quickReplyPayload);
-
-    sendTextMessage(senderID, "Quick reply tapped");
-    return;
-  }
-  
   if (messageText) {
     if (messageText === 'hello') {
       sendTextMessage(senderID, "สวัสดีจร้า");
     }
+
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
     switch (messageText) {
@@ -131,19 +116,7 @@ function sendGenericMessage(recipientId, messageText) {
             }, {
               type: "postback",
               title: "Call Postback",
-              payload: [{
-                "sender":{
-                  "id":"USER_ID"
-                },
-                "recipient":{
-                  "id":"PAGE_ID"
-                },
-                "timestamp":1458692752478,
-                "postback":{
-                  "payload":"USER_DEFINED_PAYLOAD"
-                }
-              } 
-              }]
+              payload: "Payload for second bubble",
             }]
           }]
         }
