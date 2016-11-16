@@ -96,13 +96,9 @@ function sendGenericMessage(recipientId, messageText) {
             item_url: "https://www.oculus.com/en-us/rift/",               
             image_url: "https://scontent.xx.fbcdn.net/t31.0-0/p600x600/14976766_1702147553433618_1178776288358119238_o.jpg",
             buttons: [{
-              type: "web_url",
-              url: "https://www.oculus.com/en-us/rift/",
-              title: "เลือกอัลบัมสาวๆ"
-            }, {
-              type: "postback",
-              title: "Call Postback",
-              payload: "Payload for first bubble",
+              "type":"postback",
+              "title":"Bookmark Item",
+              "payload":"DEVELOPER_DEFINED_PAYLOAD""
             }]
           }]
         }
