@@ -169,7 +169,10 @@ function findRestaurants(recipientId, messageText) {
       }
     }
   }
+};
+callSendAPI(messageData);
 }
+
 
 function sendTextMessage(recipientId, messageText) {
   var messageData = {
