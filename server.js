@@ -152,18 +152,18 @@ function findRestaurants(recipientId, messageText) {
           {
             title:"ร้านข้าว",
             item_url:"",
-            image_url:"https://petersfancybrownhats.com/company_image.png",
+            image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
             subtitle:" ",
             buttons:[
               {
                 type:"postback",
-                title:"ที่นี้",
-                payload:"DEVELOPER_DEFINED_PAYLOAD"
+                title:"เลือกที่นี้",
+                payload:"fineHere"
               },
               {
                 type:"postback",
                 title:"ทุกที่ในปราจีนบุรี",
-                payload:"DEVELOPER_DEFINED_PAYLOAD"
+                payload:"everyWhere"
               }              
             ]
           }
