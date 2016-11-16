@@ -97,9 +97,12 @@ function receivedPostback(event) {
     var result = "gg";
   }
   else if(payload == 'noThank'){
-   // setInterval(function(){ sendTextMessage(senderID, "1"); }, 1000);
-   // setInterval(function(){ sendTextMessage(senderID, "2"); }, 2000);
-    //setInterval(function(){ sendTextMessage(senderID, "3"); }, 3000);
+    var A = setInterval(function(){ sendTextMessage(senderID, "1"); }, 1000);
+    var B = setInterval(function(){ sendTextMessage(senderID, "2"); }, 2000);
+    var C =setInterval(function(){ sendTextMessage(senderID, "3"); }, 3000);
+    clearInterval(A)
+    clearInterval(B)
+    clearInterval(C)
    // sendTextMessage(senderID, ":(")
     //sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ")
     //sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
