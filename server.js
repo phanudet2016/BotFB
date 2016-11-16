@@ -139,28 +139,29 @@ function sendGreetMessage(recipientId, messageText) {
 }
 
 function findRestaurants(recipientId, messageText) {
-  "recipient":{
-    "id": recipientId
+  var messageData = {
+  recipient: {
+    id : recipientId
   },
-  "message":{
-    "attachment":{
-      "type":"template",
-      "payload":{
-        "template_type":"generic",
-        "elements":[
+  message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
           {
-            "title":"Welcome to Peter\'s Hats",
-            "image_url":"https://petersfancybrownhats.com/company_image.png",
-            "buttons":[
+            title:"Welcome to Peter\'s Hats",
+            image_url:"https://petersfancybrownhats.com/company_image.png",
+            buttons:[
               {
-                "type":"web_url",
-                "url":"https://petersfancybrownhats.com",
-                "title":"View Website"
+                type:"web_url",
+                url:"https://petersfancybrownhats.com",
+                title:"View Website"
               },
               {
-                "type":"postback",
-                "title":"Start Chatting",
-                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+                type:"postback",
+                title:"Start Chatting",
+                payload:"DEVELOPER_DEFINED_PAYLOAD"
               }              
             ]
           }
