@@ -99,9 +99,10 @@ function receivedPostback(event) {
   else if(payload == 'noThank'){
     var arr = [ ':(', 'แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ', 'หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย'];
     for(var i=0;i<3;i++){
-    setTimeout( sendTextMessage(senderID, arr[i]), i*10000)
+   sleep( i*10000,sendTextMessage(senderID, arr[i]))
     }
    // sendTextMessage(senderID, ":(")
+   
     //sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ")
     //sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
   } else {
