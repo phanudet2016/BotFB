@@ -85,6 +85,10 @@ function sendGenericMessage(recipientId, messageText) {
     recipient: {
       id: recipientId
     },
+    timestamp : 1458692752478,
+    sender: {
+    id : senderID
+    },
     message: {
       attachment: {
         type: "template",
