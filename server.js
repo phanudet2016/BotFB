@@ -98,7 +98,7 @@ function sendGenericMessage(recipientId, messageText) {
             buttons: [{
               "type":"postback",
               "title":"Bookmark Item",
-              "payload":"DEVELOPER_DEFINED_PAYLOAD""
+              "payload":"DEVELOPER_DEFINED_PAYLOAD"
             }]
           }]
         }
