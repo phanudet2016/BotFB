@@ -112,7 +112,7 @@ function receivedPostback(event) {
 
   // When a postback is called, we'll send a message back to the sender to 
   // let them know it was successful
-  sendTextMessage(senderID, payload);
+  sendTextMessage(senderID, results);
 }
 
 function sendGenericMessage(recipientId, messageText) {
@@ -134,6 +134,10 @@ function sendGenericMessage(recipientId, messageText) {
               type: "web_url",
               url: "https://www.oculus.com/en-us/touch/",
               title: "Open Web URL"
+            }, {
+              type: "postback",
+              title: "ค้นหาร้านอาหาร",
+              payload: "findRestaurant",
             }, {
               type: "postback",
               title: "ไม่เป็นไร ขอบคุณ",
