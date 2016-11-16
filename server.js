@@ -100,7 +100,12 @@ function receivedPostback(event) {
     var result = "gg";
   }
   else if(payload == 'noThank'){
-       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่ให้ตอนนี้ใช่มั้ย :( หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")   
+    if('noThank'){
+       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่ให้ตอนนี้ใช่มั้ย หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย") 
+    }
+    if('noThank'){
+      sendTextMessage(senderID, ":(")
+    }
   } else {
     var result = "";
   }
