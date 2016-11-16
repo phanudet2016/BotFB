@@ -97,7 +97,7 @@ function receivedPostback(event) {
     var result = "gg";
   }
   else if(payload == 'noThank'){
-    var result = ":("+"/n"+"แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ";
+    var result = ":("+"\n"+"แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ";
   } else {
     var result = "";
   }
