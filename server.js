@@ -97,16 +97,18 @@ function receivedPostback(event) {
     var result = "gg";
   }
   else if(payload == 'noThank'){
-    var result = ":(";
-    var result1 = "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ";
+    //var emoji = ":(";
+   // var result = "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ";
+    sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ";
+    sendTextMessage(senderID, ":(";
   } else {
     var result = "";
   }
 
   // When a postback is called, we'll send a message back to the sender to 
   // let them know it was successful
-  sendTextMessage(senderID, result);
-  sendTextMessage(senderID, result1);
+ // sendTextMessage(senderID, result);
+//  sendTextMessage(senderID, emoji);
 }
 
 
