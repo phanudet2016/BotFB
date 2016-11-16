@@ -114,16 +114,9 @@ function sendGenericMessage(recipientId, messageText) {
               url: "https://www.oculus.com/en-us/touch/",
               title: "Open Web URL"
             }, {
-              "sender":{
-                "id":senderID
-              },
-              "recipient":{
-                "id":recipientID
-              },
-              "timestamp":1458692752478,
-              "postback":{
-                "payload":"USER_DEFINED_PAYLOAD"
-              }
+              type: "postback",
+              title: "Call Postback",
+              payload: "Payload for second bubble",
             }]
           }]
         }
