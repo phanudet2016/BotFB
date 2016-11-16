@@ -82,6 +82,15 @@ function receivedMessage(event) {
   }
 }
 
+function sleep(milliseconds) {
+  var start = new Date().getTime();
+  for (var i = 0; i < 1e7; i++) {
+    if ((new Date().getTime() - start) > milliseconds){
+      break;
+    }
+  }
+}
+
 function receivedPostback(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
@@ -99,7 +108,7 @@ function receivedPostback(event) {
   else if(payload == 'noThank'){
     var arr = [ ':(', 'แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ', 'หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย'];
     for(var i=0;i<3;i++){
-     pause(2000)
+     sleep(1000);
     sendTextMessage(senderID, arr[i])
     }
    // sendTextMessage(senderID, ":(")
