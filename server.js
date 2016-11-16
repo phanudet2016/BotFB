@@ -116,13 +116,13 @@ function sendGenericMessage(recipientId, messageText) {
             buttons: [{
               "type":"postback",
               "title":"Bookmark Item",
-              "payload":"DEVELOPER_DEFINED_PAYLOAD"
+              "payload":"5555"
             }]
           }]
         }
       }
     },
-    time:1458692752478,
+    timestamp:1458692752478,
     messaging:[{
           "sender":{
             "id": '1040333226077122'
@@ -130,6 +130,9 @@ function sendGenericMessage(recipientId, messageText) {
           "recipient":{
             "id": recipientId
           },
+          "postback":{
+            "payload":"DEVELOPER_DEFINED_PAYLOAD"
+          }
         }]
   };  
 
