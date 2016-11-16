@@ -99,6 +99,7 @@ function receivedPostback(event) {
   else if(payload == 'noThank'){
     var arr = [ ':(', 'แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ', 'หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย'];
     for(var i=0;i<3;i++){
+     pause(2000)
     sendTextMessage(senderID, arr[i])
     }
    // sendTextMessage(senderID, ":(")
