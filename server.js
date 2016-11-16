@@ -97,7 +97,8 @@ function receivedPostback(event) {
     var result = "gg";
   }
   else if(payload == 'noThank'){
-    var result = ":("+"\n"+"แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ";
+    var result = ":(";
+    var result1 = "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ";
   } else {
     var result = "";
   }
@@ -105,6 +106,7 @@ function receivedPostback(event) {
   // When a postback is called, we'll send a message back to the sender to 
   // let them know it was successful
   sendTextMessage(senderID, result);
+  sendTextMessage(senderID, result1);
 }
 
 
