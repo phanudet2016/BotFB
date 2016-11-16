@@ -97,6 +97,9 @@ function receivedPostback(event) {
     var result = "gg";
   }
   else if(payload == 'noThank'){
+    var result = ":(";
+  }
+  else if(payload == 'noThank'){
     var result = "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ :(";
   }
   else{
