@@ -96,13 +96,9 @@ function receivedPostback(event) {
   if(payload == 'findRestaurant'){
     var result = "gg";
   }
-  if(payload == 'noThank'){
-    var result = ":(";
-  }
-  if(payload == 'noThank'){
-    var result = "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ :(";
-  }
-  else{
+  else if(payload == 'noThank'){
+    var result = ":("+"/n"+"แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ";
+  } else {
     var result = "";
   }
 
