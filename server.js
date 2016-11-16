@@ -62,7 +62,7 @@ function receivedMessage(event) {
   var messageAttachments = message.attachments;
 
   if (messageText) {
-    if (messageText === senderID) {
+    if (messageText === "Call Postback") {
       sendTextMessage(senderID, "สวัสดีจร้า");
     }
 
