@@ -151,16 +151,18 @@ function findRestaurants(recipientId, messageText) {
         elements:[
           {
             title:"Welcome to Peter\'s Hats",
+            "item_url":"",
             image_url:"https://petersfancybrownhats.com/company_image.png",
+            "subtitle":"",
             buttons:[
               {
-                type:"web_url",
-                url:"https://petersfancybrownhats.com",
-                title:"View Website"
+                type:"postback",
+                title:"ที่นี้",
+                payload:"DEVELOPER_DEFINED_PAYLOAD"
               },
               {
                 type:"postback",
-                title:"Start Chatting",
+                title:"ทุกที่ในปราจีนบุรี",
                 payload:"DEVELOPER_DEFINED_PAYLOAD"
               }              
             ]
