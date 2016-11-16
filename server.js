@@ -101,6 +101,14 @@ function receivedPostback(event) {
 
   console.log("Received postback for user %d and page %d with payload '%s' " + 
     "at %d", senderID, recipientID, payload, timeOfPostback);
+  
+  if(payload == 'findRestaurant') {
+    var results = ''
+     }
+  else if(payload == 'noThank') {
+    var results = "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแ่ให้ฉันช่วย"
+     }
+  else {}
 
   // When a postback is called, we'll send a message back to the sender to 
   // let them know it was successful
@@ -129,7 +137,7 @@ function sendGenericMessage(recipientId, messageText) {
             }, {
               type: "postback",
               title: "Call Postback",
-              payload: "Payload for first bubble",
+              payload: "findRestaurant",
             }],
           }, {
             title: "touch",
@@ -142,8 +150,11 @@ function sendGenericMessage(recipientId, messageText) {
               title: "Open Web URL"
             }, {
               type: "postback",
+              title: "ไม่เป็นไร ขอบคุณ",
+              payload: "noThank",
+              type: "postback",
               title: "Call Postback",
-              payload: "Payload for second bubble",
+              payload: "findRestaurant",
             }]
           }]
         }
