@@ -151,9 +151,9 @@ function findRestaurants(recipientId, messageText) {
         elements:[
           {
             title:"ร้านข้าว",
-            item_url:"www.google.com",
+            item_url:" ",
             image_url:"https://petersfancybrownhats.com/company_image.png",
-            subtitle:"5555",
+            subtitle:" ",
             buttons:[
               {
                 type:"postback",
