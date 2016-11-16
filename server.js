@@ -97,9 +97,9 @@ function receivedPostback(event) {
     var result = "gg";
   }
   else if(payload == 'noThank'){
-    setInterval(function(){ sendTextMessage(senderID, "1"); }, 1000);
-    setInterval(function(){ sendTextMessage(senderID, "2"); }, 2000);
-    setInterval(function(){ sendTextMessage(senderID, "3"); }, 3000);
+   // setInterval(function(){ sendTextMessage(senderID, "1"); }, 1000);
+   // setInterval(function(){ sendTextMessage(senderID, "2"); }, 2000);
+    //setInterval(function(){ sendTextMessage(senderID, "3"); }, 3000);
    // sendTextMessage(senderID, ":(")
     //sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ")
     //sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
