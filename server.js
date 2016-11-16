@@ -143,9 +143,6 @@ function sendGenericMessage(recipientId, messageText) {
               type: "postback",
               title: "ไม่เป็นไร ขอบคุณ",
               payload: "noThank",
-              type: "postback",
-              title: "Call Postback",
-              payload: "findRestaurant",
             }]
           }]
         }
