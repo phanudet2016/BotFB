@@ -98,7 +98,7 @@ function receivedPostback(event) {
   }
   else if(payload == 'noThank'){
     sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
-    await sleep(2000);
+    sleep(2000);
     sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ")
     sendTextMessage(senderID, ":(")
   } else {
