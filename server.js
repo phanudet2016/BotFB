@@ -162,19 +162,7 @@ function callSendAPI(messageData) {
   });  
 }
 
-function getStarted(messageData) {
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-    "setting_type":"call_to_actions",
-    "thread_state":"new_thread",
-    "call_to_actions":[
-      {
-      "payload":"USER_DEFINED_PAYLOAD"
-      }
-    ]
-}
+
 
 app.listen(app.get('port'), function () {
   console.log('run at port', app.get('port'))
