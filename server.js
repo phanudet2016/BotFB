@@ -33,6 +33,8 @@ app.post('/webhook', function (req, res) {
           receivedMessage(messagingEvent);
         } else if (messagingEvent.postback) {
           receivedPostback(messagingEvent);
+        } else if (messagingEvent.postback) {
+          receivedPostbackGG(messagingEvent);
         } else {
           console.log("Webhook received unknown messagingEvent: ", messagingEvent);
         }
@@ -73,9 +75,9 @@ function receivedMessage(event) {
       case 'hello':
         sendGenericMessage(senderID);
         break;
-      case 'quick reply':
+      /*case 'quick reply':
         sendQuickReply(senderID);
-        break;
+        break;*/
 
       default:
         sendTextMessage(senderID, messageText);
@@ -101,6 +103,30 @@ function receivedPostback(event) {
   }
   else if(payload == 'noThank'){
        sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")   
+  } else {
+    var result = "";
+  }
+
+  // When a postback is called, we'll send a message back to the sender to 
+  // let them know it was successful
+  // sendTextMessage(senderID, emoji);
+}
+function receivedPostbackGG(event) {
+  var senderID = event.sender.id;
+  var recipientID = event.recipient.id;
+  var timeOfPostback = event.timestamp;
+
+  // The 'payload' param is a developer-defined field which is set in a postback 
+  // button for Structured Messages. 
+  var payload = event.postback.payload;
+
+  console.log("Received postback for user %d and page %d with payload '%s' " + 
+    "at %d", senderID, recipientID, payload, timeOfPostback);
+  if(payload == 'findRestaurant'){
+    var result = "gg";
+  }
+  else if(payload == 'noThank'){
+       sendTextMessage(senderID, "5555")   
   } else {
     var result = "";
   }
@@ -179,7 +205,7 @@ function callSendAPI(messageData) {
   });  
 }
 
-function sendQuickReply(recipientId) {
+/*function sendQuickReply(recipientId) {
   var messageData = {
     recipient: {
       id: recipientId
@@ -207,7 +233,7 @@ function sendQuickReply(recipientId) {
   };
 
   callSendAPI(messageData);
-}
+}*/
 
 app.listen(app.get('port'), function () {
   console.log('run at port', app.get('port'))
