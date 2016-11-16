@@ -174,6 +174,7 @@ function getStarted(messageData){
       "payload":"USER_DEFINED_PAYLOAD"
     }
   ]
+  }
 }' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAKfIEoFAOQBABQ072vZAfboOxN82hoaBPLUqovfWcguKLhYqwIb35zuZCniPWqxMREhbZCR8m6kUjOOOv7xKDSOckHG7MiORWHD7cjAS8uHJbQLrydwzR1gYr3d4Tcy2FhEY612ZCYVCjWcPt0CGhbj53wYUAZBl2nctZCbTpXQZDZD" 
   
 app.listen(app.get('port'), function () {
