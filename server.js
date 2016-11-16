@@ -103,20 +103,6 @@ function sendGenericMessage(recipientId, messageText) {
               type: "postback",
               title: "Call Postback",
               payload: "Payload for first bubble",
-            }],
-          }, {
-            title: "touch",
-            subtitle: "Your Hands, Now in VR",
-            item_url: "https://www.oculus.com/en-us/touch/",               
-            image_url: "https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/14947604_1702144870100553_5946651151060590195_n.jpg?oh=aa1e827aa465fab6c06a3dafe7b029fb&oe=58940335",
-            buttons: [{
-              type: "web_url",
-              url: "https://www.oculus.com/en-us/touch/",
-              title: "Open Web URL"
-            }, {
-              type: "postback",
-              title: "Call Postback",
-              payload: "Payload for second bubble",
             }]
           }]
         }
