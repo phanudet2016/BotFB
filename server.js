@@ -100,6 +100,9 @@ function receivedPostback(event) {
     if('noThank'){
        sendTextMessage(senderID, ":(")
        }
+    if('noThank'){
+       sendTextMessage(senderID, "gg")
+       }
     //sendTextMessage(senderID, ":("+"\n"+"แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ"+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
   } else {
     var result = "";
