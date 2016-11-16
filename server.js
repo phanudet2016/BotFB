@@ -106,15 +106,7 @@ function receivedPostback(event) {
     var result = "gg";
   }
   else if(payload == 'noThank'){
-    var arr = [ ':(', 'แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ', 'หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย'];
-    for(var i=0;i<3;i++){
-     sleep(1000);
-    sendTextMessage(senderID, arr[i])
-    }
-   // sendTextMessage(senderID, ":(")
-   
-    //sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ")
-    //sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
+    sendTextMessage(senderID, ":("+"\n"+"แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ"+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย"
   } else {
     var result = "";
   }
