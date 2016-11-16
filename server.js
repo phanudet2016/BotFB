@@ -80,24 +80,6 @@ function receivedMessage(event) {
     sendTextMessage(senderID, "Message with attachment received");
   }
 }
-
-function receivedPostback(event) {
-  var senderID = event.sender.id;
-  var recipientId = event.recipient.id;
-  var timeOfPostback = event.timestamp;
-
-  // The 'payload' param is a developer-defined field which is set in a postback 
-  // button for Structured Messages. 
-  var payload = event.postback.payload;
-
-  console.log("Received postback for user %d and page %d with payload '%s' " + 
-    "at %d", senderID, recipientID, payload, timeOfPostback);
-
-  // When a postback is called, we'll send a message back to the sender to 
-  // let them know it was successful
-  sendTextMessage(senderID, "Postback called");
-}
-
 function sendGenericMessage(recipientId, messageText) {
   var messageData = {
     recipient: {
@@ -132,17 +114,10 @@ function sendGenericMessage(recipientId, messageText) {
               url: "https://www.oculus.com/en-us/touch/",
               title: "Open Web URL"
             }, {
-  "sender":{
-    "id": senderID
-  },
-  "recipient":{
-    "id": recipientId
-  },
-  "timestamp":1458692752478,
-  "postback":{
-    "payload":"USER_DEFINED_PAYLOAD"
-  }
-} ]
+              type: "postback",
+              title: "Call Postback",
+              payload: "Payload for second bubble",
+            }]
           }]
         }
       }
