@@ -131,7 +131,19 @@ function sendGenericMessage(recipientId, messageText) {
             }, {
               type: "postback",
               title: "Call Postback",
-              payload: "Payload for second bubble",
+              payload: [{
+                "sender":{
+                  "id":"USER_ID"
+                },
+                "recipient":{
+                  "id":"PAGE_ID"
+                },
+                "timestamp":1458692752478,
+                "postback":{
+                  "payload":"USER_DEFINED_PAYLOAD"
+                }
+              } 
+              }]
             }]
           }]
         }
