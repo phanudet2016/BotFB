@@ -45,7 +45,7 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
   }
 });
-
+  
 function receivedMessage(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
@@ -114,16 +114,16 @@ function sendGenericMessage(recipientId, messageText) {
               url: "https://www.oculus.com/en-us/touch/",
               title: "Open Web URL"
             }, {
-              type: "postback",
-              title: "Call Postback",
-              sender : {
-                id":"USER_ID"
+              "sender":{
+                "id":"USER_ID"
               },
-              recipient : {
+              "recipient":{
                 "id":"PAGE_ID"
               },
-              timestamp : 1458692752478,
-              payload: "USER_DEFINED_PAYLOAD",
+              "timestamp":1458692752478,
+              "postback":{
+                "payload":"USER_DEFINED_PAYLOAD"
+              }
             }]
           }]
         }
