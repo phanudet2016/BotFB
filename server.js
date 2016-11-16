@@ -115,10 +115,10 @@ function sendGenericMessage(recipientId, messageText) {
               title: "Open Web URL"
             }, {
               "sender":{
-                "id":"USER_ID"
+                "id":senderID
               },
               "recipient":{
-                "id":"PAGE_ID"
+                "id":recipientID
               },
               "timestamp":1458692752478,
               "postback":{
