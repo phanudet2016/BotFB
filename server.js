@@ -80,37 +80,12 @@ function receivedMessage(event) {
     sendTextMessage(senderID, "Message with attachment received");
   }
 }
-
-function receivedPostback(event) {
-  var senderID = event.sender.id;
-  var recipientID = event.recipient.id;
-  var timeOfPostback = event.timestamp;
-
-  // The 'payload' param is a developer-defined field which is set in a postback 
-  // button for Structured Messages. 
-  var payload = event.postback.payload;
-
-  console.log("Received postback for user %d and page %d with payload '%s' " + 
-    "at %d", senderID, recipientID, payload, timeOfPostback);
-
-  // When a postback is called, we'll send a message back to the sender to 
-  // let them know it was successful
-  sendTextMessage(senderID, "Postback called");
-}
-
 function sendGenericMessage(recipientId, messageText) {
   var messageData = {
     recipient: {
       id: recipientId
     },
     message: {
-      messaging:[{
-        "sender":{
-            "id":"USER_ID"
-          },
-          "recipient":{
-            "id":"PAGE_ID"
-          }
       attachment: {
         type: "template",
         payload: {
@@ -121,14 +96,31 @@ function sendGenericMessage(recipientId, messageText) {
             item_url: "https://www.oculus.com/en-us/rift/",               
             image_url: "https://scontent.xx.fbcdn.net/t31.0-0/p600x600/14976766_1702147553433618_1178776288358119238_o.jpg",
             buttons: [{
-              "type":"postback",
-              "title":"Bookmark Item",
-              "payload":"DEVELOPER_DEFINED_PAYLOAD"
+              type: "web_url",
+              url: "https://www.oculus.com/en-us/rift/",
+              title: "เลือกอัลบัมสาวๆ"
+            }, {
+              type: "postback",
+              title: "Call Postback",
+              payload: "Payload for first bubble",
+            }],
+          }, {
+            title: "touch",
+            subtitle: "Your Hands, Now in VR",
+            item_url: "https://www.oculus.com/en-us/touch/",               
+            image_url: "https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/14947604_1702144870100553_5946651151060590195_n.jpg?oh=aa1e827aa465fab6c06a3dafe7b029fb&oe=58940335",
+            buttons: [{
+              type: "web_url",
+              url: "https://www.oculus.com/en-us/touch/",
+              title: "Open Web URL"
+            }, {
+              type: "postback",
+              title: "Call Postback",
+              payload: "Payload for second bubble",
             }]
           }]
         }
       }
-    }]
     }
   };  
 
