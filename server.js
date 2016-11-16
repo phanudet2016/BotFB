@@ -62,7 +62,7 @@ function receivedMessage(event) {
   var messageAttachments = message.attachments;
 
   if (messageText) {
-    if (messageText === 'hello') {
+    if (messageText === senderID) {
       sendTextMessage(senderID, "สวัสดีจร้า");
     }
 
