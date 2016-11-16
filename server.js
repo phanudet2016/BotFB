@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.get('/webhook', function(req, res) {
-  var key = 'EAAKfIEoFAOQBABQ072vZAfboOxN82hoaBPLUqovfWcguKLhYqwIb35zuZCniPWqxMREhbZCR8m6kUjOOOv7xKDSOckHG7MiORWHD7cjAS8uHJbQLrydwzR1gYr3d4Tcy2FhEY612ZCYVCjWcPt0CGhbj53wYUAZBl2nctZCbTpXQZDZD'
+  var key = 'EAAZAdh4yZAgXcBAMdX9U6kUTd2Ow5oWyg6QMVy95UXvbnfALZCvovTiflTqHGhMChSqzdLyGWgIg1Sivp4dW8H5my5EIxt4TEZB3hchmNcDOkZBZBZC6aan9IVFhiVlYag6wRB6ZBsHlEFCpZAdAnCUSvLrXvF16AZC6U0Pf9pyqneuwZDZD'
   if (req.query['hub.verify_token'] === key) {
     res.send(req.query['hub.challenge'])
   }
@@ -63,13 +63,13 @@ function receivedMessage(event) {
 
   if (messageText) {
     if (messageText === 'hello') {
-      sendTextMessage(senderID, "สวัสดีจร้า");
+      sendTextMessage(senderID, "ควยเอ้ย ไม่รู้ request");
     }
 
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
     switch (messageText) {
-      case 'hello':
+      case 'generic':
         sendGenericMessage(senderID);
         break;
 
@@ -81,50 +81,7 @@ function receivedMessage(event) {
   }
 }
 function sendGenericMessage(recipientId, messageText) {
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-    message: {
-      attachment: {
-        type: "template",
-        payload: {
-          template_type: "generic",
-          elements: [{
-            title: "น้องมะลิ",
-            subtitle: "Next-generation virtual reality",
-            item_url: "https://www.oculus.com/en-us/rift/",               
-            image_url: "https://scontent.xx.fbcdn.net/t31.0-0/p600x600/14976766_1702147553433618_1178776288358119238_o.jpg",
-            buttons: [{
-              type: "web_url",
-              url: "https://www.oculus.com/en-us/rift/",
-              title: "เลือกอัลบัมสาวๆ"
-            }, {
-              type: "postback",
-              title: "Call Postback",
-              payload: "Payload for first bubble",
-            }],
-          }, {
-            title: "touch",
-            subtitle: "Your Hands, Now in VR",
-            item_url: "https://www.oculus.com/en-us/touch/",               
-            image_url: "https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/14947604_1702144870100553_5946651151060590195_n.jpg?oh=aa1e827aa465fab6c06a3dafe7b029fb&oe=58940335",
-            buttons: [{
-              type: "web_url",
-              url: "https://www.oculus.com/en-us/touch/",
-              title: "Open Web URL"
-            }, {
-              type: "postback",
-              title: "Call Postback",
-              payload: "Payload for second bubble",
-            }]
-          }]
-        }
-      }
-    }
-  };  
-
-  callSendAPI(messageData);
+  // To be expanded in later sections
 }
 
 function sendTextMessage(recipientId, messageText) {
@@ -143,7 +100,7 @@ function sendTextMessage(recipientId, messageText) {
 function callSendAPI(messageData) {
   request({
     uri: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: { access_token: 'EAAKfIEoFAOQBABQ072vZAfboOxN82hoaBPLUqovfWcguKLhYqwIb35zuZCniPWqxMREhbZCR8m6kUjOOOv7xKDSOckHG7MiORWHD7cjAS8uHJbQLrydwzR1gYr3d4Tcy2FhEY612ZCYVCjWcPt0CGhbj53wYUAZBl2nctZCbTpXQZDZD' },
+    qs: { access_token: 'EAAZAdh4yZAgXcBABVjIsKHFWDvLmeuARXQYDYIuonG4MUnRi2DLZBsVuJZAnHhEo5I0XjSmb9Qc7x2ZAmK9JqCksGRI7hal2B4sufmaQjcxoyiXAmKZCzMqdfGofCQccMMIyTpUAimRbOsEQagekugUJx3aFadcKneB7fT74uZCaQZDZD' },
     method: 'POST',
     json: messageData
 
