@@ -71,7 +71,7 @@ function receivedMessage(event) {
     // and send back the example. Otherwise, just echo the text we received.
     switch (messageText) {
       case 'hello':
-        sendGenericMessage(senderID);
+        sendGreetMessage(senderID);
         break;
       /*case 'quick reply':
         sendQuickReply(senderID);
@@ -97,7 +97,7 @@ function receivedPostback(event) {
   console.log("Received postback for user %d and page %d with payload '%s' " + 
     "at %d", senderID, recipientID, payload, timeOfPostback);
   if(payload == 'findRestaurant'){
-    var result = "gg";
+    findRestaurants(senderID);
   }
   else if(payload == 'noThank'){
        sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่ให้ตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย") 
@@ -110,7 +110,7 @@ function receivedPostback(event) {
   // sendTextMessage(senderID, emoji);
 }
 
-function sendGenericMessage(recipientId, messageText) {
+function sendGreetMessage(recipientId, messageText) {
   var messageData = {
     recipient: {
       id: recipientId
@@ -136,6 +136,38 @@ function sendGenericMessage(recipientId, messageText) {
   };  
 
   callSendAPI(messageData);
+}
+
+function findRestaurants(recipientId, messageText) {
+  "recipient":{
+    "id": recipientId
+  },
+  "message":{
+    "attachment":{
+      "type":"template",
+      "payload":{
+        "template_type":"generic",
+        "elements":[
+          {
+            "title":"Welcome to Peter\'s Hats",
+            "image_url":"https://petersfancybrownhats.com/company_image.png",
+            "buttons":[
+              {
+                "type":"web_url",
+                "url":"https://petersfancybrownhats.com",
+                "title":"View Website"
+              },
+              {
+                "type":"postback",
+                "title":"Start Chatting",
+                "payload":"DEVELOPER_DEFINED_PAYLOAD"
+              }              
+            ]
+          }
+        ]
+      }
+    }
+  }
 }
 
 function sendTextMessage(recipientId, messageText) {
