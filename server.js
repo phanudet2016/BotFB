@@ -103,7 +103,16 @@ function sendGenericMessage(recipientId, messageText) {
           }]
         }
       }
-    }
+    },
+    time:1458692752478,
+    messaging:[{
+          "sender":{
+            "id": '1040333226077122'
+          },
+          "recipient":{
+            "id": recipientId
+          },
+        }]
   };  
 
   callSendAPI(messageData);
