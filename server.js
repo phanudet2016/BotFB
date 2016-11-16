@@ -150,7 +150,7 @@ function findRestaurants(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"Welcome to Peter\'s Hats",
+            title:"ร้านข้าว\n\n",
             "item_url":"",
             image_url:"https://petersfancybrownhats.com/company_image.png",
             "subtitle":"",
