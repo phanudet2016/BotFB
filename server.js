@@ -97,10 +97,9 @@ function receivedPostback(event) {
     var result = "gg";
   }
   else if(payload == 'noThank'){
-    sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
-    var timer1 =setTimeout(function() { alert(“Test”); }, 1000);
-    sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ")
     sendTextMessage(senderID, ":(")
+    sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ")
+    sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย")
   } else {
     var result = "";
   }
