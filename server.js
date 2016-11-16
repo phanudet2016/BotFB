@@ -82,6 +82,10 @@ function receivedMessage(event) {
   }
 }
 
+function setInterval(function() {  
+ console.log("setInterval: Hey! 1 millisecond completed!..");   
+}, 1000); 
+
 function receivedPostback(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
