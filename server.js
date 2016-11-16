@@ -103,8 +103,14 @@ function sendGenericMessage(recipientId, messageText) {
     recipient: {
       id: recipientId
     },
-    
     message: {
+      messaging:[{
+        "sender":{
+            "id":"USER_ID"
+          },
+          "recipient":{
+            "id":"PAGE_ID"
+          }
       attachment: {
         type: "template",
         payload: {
@@ -117,30 +123,13 @@ function sendGenericMessage(recipientId, messageText) {
             buttons: [{
               "type":"postback",
               "title":"Bookmark Item",
-              "payload":"5555"
+              "payload":"DEVELOPER_DEFINED_PAYLOAD"
             }]
           }]
         }
       }
-    },
-    timestamp:1458692752478,
-    messaging:[{
-          "sender":{
-            "id": '1040333226077122'
-          },
-          "recipient":{
-            "id": recipientId
-          },
-          "timestamp":1458692752478,
-          "postback":{
-            "payload":"DEVELOPER_DEFINED_PAYLOAD"
-          },
-          buttons: [{
-              "type":"postback",
-              "title":"Bookmark Item",
-              "payload":"5555"
-            }]
-        }]
+    }]
+    }
   };  
 
   callSendAPI(messageData);
