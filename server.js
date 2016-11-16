@@ -64,7 +64,7 @@ function receivedMessage(event) {
 
   if (messageText) {
     if (messageText === 'hello') {
-      sendTextMessage(senderID, "สวัสดีจร้า");
+      sendTextMessage(senderID, "สวัสดีครับ นี้คือคู่มือร้านอาหารของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร");
     }
 
     // If we receive a text message, check to see if it matches a keyword
