@@ -64,7 +64,7 @@ function receivedMessage(event) {
 
   if (messageText) {
     if (messageText === 'hello') {
-      sendTextMessage(senderID, "สวัสดีครับ นี้คือคู่มือร้านอาหารของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร");
+      sendTextMessage(senderID, "สวัสดีครับ :)");
     }
 
     // If we receive a text message, check to see if it matches a keyword
@@ -119,8 +119,8 @@ function sendGenericMessage(recipientId, messageText) {
       attachment: {
         type: "template",
         payload: {
-          template_type: "generic",
-          elements: [{
+          template_type: "button",
+          text : "นี้คือคู่มือร้านอาหารของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
             buttons: [{
               type: "postback",
               title: "ค้าหาร้านอาหาร",
@@ -130,7 +130,6 @@ function sendGenericMessage(recipientId, messageText) {
               title: "ไม่เป็นไร ขอบคุณ",
               payload: "noThank"
             }],
-          }]
         }
       }
     }
