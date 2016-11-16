@@ -45,7 +45,7 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
   }
 });
-  
+
 function receivedMessage(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
@@ -162,21 +162,6 @@ function callSendAPI(messageData) {
   });  
 }
 
-function getStarted(messageData){
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-    "setting_type":"call_to_actions",
-  "thread_state":"new_thread",
-  "call_to_actions":[
-    {
-      "payload":"USER_DEFINED_PAYLOAD"
-    }
-  ]
-  }
-} "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAKfIEoFAOQBABQ072vZAfboOxN82hoaBPLUqovfWcguKLhYqwIb35zuZCniPWqxMREhbZCR8m6kUjOOOv7xKDSOckHG7MiORWHD7cjAS8uHJbQLrydwzR1gYr3d4Tcy2FhEY612ZCYVCjWcPt0CGhbj53wYUAZBl2nctZCbTpXQZDZD" 
-  
 app.listen(app.get('port'), function () {
   console.log('run at port', app.get('port'))
 })
