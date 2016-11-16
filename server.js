@@ -103,6 +103,7 @@ function sendGenericMessage(recipientId, messageText) {
     recipient: {
       id: recipientId
     },
+    
     message: {
       attachment: {
         type: "template",
@@ -130,9 +131,15 @@ function sendGenericMessage(recipientId, messageText) {
           "recipient":{
             "id": recipientId
           },
+          "timestamp":1458692752478,
           "postback":{
             "payload":"DEVELOPER_DEFINED_PAYLOAD"
-          }
+          },
+          buttons: [{
+              "type":"postback",
+              "title":"Bookmark Item",
+              "payload":"5555"
+            }]
         }]
   };  
 
