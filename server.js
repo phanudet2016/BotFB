@@ -80,6 +80,33 @@ function receivedMessage(event) {
     sendTextMessage(senderID, "Message with attachment received");
   }
 }
+
+function receivedPostback(event) {
+  var senderID = event.sender.id;
+  var recipientID = event.recipient.id;
+  var timeOfPostback = event.timestamp;
+
+  // The 'payload' param is a developer-defined field which is set in a postback 
+  // button for Structured Messages. 
+  var payload = event.postback.payload;
+
+  console.log("Received postback for user %d and page %d with payload '%s' " + 
+    "at %d", senderID, recipientID, payload, timeOfPostback);
+  if(){
+  }
+  else if(payload == 'findRestaurant'){
+    var result = "";
+  }
+  else if(payload== 'noThank'){
+    var result = "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ยครับ :(";
+  }
+  else{}
+
+  // When a postback is called, we'll send a message back to the sender to 
+  // let them know it was successful
+  sendTextMessage(senderID, result);
+}
+
 function sendGenericMessage(recipientId, messageText) {
   var messageData = {
     recipient: {
@@ -96,17 +123,13 @@ function sendGenericMessage(recipientId, messageText) {
             item_url: "https://www.oculus.com/en-us/rift/",               
             image_url: "https://scontent.xx.fbcdn.net/t31.0-0/p600x600/14976766_1702147553433618_1178776288358119238_o.jpg",
             buttons: [{
-              type: "web_url",
-              url: "https://www.oculus.com/en-us/rift/",
-              title: "เลือกอัลบัมสาวๆ"
+              type: "postback",
+              title: "ค้าหาร้านอาหาร",
+              payload: "findRestaurant"
             }, {
               type: "postback",
-              title: "Call Postback",
-              payload: "Payload for first bubble"
-            }, {
-              type: "postback",
-              title: "2222",
-              payload: "22rst bubble"
+              title: "ไม่เป็นไร ขอบคุณ",
+              payload: "noThank"
             }],
           }]
         }
