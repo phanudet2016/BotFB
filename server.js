@@ -115,7 +115,7 @@ function receivedPostback(event) {
   sendTextMessage(senderID, results);
 }
 
-function sendGenericMessage(recipientId, messageText) {
+function sendGenericMessage(recipientId) {
   var messageData = {
     recipient: {
       id: recipientId
@@ -126,22 +126,32 @@ function sendGenericMessage(recipientId, messageText) {
         payload: {
           template_type: "generic",
           elements: [{
+            title: "rift",
+            subtitle: "Next-generation virtual reality",
+            item_url: "https://www.oculus.com/en-us/rift/",               
+            image_url: SERVER_URL + "/assets/rift.png",
+            buttons: [{
+              type: "web_url",
+              url: "https://www.oculus.com/en-us/rift/",
+              title: "Open Web URL"
+            }, {
+              type: "postback",
+              title: "Call Postback",
+              payload: "Payload for first bubble",
+            }],
+          }, {
             title: "touch",
             subtitle: "Your Hands, Now in VR",
             item_url: "https://www.oculus.com/en-us/touch/",               
-            image_url: "https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/14947604_1702144870100553_5946651151060590195_n.jpg?oh=aa1e827aa465fab6c06a3dafe7b029fb&oe=58940335",
+            image_url: SERVER_URL + "/assets/touch.png",
             buttons: [{
               type: "web_url",
               url: "https://www.oculus.com/en-us/touch/",
               title: "Open Web URL"
             }, {
               type: "postback",
-              title: "ค้นหาร้านอาหาร",
-              payload: "findRestaurant",
-            }, {
-              type: "postback",
-              title: "ไม่เป็นไร ขอบคุณ",
-              payload: "noThank",
+              title: "Call Postback",
+              payload: "Payload for second bubble",
             }]
           }]
         }
