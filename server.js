@@ -225,7 +225,7 @@ function sendTextMessage(recipientId, messageText) {
   callSendAPI(messageData);
 }
 
-function setGetStartedButton (payload){
+function setGetStartedButton (payload)'{
   var req = {
         url: 'https://graph.facebook.com/v2.6/me/thread_settings',
         qs: {access_token: 'EAAS1ZB8DeZBjsBAP2jZBZBtucXXY2TxgR1fM8wvTsVhtImZAW7dlrwdfqhMm5RsQhfQqENhURt7hAqyMHzC6urnbWftaH6E7FZBZAMlPn0T0xUDZCUemDwN87lxjdSxrKWg2jBNvGOeQMTH70eUq2jZCmbm5wkxKoyWZBA5P6mTMxoBwZDZD',
@@ -241,7 +241,7 @@ function setGetStartedButton (payload){
         }
             }
 }
-}
+}' "https://graph.facebook.com/v2.6/me/thread_settings?access_token=EAAS1ZB8DeZBjsBAP2jZBZBtucXXY2TxgR1fM8wvTsVhtImZAW7dlrwdfqhMm5RsQhfQqENhURt7hAqyMHzC6urnbWftaH6E7FZBZAMlPn0T0xUDZCUemDwN87lxjdSxrKWg2jBNvGOeQMTH70eUq2jZCmbm5wkxKoyWZBA5P6mTMxoBwZDZD"
 
 function callSendAPI(messageData) {
   request({
