@@ -182,7 +182,7 @@ function findRestaurants(recipientId, messageText) {
           {
             title:"1",
             item_url:"",
-            image_url:"http://www.nuania.com/wp-content/uploads/2016/04/Daikon_008.jpg",
+            image_url:"",
             subtitle:" ",
             buttons:[
               {
