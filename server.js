@@ -133,7 +133,7 @@ function receivedPostback(event) {
   // sendTextMessage(senderID, emoji);
 }
 
-function getStart(recipientId) '{
+function getStart(recipientId, messageText) '{
   "setting_type":"call_to_actions",
   "thread_state":"new_thread",
   "call_to_actions":[{
