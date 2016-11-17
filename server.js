@@ -49,7 +49,17 @@ app.post('/webhook', function (req, res) {
     // successfully received the callback. Otherwise, the request will time out.
     res.sendStatus(200);
   }
-})
+});
+
+function getStart(event){
+  "setting_type":"call_to_actions",
+  "thread_state":"new_thread",
+  "call_to_actions":[
+    {
+      "payload":"USER_DEFINED_PAYLOAD"
+    }
+  ]
+}
   
 function receivedMessage(event) {
   var senderID = event.sender.id;
