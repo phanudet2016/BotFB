@@ -89,7 +89,7 @@ function receivedMessage(event) {
   console.log("Received postback for user %d and page %d with payload '%s' " + 
     "at %d", senderID, recipientID, payload, timeOfPostback);
   
-  if (payload) {
+  /*if (payload) {*/
     if (payload == 'getStart') {
       sendTextMessage(senderID, "สวัสดีครับ :)");
     }
@@ -106,9 +106,9 @@ function receivedMessage(event) {
       default:
         sendTextMessage(senderID, messageText);
     }
-  } else if (messageAttachments) {
+  /*} else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
-  }
+  }*/
 }
 
 function receivedPostback(event) {
