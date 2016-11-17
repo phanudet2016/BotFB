@@ -179,9 +179,9 @@ function findRestaurants(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"โรบินสัน ไลฟ์สไตล์เซ็นเตอร์",
+            title:"Cafe Kantary",
             item_url:"",
-            image_url:"http://www.robinson.co.th/images/201412/gallery2/1-1.jpg",
+            image_url:"http://image.free.in.th/v/2013/ij/161117085240.png",
             subtitle:"",
             buttons:[
               {
