@@ -58,7 +58,7 @@ function getStart(recipientId){
     },
   setting_type:"call_to_actions",
   thread_state:"new_thread",
-  call_to_actions":[
+  call_to_actions:[
     {
       "payload":"USER_DEFINED_PAYLOAD"
     }
