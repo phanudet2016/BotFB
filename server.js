@@ -20,31 +20,32 @@ app.post('/webhook', function (req, res) {
   var data = req.body;
 
   // Make sure this is a page subscription
-  if (data.object === 'page') {
-
-    // Iterate over each entry - there may be multiple if batched
-    data.entry.forEach(function(entry) {
-      var pageID = entry.id;
-      var timeOfEvent = entry.time;
+  if (data.object == 'page') {
+    // Iterate over each entry
+    // There may be multiple if batched
+    data.entry.forEach(function(pageEntry) {
+      var pageID = pageEntry.id;
+      var timeOfEvent = pageEntry.time;
 
       // Iterate over each messaging event
-      entry.messaging.forEach(function(event) {
-        if (event.message) {
-          receivedMessage(event);
+      pageEntry.messaging.forEach(function(messagingEvent) {
+        if (messagingEvent.message) {
+          receivedMessage(messagingEvent);
+        } else if (messagingEvent.postback) {
+          receivedPostback(messagingEvent);
         } else {
-          console.log("Webhook received unknown event: ", event);
+          console.log("Webhook received unknown messagingEvent: ", messagingEvent);
         }
       });
     });
 
     // Assume all went well.
     //
-    // You must send back a 200, within 20 seconds, to let us know
-    // you've successfully received the callback. Otherwise, the request
-    // will time out and we will keep trying to resend.
+    // You must send back a 200, within 20 seconds, to let us know you've 
+    // successfully received the callback. Otherwise, the request will time out.
     res.sendStatus(200);
   }
-});
+})
   
 function receivedMessage(event) {
   var senderID = event.sender.id;
@@ -63,15 +64,18 @@ function receivedMessage(event) {
 
   if (messageText) {
     if (messageText === 'hello') {
-      sendTextMessage(senderID, "ควยเอ้ย ไม่รู้ request");
+      sendTextMessage(senderID, "สวัสดีครับ :)");
     }
 
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
     switch (messageText) {
-      case 'generic':
-        sendGenericMessage(senderID);
+      case 'hello':
+        sendGreetMessage(senderID);
         break;
+      /*case 'quick reply':
+        sendQuickReply(senderID);
+        break;*/
 
       default:
         sendTextMessage(senderID, messageText);
@@ -80,9 +84,97 @@ function receivedMessage(event) {
     sendTextMessage(senderID, "Message with attachment received");
   }
 }
-function sendGenericMessage(recipientId, messageText) {
-  // To be expanded in later sections
+
+function receivedPostback(event) {
+  var senderID = event.sender.id;
+  var recipientID = event.recipient.id;
+  var timeOfPostback = event.timestamp;
+
+  // The 'payload' param is a developer-defined field which is set in a postback 
+  // button for Structured Messages. 
+  var payload = event.postback.payload;
+
+  console.log("Received postback for user %d and page %d with payload '%s' " + 
+    "at %d", senderID, recipientID, payload, timeOfPostback);
+  if(payload == 'findRestaurant'){
+    findRestaurants(senderID);
+  }
+  else if(payload == 'noThank'){
+       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่ให้ตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย") 
+  } else {
+    var result = "";
+  }
+
+  // When a postback is called, we'll send a message back to the sender to 
+  // let them know it was successful
+  // sendTextMessage(senderID, emoji);
 }
+
+function sendGreetMessage(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "นี้คือคู่มือร้านอาหารของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
+            buttons: [{
+              type: "postback",
+              title: "ค้าหาร้านอาหาร",
+              payload: "findRestaurant"
+            }, {
+              type: "postback",
+              title: "ไม่เป็นไร ขอบคุณ",
+              payload: "noThank"
+            }],
+        }
+      }
+    }
+  };  
+
+  callSendAPI(messageData);
+}
+
+function findRestaurants(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+  message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ร้านข้าว",
+            item_url:"",
+            image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+            subtitle:" ",
+            buttons:[
+              {
+                type:"postback",
+                title:"เลือกที่นี้",
+                payload:"fineHere"
+              },
+              {
+                type:"postback",
+                title:"ทุกที่ในปราจีนบุรี",
+                payload:"everyWhere"
+              }              
+            ]
+          }
+        ]
+      }
+    }
+  }
+};
+callSendAPI(messageData);
+}
+
 
 function sendTextMessage(recipientId, messageText) {
   var messageData = {
@@ -118,6 +210,35 @@ function callSendAPI(messageData) {
     }
   });  
 }
+
+/*function sendQuickReply(recipientId) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      text: "What's your favorite movie genre?",
+      quick_replies: [
+        {
+          "content_type":"text",
+          "title":"Action",
+          "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_ACTION"
+        },
+        {
+          "content_type":"text",
+          "title":"Comedy",
+          "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_COMEDY"
+        },
+        {
+          "content_type":"text",
+          "title":"Drama",
+          "payload":"DEVELOPER_DEFINED_PAYLOAD_FOR_PICKING_DRAMA"
+        }
+      ]
+    }
+  };
+  callSendAPI(messageData);
+}*/
 
 app.listen(app.get('port'), function () {
   console.log('run at port', app.get('port'))
