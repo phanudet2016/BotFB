@@ -51,10 +51,14 @@ app.post('/webhook', function (req, res) {
   }
 });
 
-function getStart(event){
-  "setting_type":"call_to_actions",
-  "thread_state":"new_thread",
-  "call_to_actions":[
+function getStart(recipientId){
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+  setting_type:"call_to_actions",
+  thread_state:"new_thread",
+  call_to_actions":[
     {
       "payload":"USER_DEFINED_PAYLOAD"
     }
