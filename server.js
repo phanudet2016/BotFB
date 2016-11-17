@@ -116,7 +116,7 @@ function receivedPostback(event) {
   console.log("Received postback for user %d and page %d with payload '%s' " + 
     "at %d", senderID, recipientID, payload, timeOfPostback);
   if(payload == 'findRestaurant'){
-    findRestaurants(senderID);
+   // findRestaurants(senderID);
   }
   else if(payload == 'noThank'){
        sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่ให้ตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย") 
@@ -157,7 +157,7 @@ function sendGreetMessage(recipientId, messageText) {
   callSendAPI(messageData);
 }
 
-function findRestaurants(recipientId, messageText) {
+/*function findRestaurants(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -193,7 +193,7 @@ function findRestaurants(recipientId, messageText) {
 };
 callSendAPI(messageData);
 }
-
+*/
 
 function sendTextMessage(recipientId, messageText) {
   var messageData = {
