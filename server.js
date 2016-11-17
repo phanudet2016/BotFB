@@ -240,7 +240,8 @@ function setGetStartedButton (payload){
             ]
         }
             }
-};
+}
+}
 
 function callSendAPI(messageData) {
   request({
