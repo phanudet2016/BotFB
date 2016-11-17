@@ -85,8 +85,8 @@ function receivedMessage(event) {
     return;
   }*/
 
-  if (payload) {
-    if (payload == 'getStart') {
+  if (messageText) {
+    if (messageText == 'hello') {
       sendTextMessage(senderID, "สวัสดีครับ :)");
     }
 
@@ -118,7 +118,7 @@ function receivedPostback(event) {
 
   console.log("Received postback for user %d and page %d with payload '%s' " + 
     "at %d", senderID, recipientID, payload, timeOfPostback);
-  if(payload == 'findRestaurant'){
+  if(payload == 'getStart'){
     findRestaurants(senderID);
   }
   else if(payload == 'noThank'){
