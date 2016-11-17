@@ -179,9 +179,9 @@ function findRestaurants(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"1",
+            title:"โรบินสัน ไลฟ์สไตล์เซ็นเตอร์",
             item_url:"",
-            image_url:"http://www.nuania.com/wp-content/uploads/2016/04/Daikon_008.jpg",
+            image_url:"http://www.robinson.co.th/images/201412/gallery2/1-1.jpg",
             subtitle:" ",
             buttons:[
               {
