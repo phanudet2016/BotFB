@@ -10,11 +10,15 @@ app.use(bodyParser.json())
 
 app.get('/webhook', function(req, res) {
   var key = 'EAAS1ZB8DeZBjsBAP2jZBZBtucXXY2TxgR1fM8wvTsVhtImZAW7dlrwdfqhMm5RsQhfQqENhURt7hAqyMHzC6urnbWftaH6E7FZBZAMlPn0T0xUDZCUemDwN87lxjdSxrKWg2jBNvGOeQMTH70eUq2jZCmbm5wkxKoyWZBA5P6mTMxoBwZDZD'
-  if (req.query['hub.verify_token'] === key) {
+  if (req.query['hub.mode'] === 'subscribe' &&
+    req.query['hub.verify_token'] === key) {
+    console.log("Validating webhook");
     res.send(req.query['hub.challenge'])
-  }
-  res.send('Error, wrong token')
-})
+  } else {
+    console.error("Failed validation. Make sure the validation tokens match.");
+    res.sendStatus(403);          
+  }  
+});
 
 app.post('/webhook', function (req, res) {
   var data = req.body;
@@ -127,6 +131,14 @@ function receivedPostback(event) {
   // When a postback is called, we'll send a message back to the sender to 
   // let them know it was successful
   // sendTextMessage(senderID, emoji);
+}
+
+function getStart(recipientId) {
+  "setting_type":"call_to_actions",
+  "thread_state":"new_thread",
+  "call_to_actions":[{
+      "payload":"getStart"
+    }]
 }
 
 function sendGreetMessage(recipientId, messageText) {
