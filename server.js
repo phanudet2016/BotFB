@@ -50,22 +50,7 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
   }
 });
-
-function getStart(recipientId) {
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-  setting_type:"call_to_actions",
-  thread_state:"new_thread",
-  call_to_actions:[
-    {
-      "payload":"USER_DEFINED_PAYLOAD"
-    }
-  ]
-  }
-  }
-  
+ 
 function receivedMessage(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
@@ -114,9 +99,6 @@ function receivedMessage(event) {
       /*case 'quick reply':
         sendQuickReply(senderID);
         break;*/
-       case '555':
-        getStart(senderID)
-        break;
       default:
         sendTextMessage(senderID, messageText);
     }
