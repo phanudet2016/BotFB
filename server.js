@@ -67,7 +67,7 @@ function receivedMessage(event) {
   var messageAttachments = message.attachments;
   var quickReply = message.quick_reply;
 
-  if (isEcho) {
+ /* if (isEcho) {
     // Just logging message echoes to console
     console.log("Received echo for message %s and app %d with metadata %s", 
       messageId, appId, metadata);
@@ -79,7 +79,7 @@ function receivedMessage(event) {
 
     sendTextMessage(senderID, "Quick reply tapped");
     return;
-  }
+  }*/
 
   if (messageText) {
     if (messageText === 'hello') {
@@ -158,13 +158,6 @@ function sendGreetMessage(recipientId, messageText) {
 }
 
 function findRestaurants(recipientId, messageText) {
-  request({
-    uri: 'https://graph.facebook.com/v2.6/me/messages',
-    qs: { access_token: 'EAAS1ZB8DeZBjsBAP2jZBZBtucXXY2TxgR1fM8wvTsVhtImZAW7dlrwdfqhMm5RsQhfQqENhURt7hAqyMHzC6urnbWftaH6E7FZBZAMlPn0T0xUDZCUemDwN87lxjdSxrKWg2jBNvGOeQMTH70eUq2jZCmbm5wkxKoyWZBA5P6mTMxoBwZDZD' },
-    method: 'POST',
-    json: messageData
-
-  });
   var messageData = {
   recipient: {
     id : recipientId
