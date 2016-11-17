@@ -65,7 +65,7 @@ function receivedMessage(event) {
   var messageId = message.mid;
   var appId = message.app_id;
   var metadata = message.metadata;
-
+  var payload = event.postback.payload;
   // You may get a text or attachment but not both
   var messageText = message.text;
   var messageAttachments = message.attachments;
@@ -85,15 +85,15 @@ function receivedMessage(event) {
     return;
   }*/
 
-  if (messageText) {
-    if (messageText === 'hello') {
+  if (payload) {
+    if (payload == 'getStart') {
       sendTextMessage(senderID, "สวัสดีครับ :)");
     }
 
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
     switch (messageText) {
-      case 'hello':
+      case 'payload':
         sendGreetMessage(senderID);
         break;
       /*case 'quick reply':
