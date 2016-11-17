@@ -51,7 +51,7 @@ app.post('/webhook', function (req, res) {
   }
 });
 
-function getStart(recipientId){
+function getStart(recipientId) {
   var messageData = {
     recipient: {
       id: recipientId
@@ -63,7 +63,8 @@ function getStart(recipientId){
       "payload":"USER_DEFINED_PAYLOAD"
     }
   ]
-}
+  }
+  }
   
 function receivedMessage(event) {
   var senderID = event.sender.id;
