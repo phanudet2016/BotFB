@@ -114,7 +114,9 @@ function receivedMessage(event) {
       /*case 'quick reply':
         sendQuickReply(senderID);
         break;*/
-
+       case '555':
+        getStart(senderID)
+        break;
       default:
         sendTextMessage(senderID, messageText);
     }
