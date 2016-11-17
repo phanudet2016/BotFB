@@ -35,8 +35,6 @@ app.post('/webhook', function (req, res) {
       pageEntry.messaging.forEach(function(messagingEvent) {
         if (messagingEvent.message) {
           receivedMessage(messagingEvent);
-          emoji(messagingEvent);
-          GG(messagingEvent);
         } else if (messagingEvent.postback) {
           receivedPostback(messagingEvent);
         } else {
@@ -52,17 +50,6 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
   }
 });
-
-function emoji(event) {
-  var senderID = event.sender.id;
-  sendTextMessage(senderID, ":(");
-}
-function GG(event) {
-  var senderID = event.sender.id;
-  sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
-}
-
-
 
 function receivedMessage(event) {
   var senderID = event.sender.id;
@@ -225,7 +212,24 @@ function findRestaurants(recipientId, messageText) {
                  title:"ทุกที่ในปราจีนบุรี",
                  payload:"everyWhere"
                }]
-            }]
+            },
+          {
+            title:"ร้านข้าว",
+            item_url:"",
+            image_url:"http://img.painaidii.com/images/20140926_3_1411711631_69610.jpg",
+            subtitle:" ",
+            buttons:[
+              {
+                type:"postback",
+                title:"เลือกที่นี้",
+                payload:"fineHere"
+              },
+              {
+                type:"postback",
+                title:"ทุกที่ในปราจีนบุรี",
+                payload:"everyWhere"
+              }]
+           }]
       }
     }
   }
