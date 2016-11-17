@@ -84,20 +84,15 @@ function receivedMessage(event) {
     sendTextMessage(senderID, "Quick reply tapped");
     return;
   }*/
-  var payload = event.postback.payload;
-  var timeOfPostback = event.timestamp;
-  console.log("Received postback for user %d and page %d with payload '%s' " + 
-    "at %d", senderID, recipientID, payload, timeOfPostback);
-  
-  /*if (payload) {*/
-    if (payload == 'getStart') {
+  if (messageText) {
+    if (messageText == 'hello') {
       sendTextMessage(senderID, "สวัสดีครับ :)");
     }
 
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
-    switch (payload) {
-      case 'getStart':
+    switch (messageText) {
+      case 'hello':
         sendGreetMessage(senderID);
         break;
       /*case 'quick reply':
@@ -106,9 +101,9 @@ function receivedMessage(event) {
       default:
         sendTextMessage(senderID, messageText);
     }
-  /*} else if (messageAttachments) {
+  } else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
-  }*/
+  }
 }
 
 function receivedPostback(event) {
@@ -122,7 +117,7 @@ function receivedPostback(event) {
 
   console.log("Received postback for user %d and page %d with payload '%s' " + 
     "at %d", senderID, recipientID, payload, timeOfPostback);
-  if(payload == 'findRestaurant'){
+  if(payload == 'getStart'){
     findRestaurants(senderID);
   }
   else if(payload == 'noThank'){
