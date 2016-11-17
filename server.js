@@ -199,7 +199,7 @@ function findRestaurants(recipientId, messageText) {
              title:"Robinson Lifestyle Center",
              item_url:"",
              image_url:"http://www.robinson.co.th/images/201412/gallery2/1-1.jpg",
-             subtitle:" ",
+             subtitle:"",
              buttons:[
                {
                  type:"postback",
