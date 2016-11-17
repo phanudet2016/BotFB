@@ -89,7 +89,7 @@ function receivedMessage(event) {
       findRestaurants(senderID);
     }
     if (messageText == 'ไม่เป็นไร ขอบคุณ') {
-      setTimeout(function(){ alert("Hello"); }, 3000)
+      setTimeout(function(){ alert(sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย")); }, 3000)
      // sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
     }
 
