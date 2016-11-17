@@ -92,9 +92,9 @@ function receivedMessage(event) {
       case 'hello':
         sendGreetMessage(senderID);
         break;
-      case 'quick reply':
+      /*case 'quick reply':
         sendQuickReply(senderID);
-        break;
+        break;*/
 
       default:
         sendTextMessage(senderID, messageText);
@@ -244,7 +244,7 @@ function callSendAPI(messageData) {
   });  
 }
 
-function sendQuickReply(recipientId) {
+/*function sendQuickReply(recipientId) {
   var messageData = {
     recipient: {
       id: recipientId
@@ -271,7 +271,7 @@ function sendQuickReply(recipientId) {
     }
   };
   callSendAPI(messageData);
-}
+}*/
 
 app.listen(app.get('port'), function () {
   console.log('run at port', app.get('port'))
