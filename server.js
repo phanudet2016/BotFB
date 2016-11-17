@@ -35,6 +35,7 @@ app.post('/webhook', function (req, res) {
       pageEntry.messaging.forEach(function(messagingEvent) {
         if (messagingEvent.message) {
           receivedMessage(messagingEvent);
+          emoji(messagingEvent);
           GG(messagingEvent);
         } else if (messagingEvent.postback) {
           receivedPostback(messagingEvent);
@@ -51,10 +52,18 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
   }
 });
+
+function emoji(event) {
+  var senderID = event.sender.id;
+  sendTextMessage(senderID, ":(");
+}
 function GG(event) {
   var senderID = event.sender.id;
   sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
 }
+
+
+
 function receivedMessage(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
