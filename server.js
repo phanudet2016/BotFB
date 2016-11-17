@@ -157,7 +157,7 @@ function sendGreetMessage(recipientId, messageText) {
   callSendAPI(messageData);
 }
 
-/*function findRestaurants(recipientId, messageText) {
+function findRestaurants(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -192,8 +192,8 @@ function sendGreetMessage(recipientId, messageText) {
   }
 };
 callSendAPI(messageData);
-}
-*/
+} "https://graph.facebook.com/v2.6/me/messages?access_token=EAAS1ZB8DeZBjsBAP2jZBZBtucXXY2TxgR1fM8wvTsVhtImZAW7dlrwdfqhMm5RsQhfQqENhURt7hAqyMHzC6urnbWftaH6E7FZBZAMlPn0T0xUDZCUemDwN87lxjdSxrKWg2jBNvGOeQMTH70eUq2jZCmbm5wkxKoyWZBA5P6mTMxoBwZDZD"
+
 
 function sendTextMessage(recipientId, messageText) {
   var messageData = {
