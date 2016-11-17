@@ -85,8 +85,12 @@ function receivedMessage(event) {
     return;
   }*/
   if (messageText) {
-    if (messageText == 'ค้าหาร้านอาหาร') {
+    if (messageText == 'ค้นหาร้านอาหาร') {
       findRestaurants(senderID);
+    }
+    if (messageText == 'ไม่เป็นไร ขอบคุณ') {
+      setTimeout(function(){ alert("Hello"); }, 3000)
+     // sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
     }
 
     // If we receive a text message, check to see if it matches a keyword
@@ -149,7 +153,7 @@ function sendGreetMessage(recipientId, messageText) {
           text : "นี้คือคู่มือร้านอาหารของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
             buttons: [{
               type: "postback",
-              title: "ค้าหาร้านอาหาร",
+              title: "ค้นหาร้านอาหาร",
               payload: "findRestaurant"
             }, {
               type: "postback",
