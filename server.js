@@ -117,8 +117,13 @@ function receivedPostback(event) {
 
   console.log("Received postback for user %d and page %d with payload '%s' " + 
     "at %d", senderID, recipientID, payload, timeOfPostback);
+  
   if(payload == 'getStart'){
-    findRestaurants(senderID);
+       sendTextMessage(senderID, "สวัสดีครับ");
+       sendGreetMessage(senderID);
+  }
+  else if(payload == 'findRestaurant'){
+       findRestaurants(senderID);
   }
   else if(payload == 'noThank'){
        sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย") 
