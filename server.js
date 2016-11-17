@@ -35,6 +35,7 @@ app.post('/webhook', function (req, res) {
       pageEntry.messaging.forEach(function(messagingEvent) {
         if (messagingEvent.message) {
           receivedMessage(messagingEvent);
+          GG(messagingEvent);
         } else if (messagingEvent.postback) {
           receivedPostback(messagingEvent);
         } else {
@@ -50,7 +51,10 @@ app.post('/webhook', function (req, res) {
     res.sendStatus(200);
   }
 });
- 
+function GG(event) {
+  var senderID = event.sender.id;
+  sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
+}
 function receivedMessage(event) {
   var senderID = event.sender.id;
   var recipientID = event.recipient.id;
@@ -89,7 +93,7 @@ function receivedMessage(event) {
       findRestaurants(senderID);
     }
     if (messageText == 'ไม่เป็นไร ขอบคุณ') {
-      setTimeout(function(){ alert(sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย")); }, 3000)
+      setTimeout(function(){ alert("ddd"); }, 3000)
      // sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
     }
 
