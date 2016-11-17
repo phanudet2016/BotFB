@@ -89,8 +89,7 @@ function receivedMessage(event) {
       findRestaurants(senderID);
     }
     if (messageText == 'ไม่เป็นไร ขอบคุณ') {
-      setTimeout(function(){ alert("ddd"); }, 3000)
-     // sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
+      sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :(");
     }
 
     // If we receive a text message, check to see if it matches a keyword
