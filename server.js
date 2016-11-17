@@ -182,7 +182,7 @@ function findRestaurants(recipientId, messageText) {
             title:"โรบินสัน ไลฟ์สไตล์เซ็นเตอร์",
             item_url:"",
             image_url:"http://www.robinson.co.th/images/201412/gallery2/1-1.jpg",
-            subtitle:" ",
+            subtitle:"",
             buttons:[
               {
                 type:"postback",
