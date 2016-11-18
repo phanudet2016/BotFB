@@ -230,9 +230,9 @@ function findRestaurants(recipientId, messageText) {
                }]
             },
         {
-             title:"4",
+             title:"ร้านอาหารชมชล (Chom Chon Restaurant)",
              item_url:"",
-             image_url:"http://img.painaidii.com/images/20140616_3_1402852488_281296.jpg",
+             image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2012/10/07/0e81bf6ad4ef4f2ea4361c7985c027df.jpg",
              subtitle:" ",
              buttons:[
                {
