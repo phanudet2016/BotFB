@@ -164,7 +164,7 @@ function receivedPostback(event) {
   // sendTextMessage(senderID, emoji);
 }
 
-function needYourHelp(recipientId, messageText) {
+/*function needYourHelp(recipientId, messageText) {
   var messageData = {
     recipient: {
       id: recipientId
@@ -183,8 +183,7 @@ function needYourHelp(recipientId, messageText) {
         }
       }
   }
-}
-
+}*/
 function sendGreetMessage(recipientId, messageText) {
   var messageData = {
     recipient: {
