@@ -131,13 +131,13 @@ function receivedPostback(event) {
   else if(payload == 'noThank'){
     setTimeout(function() {
       sendTextMessage(senderID, ":(");
-    }, 100)
+    }, 300)
     setTimeout(function() {
       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
     }, 200)
     setTimeout(function() {
       sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย");
-    }, 300)
+    }, 100)
     
        //sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย") 
   } else {
