@@ -133,7 +133,7 @@ function receivedPostback(event) {
        sendTextMessage(senderID, "สวัสดีครับ :)");
        sendGreetMessage(senderID);
   }
-  else if(payload == 'findRestaurant'){
+  else if(payload == 'findRestaurant' || payload == 'I_need_your_help'){
     setTimeout(function() {
       sendTextMessage(senderID, "นี้คือร้านอาหารยอดนิยมในปราจีนบุรี");
     }, 500)
@@ -152,10 +152,9 @@ function receivedPostback(event) {
       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
     }, 1000)
     setTimeout(function() {
-      sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย");
+      needYourHelp(senderID)
+      //sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย");
     }, 1500)
-    
-       //sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย") 
   } else {
     var result = "";
   }
@@ -163,6 +162,27 @@ function receivedPostback(event) {
   // When a postback is called, we'll send a message back to the sender to 
   // let them know it was successful
   // sendTextMessage(senderID, emoji);
+}
+
+function needYourHelp(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย",
+            buttons: [{
+              type: "postback",
+              title: "⚡️ ฉันต้องการให้คุณช่วย",
+              payload: "I_need_your_help"
+            }]
+        }
+      }
+  }
 }
 
 function sendGreetMessage(recipientId, messageText) {
@@ -184,7 +204,7 @@ function sendGreetMessage(recipientId, messageText) {
               type: "postback",
               title: "❌ ไม่เป็นไร ขอบคุณ",
               payload: "noThank"
-            }],
+            }]
         }
       }
     }
