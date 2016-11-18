@@ -125,7 +125,7 @@ function receivedPostback(event) {
   // The 'payload' param is a developer-defined field which is set in a postback 
   // button for Structured Messages. 
   var payload = event.postback.payload;
-
+  
   console.log("Received postback for user %d and page %d with payload '%s' " + 
     "at %d", senderID, recipientID, payload, timeOfPostback);
   
@@ -134,7 +134,12 @@ function receivedPostback(event) {
        sendGreetMessage(senderID);
   }
   else if(payload == 'findRestaurant'){
-       findRestaurants(senderID);
+    setTimeout(function() {
+      sendTextMessage(senderID, "นี้คือร้านอาหารยอดนิยมในปราจีนบุรี");
+    }, 500)
+    setTimeout(function() {
+      sendTextMessage(senderID, "คุณต้องการรับประทานอาหารในสถานที่ใดครับ 🏠");
+    }, 1000)
   }
   else if(payload == 'noThank'){
     setTimeout(function() {
