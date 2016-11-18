@@ -89,7 +89,15 @@ function receivedMessage(event) {
       findRestaurants(senderID);
     }
     if (messageText == 'ไม่เป็นไร ขอบคุณ') {
-      sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :(");
+      setTimeout(function() {
+      sendTextMessage(senderID, ":(");
+    }, 500)
+    setTimeout(function() {
+      sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
+    }, 1000)
+    setTimeout(function() {
+      sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย");
+    }, 1500)
     }
 
     // If we receive a text message, check to see if it matches a keyword
@@ -131,13 +139,13 @@ function receivedPostback(event) {
   else if(payload == 'noThank'){
     setTimeout(function() {
       sendTextMessage(senderID, ":(");
-    }, 300)
+    }, 500)
     setTimeout(function() {
       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
-    }, 200)
+    }, 1000)
     setTimeout(function() {
       sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย");
-    }, 100)
+    }, 1500)
     
        //sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย :("+"\n"+"หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย") 
   } else {
