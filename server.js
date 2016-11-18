@@ -249,7 +249,7 @@ function findRestaurants(recipientId, messageText) {
         {
              title:"น่ำเฮียงโภชนา (ฟ้ามุ่ย)",
              item_url:"",
-             image_url:"http://img.painaidii.com/images/20150128_3_1422443147_453820.jpg",
+             image_url:"http://i0.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_010.jpg",
              subtitle:"",
              buttons:[
                {
