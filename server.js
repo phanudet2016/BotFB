@@ -182,7 +182,7 @@ function sendGreetMessage(recipientId, messageText) {
               payload: "findRestaurant"
             }, {
               type: "postback",
-              title: "  ไม่เป็นไร ขอบคุณ",
+              title: "❌ ไม่เป็นไร ขอบคุณ",
               payload: "noThank"
             }],
         }
