@@ -178,7 +178,7 @@ function sendGreetMessage(recipientId, messageText) {
           text : "📖 นี้คือคู่มือร้านอาหารของคุณในปราจีนบุรี ผมจะช่วยคุณได้อย่างไร",
             buttons: [{
               type: "postback",
-              title: "ค้นหาร้านอาหาร",
+              title: "🍣 ค้นหาร้านอาหาร",
               payload: "findRestaurant"
             }, {
               type: "postback",
@@ -212,7 +212,7 @@ function findRestaurants(recipientId, messageText) {
             buttons:[
               {
                 type:"postback",
-                title:"เลือกที่นี้",
+                title:"✅ เลือกที่นี้",
                 payload:"fineHere"
               },
               {
@@ -229,7 +229,7 @@ function findRestaurants(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"เลือกที่นี้",
+                 title:" ✅เลือกที่นี้",
                  payload:"fineHere"
                },
                {
@@ -246,7 +246,7 @@ function findRestaurants(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"เลือกที่นี้",
+                 title:"✅ เลือกที่นี้",
                  payload:"fineHere"
                },
                {
@@ -263,7 +263,7 @@ function findRestaurants(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"เลือกที่นี้",
+                 title:"✅ เลือกที่นี้",
                  payload:"fineHere"
                },
                {
@@ -280,7 +280,7 @@ function findRestaurants(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"เลือกที่นี้",
+                 title:"✅ เลือกที่นี้",
                  payload:"fineHere"
                },
                {
@@ -297,7 +297,7 @@ function findRestaurants(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"เลือกที่นี้",
+                 title:"✅ เลือกที่นี้",
                  payload:"fineHere"
                },
                {
@@ -314,7 +314,7 @@ function findRestaurants(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"เลือกที่นี้",
+                 title:"✅ เลือกที่นี้",
                  payload:"fineHere"
                },
                {
