@@ -138,9 +138,11 @@ function receivedPostback(event) {
       sendTextMessage(senderID, "นี้คือร้านอาหารยอดนิยมในปราจีนบุรี");
     }, 500)
     setTimeout(function() {
-      sendTextMessage(senderID, "คุณต้องการรับประทานอาหารในสถานที่ใดครับ 🏠");
+      sendTextMessage(senderID, "🏠 คุณต้องการรับประทานอาหารในสถานที่ใดครับ 🏠");
     }, 1000)
-    findRestaurants(senderID);
+    setTimeout(function() {
+      findRestaurants(senderID);
+    }, 1500)
   }
   else if(payload == 'noThank'){
     setTimeout(function() {
