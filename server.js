@@ -153,7 +153,6 @@ function receivedPostback(event) {
     }, 1000)
     setTimeout(function() {
       needYourHelp(senderID)
-      //sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย");
     }, 1500)
   } else {
     var result = "";
@@ -177,7 +176,7 @@ function needYourHelp(recipientId, messageText) {
           text : "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย",
             buttons: [{
               type: "postback",
-              title: "⚡️ ฉันต้องการให้คุณช่วย",
+              title: "ฉันต้องการให้คุณช่วย",
               payload: "I_need_your_help"
             }]
         }
