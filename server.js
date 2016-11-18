@@ -182,8 +182,9 @@ function needYourHelp(recipientId, messageText) {
             }]
         }
       }
-  }
-}
+    }
+  };
+  callSendAPI(messageData);
 }
 
 function sendGreetMessage(recipientId, messageText) {
