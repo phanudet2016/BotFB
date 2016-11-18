@@ -122,7 +122,7 @@ function receivedPostback(event) {
     "at %d", senderID, recipientID, payload, timeOfPostback);
   
   if(payload == 'getStart'){
-       sendTextMessage(senderID, "สวัสดีครับ :){{user_first_name}}");
+       sendTextMessage(senderID, "สวัสดีครับ :)");
        sendGreetMessage(senderID);
   }
   else if(payload == 'findRestaurant'){
