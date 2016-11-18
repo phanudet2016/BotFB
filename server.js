@@ -140,6 +140,7 @@ function receivedPostback(event) {
     setTimeout(function() {
       sendTextMessage(senderID, "คุณต้องการรับประทานอาหารในสถานที่ใดครับ 🏠");
     }, 1000)
+    findRestaurants(senderID);
   }
   else if(payload == 'noThank'){
     setTimeout(function() {
