@@ -88,17 +88,28 @@ function receivedMessage(event) {
     if (messageText == 'ค้นหาร้านอาหาร') {
       findRestaurants(senderID);
     }
-    if (messageText == 'ไม่เป็นไร ขอบคุณ') {
+    else if (messageText == 'ไม่เป็นไร ขอบคุณ') {
       setTimeout(function() {
-      sendTextMessage(senderID, ":(");
-    }, 500)
-    setTimeout(function() {
-      sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
-    }, 1000)
-    setTimeout(function() {
-      needYourHelp(senderID);
-    }, 1500) 
+        sendTextMessage(senderID, ":(");
+      }, 500)
+      setTimeout(function() {
+        sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
+      }, 1000)
+      setTimeout(function() {
+        needYourHelp(senderID);
+      }, 1500) 
     }
+    else if (messageText == 'ต้องการให้คุณช่วย') {
+      setTimeout(function() {
+        sendTextMessage(senderID, "นี้คือร้านอาหารยอดนิยมในปราจีนบุรี");
+      }, 500)
+      setTimeout(function() {
+        sendTextMessage(senderID, "คุณต้องการรับประทานอาหารในสถานที่ใดครับ 🏠");
+      }, 1000)
+      setTimeout(function() {
+        findRestaurants(senderID);
+      }, 1500)
+    } else {}
 
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
@@ -112,7 +123,8 @@ function receivedMessage(event) {
       default:
         sendTextMessage(senderID, messageText);*/
     }
-  } else if (messageAttachments) {
+  } 
+  else if (messageAttachments) {
     sendTextMessage(senderID, "Message with attachment received");
   }
 }
