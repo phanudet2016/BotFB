@@ -133,6 +133,7 @@ function receivedPostback(event) {
        sendTextMessage(senderID, "สวัสดีครับ :)");
        sendGreetMessage(senderID);
   }
+  ///////////////////////////////////////////////////////////////////
   else if(payload == 'findRestaurant' || payload == 'I_need_your_help'){
     setTimeout(function() {
       sendTextMessage(senderID, "นี้คือร้านอาหารยอดนิยมในปราจีนบุรี");
@@ -154,6 +155,19 @@ function receivedPostback(event) {
     setTimeout(function() {
       needYourHelp(senderID)
     }, 1500)
+  } 
+  //////////////////////////////////////////////////////////////////
+  else if(payload == 'robinson'){
+    setTimeout(function() {
+      sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่โรบินสัน ปราจีนบุรี");
+    }, 500)
+    setTimeout(function() {
+      sendTextMessage(senderID, "คุณชอบรับประทานอาหารประเภทไหนครับ");
+    }, 1000)
+    setTimeout(function() {
+      finHere(senderID)
+    }, 1500)
+          
   } else {
     var result = "";
   }
@@ -176,20 +190,20 @@ function finHere(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"1",
+            title:"บูตะ",
             item_url:"",
             image_url:"",
             subtitle:"",
             buttons:[
               {
                 type:"postback",
-                title:"✅ เลือกที่นี้",
+                title:"✅ ฉันต้องการรับประทานสิ่งนี้",
                 payload:"fineHere"
               },
               {
                 type:"postback",
                 title:"🔔 ทุกที่ในปราจีนบุรี",
-                payload:"everyWhere"
+                payload:"data"
               }]
            },
            {
@@ -297,7 +311,7 @@ function findRestaurants(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"Robinson Lifestyle Center",
+            title:"โรบินสัน ปราจีนบุรี",
             item_url:"",
             image_url:"http://www.robinson.co.th/images/201412/gallery2/1-1.jpg",
             subtitle:"",
@@ -305,7 +319,7 @@ function findRestaurants(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ เลือกที่นี้",
-                payload:"fineHere"
+                payload:"robinson"
               },
               {
                 type:"postback",
