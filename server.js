@@ -163,6 +163,77 @@ function receivedPostback(event) {
   // sendTextMessage(senderID, emoji);
 }
 
+//ฉันต้องการรับประทานสิ่งนี้
+function finHere(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+  message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"1",
+            item_url:"",
+            image_url:"",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ เลือกที่นี้",
+                payload:"fineHere"
+              },
+              {
+                type:"postback",
+                title:"🔔 ทุกที่ในปราจีนบุรี",
+                payload:"everyWhere"
+              }]
+           },
+           {
+             title:"2",
+             item_url:"",
+             image_url:"",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:" ✅เลือกที่นี้",
+                 payload:"fineHere"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ทุกที่ในปราจีนบุรี",
+                 payload:"everyWhere"
+               }]
+            },
+        {
+             title:"3",
+             item_url:"",
+             image_url:"",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ เลือกที่นี้",
+                 payload:"fineHere"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ทุกที่ในปราจีนบุรี",
+                 payload:"everyWhere"
+               }]
+            }]
+      }
+    }
+  }
+};
+callSendAPI(messageData);
+} 
+
+//ต้องการให้คุณช่วย
 function needYourHelp(recipientId, messageText) {
   var messageData = {
     recipient: {
