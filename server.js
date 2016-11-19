@@ -157,13 +157,14 @@ function receivedPostback(event) {
     }, 1500)
   } 
   //////////////////////////////////////////////////////////////////
-  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'||payload == 'Add'||payload == 'PalmSweetHome'){
+  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'||payload == 'Add'||payload == 'PalmSweetHome'||payload == 'NamHiang'){
     setTimeout(function() {
       if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
       if(payload == 'baannernnam'){var restaurant="มีหลากหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
       if(payload == 'ChomChol'){var restaurant="มีหลากหลายเมนูที่ร้านอาหารชมชล"}
       if(payload == 'Add'){var restaurant="มีหลากหลายเมนูที่ร้านแอ๊ด ข้าวต้ม กบินทร์บุรี"}
       if(payload == 'PalmSweetHome'){var restaurant="มีหลากหลายเมนูที่ร้านอาหาร ปาล์มสวีทโฮม กบินทร์บุรี ปราจีนบุรี"}
+      if(payload == 'NamHiang'){var restaurant="มีหลากหลายเมนูที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ร้านอร่อยที่กบินทร์บุรี "}
       sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่"+restaurant);
     }, 500)
     setTimeout(function() {
@@ -175,6 +176,7 @@ function receivedPostback(event) {
       else if(payload == 'ChomChol'){menuFoodChomChol(senderID);}
       else if(payload == 'Add'){menuFoodAdd(senderID);}
       else if(payload == 'PalmSweetHome'){menuFoodPalmSweetHome(senderID);}
+      else if(payload == 'NamHiang'){menuFoodNamHiang(senderID);}
               else{var result = "";}
     }, 1500)
           
@@ -186,6 +188,127 @@ function receivedPostback(event) {
   // let them know it was successful
   // sendTextMessage(senderID, emoji);
 }
+
+//เมนูร้านน่ำเฮียง
+function menuFoodNamHiang(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+  message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"กระดูกหมูอ่อนทอดกระเทียมพริกไทย",
+            item_url:"",
+            image_url:"http://i0.wp.com/s3-ap-southeast-1.amazonaws.com/ungsriwong/wp-content/uploads/2014/05/NumHiang_004.jpg?resize=1024%2C769",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ ต้องการทานสิ่งนี้",
+                payload:"eatNamHiangFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 ข้อมูลอาหาร",
+                payload:"dataNamHiangFirst"
+              }]
+           },
+           {
+             title:"ผัดผักกระเฉดชลูดน้ำ",
+             item_url:"",
+             image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_005.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:" ✅ ต้องการทานสิ่งนี้",
+                 payload:"eatNamHiangSecond"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataNamHiangSecond"
+               }]
+            },
+          {
+             title:"ํทอดมันกุ้ง ",
+             item_url:"",
+             image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_006.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatNamHiangThird"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataNamHiangThird"
+               }]
+            },
+        {
+             title:"ํมะระผัดไข่",
+             item_url:"",
+             image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_007.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatNamHiangFourth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataNamHiangFourth"
+               }]
+            },
+        {
+             title:"ํต้มยำไก่บ้าน",
+             item_url:"",
+             image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_008.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatNamHiangFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataNamHiangFifth"
+               }]
+            },
+        {
+             title:"ํปลาซิวทอดกรอบ",
+             item_url:"",
+             image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_009.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatNamHiangFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataNamHiangFifth"
+               }]
+        }]
+      }
+    }
+  }
+};
+callSendAPI(messageData);
+} 
 
 //เมนูร้านปาล์มสวีทโฮม
 function menuFoodPalmSweetHome(recipientId, messageText) {
@@ -933,7 +1056,7 @@ function findRestaurants(recipientId, messageText) {
                {
                  type:"postback",
                  title:"✅ เลือกที่นี้",
-                 payload:"fineHere"
+                 payload:"NamHiang"
                },
                {
                  type:"postback",
