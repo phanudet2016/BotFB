@@ -157,7 +157,7 @@ function receivedPostback(event) {
     }, 1500)
   } 
   //////////////////////////////////////////////////////////////////
-  else if(payload == 'robinson'||payload == 'baannernnam'){
+  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'){
     setTimeout(function() {
       if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
       if(payload == 'baannernnam'){var restaurant="มีหลายหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
@@ -169,6 +169,7 @@ function receivedPostback(event) {
     setTimeout(function() {
        if(payload == 'robinson'){menuFoodRobinson(senderID);}
       else if(payload == 'baannernnam'){menuFoodBaannernnam(senderID);}
+      else if(payload == 'ChomChol'){menuFoodChomChol(senderID);}
               else{var result = "";}
     }, 1500)
           
@@ -642,7 +643,7 @@ function findRestaurants(recipientId, messageText) {
                }]
             },
         {
-             title:"ร้านอาหารชมชล (Chom Chon Restaurant)",
+             title:"ร้านอาหารชมชล",
              item_url:"",
              image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2012/10/07/0e81bf6ad4ef4f2ea4361c7985c027df.jpg",
              subtitle:" ",
@@ -650,7 +651,7 @@ function findRestaurants(recipientId, messageText) {
                {
                  type:"postback",
                  title:"✅ เลือกที่นี้",
-                 payload:"fineHere"
+                 payload:"ChomChol"
                },
                {
                  type:"postback",
