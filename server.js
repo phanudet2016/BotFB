@@ -161,6 +161,7 @@ function receivedPostback(event) {
     setTimeout(function() {
       if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
       if(payload == 'baannernnam'){var restaurant="มีหลายหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
+      if(payload == 'ChomChol'){var restaurant="มีหลายหลายเมนูที่ร้านอาหารชมชล"}
       sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่"+restaurant);
     }, 500)
     setTimeout(function() {
@@ -655,7 +656,7 @@ function findRestaurants(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"ทุกที่ในปราจีนบุรี",
+                 title:"🔔 ทุกที่ในปราจีนบุรี",
                  payload:"everyWhere"
                }]
             },
