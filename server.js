@@ -236,7 +236,7 @@ function finHere(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
+                 title:"🔔 ข้อมูลอาหาร",
                  payload:"dataYayoi"
                }]
             },
@@ -253,8 +253,42 @@ function finHere(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
+                 title:"🔔 ข้อมูลอาหาร",
                  payload:"dataHotPot"
+               }]
+            },
+        {
+             title:"ํTempura Somen",
+             item_url:"",
+             image_url:"https://www.yayoirestaurants.com/uploads/image/F5D45267-6E7A-46B2-81D2-81F2F96C1C23.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ข้อมูลอาหาร",
+                 payload:"eatTempura"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataTempura"
+               }]
+            },
+        {
+             title:"ํRamen Champion",
+             item_url:"",
+             image_url:"https://www.yayoirestaurants.com/uploads/image/8D6E1B28-3E20-4865-86D0-493F1254C795.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ข้อมูลอาหาร",
+                 payload:"eatRamenChampion"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataRamenChampion"
                }]
             }]
       }
