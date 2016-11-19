@@ -157,7 +157,7 @@ function receivedPostback(event) {
     }, 1500)
   } 
   //////////////////////////////////////////////////////////////////
-  else if(payload == 'robinson'){
+  else if(payload == 'robinson'||payload == 'baannernnam'){
     setTimeout(function() {
       sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่โรบินสัน ปราจีนบุรี");
     }, 500)
@@ -165,7 +165,8 @@ function receivedPostback(event) {
       sendTextMessage(senderID, "คุณชอบรับประทานอาหารประเภทไหนครับ");
     }, 1000)
     setTimeout(function() {
-      finHere(senderID)
+       if(payload == 'robinson'){
+      menuFoodRobinson(senderID)
     }, 1500)
           
   } else {
@@ -177,8 +178,128 @@ function receivedPostback(event) {
   // sendTextMessage(senderID, emoji);
 }
 
-//ฉันต้องการรับประทานสิ่งนี้
-function finHere(recipientId, messageText) {
+function menuFoodBaannernnam(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+  message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"Topokki",
+            item_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2015/09/12/e18408e67b634f9d945f7382b27121a7.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ ต้องการทานสิ่งนี้",
+                payload:"eatSalang"
+              },
+              {
+                type:"postback",
+                title:"🔔 ข้อมูลอาหาร",
+                payload:"dataSalang"
+              }]
+           },
+           {
+             title:"Wagyu Steak",
+             item_url:"",
+             image_url:"http://oknation.nationtv.tv/blog/home/user_data/file_data/201301/15/14980c201.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:" ✅ ต้องการทานสิ่งนี้",
+                 payload:"eatJefferSteak"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataJefferSteak"
+               }]
+            },
+          {
+             title:"ํTakoyaki",
+             item_url:"",
+             image_url:"https://www.yayoirestaurants.com/uploads/image/96BE41CD-F01D-4E9B-85D1-6AB8B84A4C02.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ข้อมูลอาหาร",
+                 payload:"eatYayoi"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataYayoi"
+               }]
+            },
+        {
+             title:"ํHot Pot Buffet",
+             item_url:"",
+             image_url:"http://2.bp.blogspot.com/-rtL6WPiASvM/Vn6w4mfVHuI/AAAAAAAABlI/6ygYNRreW4Q/s1600/%25E0%25B8%25AA%25E0%25B8%25A1%25E0%25B8%25B1%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%2BPart%2BTime%2BHOT%2BPOT%2B%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%2582%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%258B%25E0%25B9%2587%25E0%25B8%25A5%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%25A5%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2599%25E0%25B8%25B2%2B45%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%258A%25E0%25B8%25A1..jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ข้อมูลอาหาร",
+                 payload:"eatHotPot"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataHotPot"
+               }]
+            },
+        {
+             title:"ํTempura Somen",
+             item_url:"",
+             image_url:"https://www.yayoirestaurants.com/uploads/image/F5D45267-6E7A-46B2-81D2-81F2F96C1C23.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ข้อมูลอาหาร",
+                 payload:"eatTempura"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataTempura"
+               }]
+            },
+        {
+             title:"ํRamen Champion",
+             item_url:"",
+             image_url:"https://www.yayoirestaurants.com/uploads/image/8D6E1B28-3E20-4865-86D0-493F1254C795.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ข้อมูลอาหาร",
+                 payload:"eatRamenChampion"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataRamenChampion"
+               }]
+            }]
+      }
+    }
+  }
+};
+callSendAPI(messageData);
+} 
+
+//เมนูโรบินสัน
+function menuFoodRobinson(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -404,7 +525,7 @@ function findRestaurants(recipientId, messageText) {
                {
                  type:"postback",
                  title:"✅ เลือกที่นี้",
-                 payload:"fineHere"
+                 payload:"baannernnam"
                },
                {
                  type:"postback",
