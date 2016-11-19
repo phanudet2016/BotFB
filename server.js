@@ -157,12 +157,13 @@ function receivedPostback(event) {
     }, 1500)
   } 
   //////////////////////////////////////////////////////////////////
-  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'||payload == 'Add'){
+  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'||payload == 'Add'||payload == 'PalmSweetHome'){
     setTimeout(function() {
       if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
       if(payload == 'baannernnam'){var restaurant="มีหลากหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
       if(payload == 'ChomChol'){var restaurant="มีหลากหลายเมนูที่ร้านอาหารชมชล"}
       if(payload == 'Add'){var restaurant="มีหลากหลายเมนูที่ร้านแอ๊ด ข้าวต้ม กบินทร์บุรี"}
+      if(payload == 'PalmSweetHome'){var restaurant="มีหลากหลายเมนูที่ร้านอาหาร ปาล์มสวีทโฮม กบินทร์บุรี ปราจีนบุรี"}
       sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่"+restaurant);
     }, 500)
     setTimeout(function() {
@@ -173,6 +174,7 @@ function receivedPostback(event) {
       else if(payload == 'baannernnam'){menuFoodBaannernnam(senderID);}
       else if(payload == 'ChomChol'){menuFoodChomChol(senderID);}
       else if(payload == 'Add'){menuFoodAdd(senderID);}
+      else if(payload == 'PalmSweetHome'){menuFoodAdd(senderID);}
               else{var result = "";}
     }, 1500)
           
@@ -185,7 +187,128 @@ function receivedPostback(event) {
   // sendTextMessage(senderID, emoji);
 }
 
-//เมนูแอ๊ดข้าวต้ม
+//เมนูร้านปาล์มสวีทโฮม
+function menuFoodPalmSweetHome(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+  message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ไก่มะนาว",
+            item_url:"",
+            image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_003.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ ต้องการทานสิ่งนี้",
+                payload:"eatPalmFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 ข้อมูลอาหาร",
+                payload:"dataPalmFirst"
+              }]
+           },
+           {
+             title:"ผักบุ้งไฟแดง",
+             item_url:"",
+             image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_001.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:" ✅ ต้องการทานสิ่งนี้",
+                 payload:"eatPalmSecond"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataPalmSecond"
+               }]
+            },
+          {
+             title:"ํยำกระเฉดชลูดน้ำ",
+             item_url:"",
+             image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_004.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatPalmThird"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataPalmThird"
+               }]
+            },
+        {
+             title:"ํผัดเผ็ดหมูป่า",
+             item_url:"",
+             image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_007.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatPalmFourth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataPalmFourth"
+               }]
+            },
+        {
+             title:"ํแกงส้มแป๊ะซะ",
+             item_url:"",
+             image_url:"http://i0.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_005.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatPalmFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataPalmFifth"
+               }]
+            },
+        {
+             title:"ํผัดเผ็ดปลาช่อน",
+             item_url:"",
+             image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_002.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatPalmFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataPalmFifth"
+               }]
+        }]
+      }
+    }
+  }
+};
+callSendAPI(messageData);
+} 
+
+//เมนูร้านแอ๊ดข้าวต้ม
 function menuFoodAdd(recipientId, messageText) {
   var messageData = {
   recipient: {
