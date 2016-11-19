@@ -190,7 +190,7 @@ function finHere(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"Topokki ",
+            title:"Topokki",
             item_url:"",
             image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2015/09/12/e18408e67b634f9d945f7382b27121a7.jpg",
             subtitle:"",
@@ -198,12 +198,12 @@ function finHere(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ ต้องการทานสิ่งนี้",
-                payload:"eatJefferSteak"
+                payload:"eatSalang"
               },
               {
                 type:"postback",
-                title:"🔔 นี้คืออะไร",
-                payload:"data"
+                title:"🔔 ข้อมูลอาหาร",
+                payload:"dataSalang"
               }]
            },
            {
@@ -215,15 +215,15 @@ function finHere(recipientId, messageText) {
                {
                  type:"postback",
                  title:" ✅ ต้องการทานสิ่งนี้",
-                 payload:"fineHere"
+                 payload:"eatJefferSteak"
                },
                {
                  type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataJefferSteak"
                }]
             },
-        {
+          {
              title:"ํTakoyaki",
              item_url:"",
              image_url:"https://www.yayoirestaurants.com/uploads/image/96BE41CD-F01D-4E9B-85D1-6AB8B84A4C02.jpg",
@@ -231,13 +231,30 @@ function finHere(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"fineHere"
+                 title:"✅ ข้อมูลอาหาร",
+                 payload:"eatYayoi"
                },
                {
                  type:"postback",
                  title:"🔔 ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
+                 payload:"dataYayoi"
+               }]
+            },
+        {
+             title:"ํHot Pot Buffet",
+             item_url:"",
+             image_url:"http://2.bp.blogspot.com/-rtL6WPiASvM/Vn6w4mfVHuI/AAAAAAAABlI/6ygYNRreW4Q/s1600/%25E0%25B8%25AA%25E0%25B8%25A1%25E0%25B8%25B1%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%2BPart%2BTime%2BHOT%2BPOT%2B%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%2582%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%258B%25E0%25B9%2587%25E0%25B8%25A5%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%25A5%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2599%25E0%25B8%25B2%2B45%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%258A%25E0%25B8%25A1..jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ข้อมูลอาหาร",
+                 payload:"eatHotPot"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ทุกที่ในปราจีนบุรี",
+                 payload:"dataHotPot"
                }]
             }]
       }
