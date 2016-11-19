@@ -159,7 +159,9 @@ function receivedPostback(event) {
   //////////////////////////////////////////////////////////////////
   else if(payload == 'robinson'||payload == 'baannernnam'){
     setTimeout(function() {
-      sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่โรบินสัน ปราจีนบุรี");
+      if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
+      if(payload == 'baannernnam'){var restaurant="มีหลายหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
+      sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่"+restaurant);
     }, 500)
     setTimeout(function() {
       sendTextMessage(senderID, "คุณชอบรับประทานอาหารประเภทไหนครับ");
