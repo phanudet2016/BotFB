@@ -160,8 +160,8 @@ function receivedPostback(event) {
   else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'){
     setTimeout(function() {
       if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
-      if(payload == 'baannernnam'){var restaurant="มีหลายหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
-      if(payload == 'ChomChol'){var restaurant="มีหลายหลายเมนูที่ร้านอาหารชมชล"}
+      if(payload == 'baannernnam'){var restaurant="มีหลากหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
+      if(payload == 'ChomChol'){var restaurant="มีหลากหลายเมนูที่ร้านอาหารชมชล"}
       sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่"+restaurant);
     }, 500)
     setTimeout(function() {
