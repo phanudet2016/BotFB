@@ -174,7 +174,7 @@ function receivedPostback(event) {
       else if(payload == 'baannernnam'){menuFoodBaannernnam(senderID);}
       else if(payload == 'ChomChol'){menuFoodChomChol(senderID);}
       else if(payload == 'Add'){menuFoodAdd(senderID);}
-      else if(payload == 'PalmSweetHome'){menuFoodAdd(senderID);}
+      else if(payload == 'PalmSweetHome'){menuFoodPalmSweetHome(senderID);}
               else{var result = "";}
     }, 1500)
           
