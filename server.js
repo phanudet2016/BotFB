@@ -229,18 +229,8 @@ function findRestaurants(recipientId, messageText) {
             title:"Cafe Kantary",
             item_url:"",
             image_url:"http://image.free.in.th/v/2013/ij/161117085240.png",
-            subtitle:"",
-            buttons:[
-              {
-                type:"postback",
-                title:"✅ เลือกที่นี้",
-                payload:"fineHere"
-              },
-              {
-                type:"postback",
-                title:"🔔 ทุกที่ในปราจีนบุรี",
-                payload:"everyWhere"
-              }]
+            subtitle:""
+            
            },
            {
              title:"Robinson Lifestyle Center",
