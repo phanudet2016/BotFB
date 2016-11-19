@@ -96,14 +96,14 @@ function receivedMessage(event) {
       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
     }, 1000)
     setTimeout(function() {
-      sendTextMessage(senderID, "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย");
-    }, 1500)
+      needYourHelp(senderID);
+    }, 1500) 
     }
 
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
     switch (messageText) {
-      case 'hello':
+      case '':
         sendGreetMessage(senderID);
         break;
       /*case 'quick reply':
