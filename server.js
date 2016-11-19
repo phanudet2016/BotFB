@@ -1046,7 +1046,7 @@ function findRestaurants(recipientId, messageText) {
              title:"ร้านอาหารชมชล",
              item_url:"",
              image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2012/10/07/0e81bf6ad4ef4f2ea4361c7985c027df.jpg",
-             subtitle:" ",
+             subtitle:"",
              buttons:[
                {
                  type:"postback",
@@ -1080,7 +1080,7 @@ function findRestaurants(recipientId, messageText) {
              title:"แอ๊ด ข้าวต้ม กบินทร์บุรี",
              item_url:"",
              image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_012.jpg",
-             subtitle:" ",
+             subtitle:"",
              buttons:[
                {
                  type:"postback",
@@ -1097,7 +1097,7 @@ function findRestaurants(recipientId, messageText) {
              title:"ร้านอาหาร ปาล์มสวีทโฮม กบินทร์บุรี",
              item_url:"",
              image_url:"http://image.free.in.th/v/2013/iq/161118060914.png",
-             subtitle:" ",
+             subtitle:"",
              buttons:[
                {
                  type:"postback",
