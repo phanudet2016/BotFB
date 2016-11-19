@@ -190,15 +190,15 @@ function finHere(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"บูตะ",
+            title:"Jeffer Steak",
             item_url:"",
-            image_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2013/11/17/7c9dc9d35ea7429a9256b048d1a55f88.jpg",
             subtitle:"",
             buttons:[
               {
                 type:"postback",
-                title:"✅ ฉันต้องการรับประทานสิ่งนี้",
-                payload:"fineHere"
+                title:"✅ ต้องการทานสิ่งนี้",
+                payload:"eatJefferSteak"
               },
               {
                 type:"postback",
@@ -214,7 +214,7 @@ function finHere(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:" ✅เลือกที่นี้",
+                 title:" ✅ ต้องการทานสิ่งนี้",
                  payload:"fineHere"
                },
                {
@@ -231,7 +231,7 @@ function finHere(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"✅ เลือกที่นี้",
+                 title:"✅ ต้องการทานสิ่งนี้",
                  payload:"fineHere"
                },
                {
