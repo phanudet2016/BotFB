@@ -155,13 +155,14 @@ function receivedPostback(event) {
     setTimeout(function() {
       needYourHelp(senderID)
     }, 1500)
-  } 
+  } Add
   //////////////////////////////////////////////////////////////////
-  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'){
+  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'||payload == 'Add'){
     setTimeout(function() {
       if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
       if(payload == 'baannernnam'){var restaurant="มีหลากหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
       if(payload == 'ChomChol'){var restaurant="มีหลากหลายเมนูที่ร้านอาหารชมชล"}
+      if(payload == 'ChomChol'){var restaurant="มีหลากหลายเมนูที่ร้านแอ๊ด ข้าวต้ม กบินทร์บุรี"}
       sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่"+restaurant);
     }, 500)
     setTimeout(function() {
@@ -171,6 +172,7 @@ function receivedPostback(event) {
        if(payload == 'robinson'){menuFoodRobinson(senderID);}
       else if(payload == 'baannernnam'){menuFoodBaannernnam(senderID);}
       else if(payload == 'ChomChol'){menuFoodChomChol(senderID);}
+      else if(payload == 'Add'){menuFoodAdd(senderID);}
               else{var result = "";}
     }, 1500)
           
@@ -182,6 +184,111 @@ function receivedPostback(event) {
   // let them know it was successful
   // sendTextMessage(senderID, emoji);
 }
+
+//เมนูแอ๊ดข้าวต้ม
+function menuFoodAdd(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+  message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"กระเฉดชลูดน้ำไฟแดง",
+            item_url:"",
+            image_url:"http://i2.wp.com/s3-ap-southeast-1.amazonaws.com/ungsriwong/wp-content/uploads/2014/05/AddKabin_004.jpg?resize=1024%2C768",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ ต้องการทานสิ่งนี้",
+                payload:"eatAddFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 ข้อมูลอาหาร",
+                payload:"dataAddFirst"
+              }]
+           },
+           {
+             title:"ผักบุ้งไฟแดง",
+             item_url:"",
+             image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_005.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:" ✅ ต้องการทานสิ่งนี้",
+                 payload:"eatAddSecond"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataAddSecond"
+               }]
+            },
+          {
+             title:"ํหมูผัดหนำเลี๊ยบ",
+             item_url:"",
+             image_url:"http://i0.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_007.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatAddThird"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataAddThird"
+               }]
+            },
+        {
+             title:"ํแกงป่า ปลาเห็ดโคน",
+             item_url:"",
+             image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_008.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatAddFourth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataAddFourth"
+               }]
+            },
+        {
+             title:"ํเกี้ยมฉ่ายกระเพาะหมู",
+             item_url:"",
+             image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_010.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatAddFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataAddFifth"
+               }]
+            }]
+      }
+    }
+  }
+};
+callSendAPI(messageData);
+} 
+
 
 //เมนูร้านชลมล
 function menuFoodChomChol(recipientId, messageText) {
@@ -686,7 +793,7 @@ function findRestaurants(recipientId, messageText) {
                {
                  type:"postback",
                  title:"✅ เลือกที่นี้",
-                 payload:"fineHere"
+                 payload:"Add"
                },
                {
                  type:"postback",
