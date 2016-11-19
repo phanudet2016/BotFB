@@ -155,9 +155,9 @@ function receivedPostback(event) {
     setTimeout(function() {
       needYourHelp(senderID)
     }, 1500)
-  } Add
+  } 
   //////////////////////////////////////////////////////////////////
-  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'){
+  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'||payload == 'Add'){
     setTimeout(function() {
       if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
       if(payload == 'baannernnam'){var restaurant="มีหลากหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
