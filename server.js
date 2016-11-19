@@ -86,7 +86,15 @@ function receivedMessage(event) {
   }*/
   if (messageText) {
     if (messageText == 'ค้นหาร้านอาหาร') {
-      findRestaurants(senderID);
+      setTimeout(function() {
+        sendTextMessage(senderID, "นี้คือร้านอาหารยอดนิยมในปราจีนบุรี");
+      }, 500)
+      setTimeout(function() {
+        sendTextMessage(senderID, "คุณต้องการรับประทานอาหารในสถานที่ใดครับ 🏠");
+      }, 1000)
+      setTimeout(function() {
+        findRestaurants(senderID);
+      }, 1500)
     }
     else if (messageText == 'ไม่เป็นไร ขอบคุณ') {
       setTimeout(function() {
