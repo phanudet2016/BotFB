@@ -234,7 +234,7 @@ function menuFoodBaannernnam(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"✅ ข้อมูลอาหาร",
+                 title:"✅ ต้องการทานสิ่งนี้",
                  payload:"eatDuck"
                },
                {
@@ -251,7 +251,7 @@ function menuFoodBaannernnam(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"✅ ข้อมูลอาหาร",
+                 title:"✅ ต้องการทานสิ่งนี้",
                  payload:"eatSquid"
                },
                {
@@ -268,7 +268,7 @@ function menuFoodBaannernnam(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"✅ ข้อมูลอาหาร",
+                 title:"✅ ต้องการทานสิ่งนี้",
                  payload:"eatPigSpicy"
                },
                {
@@ -285,7 +285,7 @@ function menuFoodBaannernnam(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"✅ ข้อมูลอาหาร",
+                 title:"✅ ต้องการทานสิ่งนี้",
                  payload:"eatTomyumkung"
                },
                {
@@ -355,7 +355,7 @@ function menuFoodRobinson(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"✅ ข้อมูลอาหาร",
+                 title:"✅ ต้องการทานสิ่งนี้",
                  payload:"eatYayoi"
                },
                {
@@ -372,7 +372,7 @@ function menuFoodRobinson(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"✅ ข้อมูลอาหาร",
+                 title:"✅ ต้องการทานสิ่งนี้",
                  payload:"eatHotPot"
                },
                {
@@ -389,7 +389,7 @@ function menuFoodRobinson(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"✅ ข้อมูลอาหาร",
+                 title:"✅ ต้องการทานสิ่งนี้",
                  payload:"eatTempura"
                },
                {
@@ -406,7 +406,7 @@ function menuFoodRobinson(recipientId, messageText) {
              buttons:[
                {
                  type:"postback",
-                 title:"✅ ข้อมูลอาหาร",
+                 title:"✅ ต้องการทานสิ่งนี้",
                  payload:"eatRamenChampion"
                },
                {
