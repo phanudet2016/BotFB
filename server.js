@@ -226,9 +226,9 @@ function findRestaurants(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"Cafe Kantary",
+            title:"Robinson Lifestyle Center",
             item_url:"",
-            image_url:"http://image.free.in.th/v/2013/ij/161117085240.png",
+            image_url:"http://www.robinson.co.th/images/201412/gallery2/1-1.jpg",
             subtitle:"",
             buttons:[
               {
@@ -243,9 +243,9 @@ function findRestaurants(recipientId, messageText) {
               }]
            },
            {
-             title:"Robinson Lifestyle Center",
+             title:"Cafe Kantary",
              item_url:"",
-             image_url:"http://www.robinson.co.th/images/201412/gallery2/1-1.jpg",
+             image_url:"http://image.free.in.th/v/2013/ij/161117085240.png",
              subtitle:"",
              buttons:[
                {
