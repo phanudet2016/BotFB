@@ -162,7 +162,7 @@ function receivedPostback(event) {
       if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
       if(payload == 'baannernnam'){var restaurant="มีหลากหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
       if(payload == 'ChomChol'){var restaurant="มีหลากหลายเมนูที่ร้านอาหารชมชล"}
-      if(payload == 'ChomChol'){var restaurant="มีหลากหลายเมนูที่ร้านแอ๊ด ข้าวต้ม กบินทร์บุรี"}
+      if(payload == 'Add'){var restaurant="มีหลากหลายเมนูที่ร้านแอ๊ด ข้าวต้ม กบินทร์บุรี"}
       sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่"+restaurant);
     }, 500)
     setTimeout(function() {
@@ -281,7 +281,41 @@ function menuFoodAdd(recipientId, messageText) {
                  title:"🔔 ข้อมูลอาหาร",
                  payload:"dataAddFifth"
                }]
-            }]
+            },
+        {
+             title:"ํปลาสลิดทอด",
+             item_url:"",
+             image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_009.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatAddFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataAddFifth"
+               }]
+        },
+        {
+             title:"ํข้าวต้ม",
+             item_url:"",
+             image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_006.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatAddFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataAddFifth"
+               }]
+        }]
       }
     }
   }
