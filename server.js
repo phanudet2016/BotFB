@@ -479,57 +479,6 @@ function findRestaurants(recipientId, messageText) {
                  title:"🔔 ทุกที่ในปราจีนบุรี",
                  payload:"everyWhere"
                }]
-            },
-        {
-             title:"8",
-             item_url:"",
-             image_url:"http://4.bp.blogspot.com/-egpcFDGy01E/Vlkr5WAocjI/AAAAAAAAAQI/brutzJbSiGo/s1600/%25E0%25B8%2595%25E0%25B9%2589%25E0%25B8%25A1%25E0%25B8%25A2%25E0%25B8%25B3%25E0%25B8%2581%25E0%25B8%25B8%25E0%25B9%2589%25E0%25B8%2587.jpg",
-             subtitle:" ",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"เลือกที่นี้",
-                 payload:"fineHere"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
-               }]
-            },
-        {
-             title:"9",
-             item_url:"",
-             image_url:"http://www.nuania.com/wp-content/uploads/2016/04/Daikon_0035.jpg",
-             subtitle:" ",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"เลือกที่นี้",
-                 payload:"fineHere"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
-               }]
-            },
-        {
-             title:"10",
-             item_url:"",
-             image_url:"http://ed.files-media.com/ud/news/1/145/433857/maiuusushibar27-810x480.jpg",
-             subtitle:" ",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"เลือกที่นี้",
-                 payload:"fineHere"
-               },
-               {
-                 type:"postback",
-                 title:"ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
-               }]
             }]
       }
     }
