@@ -181,6 +181,111 @@ function receivedPostback(event) {
   // sendTextMessage(senderID, emoji);
 }
 
+//เมนูร้านชลมล
+function menuFoodChomChol(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+  message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ส้มตำปูม้า",
+            item_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2015/01/03/82eeb8edf2404be0b4c96b2d81d809a7.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ ต้องการทานสิ่งนี้",
+                payload:"eatChomCholFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 ข้อมูลอาหาร",
+                payload:"dataChomCholFirst"
+              }]
+           },
+           {
+             title:"ลาบปลาช่อนทอด",
+             item_url:"",
+             image_url:"http://lenoircafe.net/wp-content/uploads/2013/03/%E0%B8%A5%E0%B8%B2%E0%B8%9A%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%993-650.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:" ✅ ต้องการทานสิ่งนี้",
+                 payload:"eatChomCholSecond"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataChomCholSecond"
+               }]
+            },
+          {
+             title:"ํทอดมันปลากราย",
+             item_url:"",
+             image_url:"http://archeep.smeleader.com/wp-content/uploads/2014/11/%E0%B8%97%E0%B8%AD%E0%B8%94%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%A202-Medium.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatChomCholThird"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataChomCholThird"
+               }]
+            },
+        {
+             title:"ํต้มยำกุ้งน้ำข้น ",
+             item_url:"",
+             image_url:"http://food.mthai.com/app/uploads/2014/04/184615110-1.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatChomCholFourth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataChomCholFourth"
+               }]
+            },
+        {
+             title:"ํปลาเนื้ออ่อนทอดกระเทียม",
+             item_url:"",
+             image_url:"http://f.ptcdn.info/922/041/000/o5vl43d99sVRvnpZsgm-o.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatChomCholFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataChomCholFifth"
+               }]
+            }]
+      }
+    }
+  }
+};
+callSendAPI(messageData);
+} 
+
+//เมนูสวนอาหาร บ้านเนินน้ำ
 function menuFoodBaannernnam(recipientId, messageText) {
   var messageData = {
   recipient: {
