@@ -201,13 +201,13 @@ function receivedPostback(event) {
       else{var result = "";}
     }, 1500)
   }
-  //////////////////////////////////////////////////////////////////
+  ///////////////////// ฉันต้องการทานสิ่งนี้ //////////////////////////////////////
   else if(payload == 'eatSalang'){
     setTimeout(function() {
-      sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่ปราจีนบุรี");
+      sendTextMessage(senderID, "โอเค! คุณต้องารรับประทาน Topokki ที่โรบินสัน ใช่มั้ย");
     }, 500)
     setTimeout(function() {
-      sendTextMessage(senderID, "คุณชอบรับประทานอาหารประเภทไหนครับ");
+      sendTextMessage(senderID, "คุณชอบรับประทานอาหารประเภทไหนครับ"); ///////////////////ค่อยทำต่อ
     }, 1000)
     setTimeout(function() {
       eatThis(senderID);
@@ -217,10 +217,7 @@ function receivedPostback(event) {
   }
 }
 
-//ต้องการทานสิ่งนี้
-function eatThis(recipientId, messageText) {
-  if(payload=='eatSalang'){sendTextMessage(senderID, "คุdsdsdsdบ");} 
-}
+
 
 //ทุกที่ในปาจีน
 function everyWhere(recipientId, messageText) {
