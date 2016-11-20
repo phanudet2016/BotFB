@@ -1333,8 +1333,8 @@ function findRestaurants(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ทุกที่ในปราจีนบุรี",
-                payload:"everyWhere"
+                title:"❌ ไม่เป็นไร ขอบคุณ",
+                payload:"noThank"
               }]
            },
            {
@@ -1350,8 +1350,8 @@ function findRestaurants(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
+                 title:"❌ ไม่เป็นไร ขอบคุณ",
+                 payload:"noThank"
                }]
             },
         {
@@ -1367,8 +1367,8 @@ function findRestaurants(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
+                 title:"❌ ไม่เป็นไร ขอบคุณ",
+                 payload:"noThank"
                }]
             },
         {
@@ -1384,8 +1384,8 @@ function findRestaurants(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
+                 title:"❌ ไม่เป็นไร ขอบคุณ",
+                 payload:"noThank"
                }]
             },
         {
@@ -1401,8 +1401,8 @@ function findRestaurants(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
+                 title:"❌ ไม่เป็นไร ขอบคุณ",
+                 payload:"noThank"
                }]
             },
         {
@@ -1418,8 +1418,8 @@ function findRestaurants(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
+                 title:"❌ ไม่เป็นไร ขอบคุณ",
+                 payload:"noThank"
                }]
             },
         {
@@ -1435,8 +1435,8 @@ function findRestaurants(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ทุกที่ในปราจีนบุรี",
-                 payload:"everyWhere"
+                 title:"❌ ไม่เป็นไร ขอบคุณ",
+                 payload:"noThank"
                }]
             }]
       }
