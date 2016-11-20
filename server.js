@@ -348,7 +348,92 @@ function everyWhere(recipientId, messageText) {
                 title:"🔔 ข้อมูลอาหาร",
                 payload:"dataCafeFirst"
               }]
-           }]
+           },
+        {
+             title:"เบอร์รี่ เบอร์รี่ เครป",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/example/crepe1_B.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:" ✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeSecond"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeSecond"
+               }]
+            },
+          {
+             title:"ํคาราเมล วาฟเฟิล ",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/example/w2_b.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeThird"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeThird"
+               }]
+            },
+        {
+             title:"ํสตรอเบอร์รี่ วาฟเฟิล",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/example/w1_b.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeFourth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeFourth"
+               }]
+            },
+        {
+             title:"ํโอ้ ล้า ลา ฮันนี่ โทสต์",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/cake-update.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeFifth"
+               }]
+            },
+        {
+             title:"ํไอศครีมโฮมเมด",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/gelato.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeFifth"
+               }]
+        }]
       }
     }
   }
