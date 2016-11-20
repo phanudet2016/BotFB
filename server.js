@@ -204,10 +204,228 @@ function receivedPostback(event) {
   } else {
     var result = "";
   }
+}
 
-  // When a postback is called, we'll send a message back to the sender to 
-  // let them know it was successful
-  // sendTextMessage(senderID, emoji);
+function everyWhere(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"Topokki",
+            item_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2015/09/12/e18408e67b634f9d945f7382b27121a7.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ ต้องการทานสิ่งนี้",
+                payload:"eatSalang"
+              },
+              {
+                type:"postback",
+                title:"🔔 ข้อมูลอาหาร",
+                payload:"dataSalang"
+              }]
+           },
+           {
+             title:"Wagyu Steak",
+             item_url:"",
+             image_url:"http://oknation.nationtv.tv/blog/home/user_data/file_data/201301/15/14980c201.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:" ✅ ต้องการทานสิ่งนี้",
+                 payload:"eatJefferSteak"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataJefferSteak"
+               }]
+            },
+          {
+             title:"ํTakoyaki",
+             item_url:"",
+             image_url:"https://www.yayoirestaurants.com/uploads/image/96BE41CD-F01D-4E9B-85D1-6AB8B84A4C02.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatYayoi"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataYayoi"
+               }]
+            },
+        {
+             title:"ํHot Pot Buffet",
+             item_url:"",
+             image_url:"http://2.bp.blogspot.com/-rtL6WPiASvM/Vn6w4mfVHuI/AAAAAAAABlI/6ygYNRreW4Q/s1600/%25E0%25B8%25AA%25E0%25B8%25A1%25E0%25B8%25B1%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%2BPart%2BTime%2BHOT%2BPOT%2B%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%2582%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%258B%25E0%25B9%2587%25E0%25B8%25A5%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%25A5%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2599%25E0%25B8%25B2%2B45%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%258A%25E0%25B8%25A1..jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatHotPot"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataHotPot"
+               }]
+            },
+        {
+             title:"ํTempura Somen",
+             item_url:"",
+             image_url:"https://www.yayoirestaurants.com/uploads/image/F5D45267-6E7A-46B2-81D2-81F2F96C1C23.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatTempura"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataTempura"
+               }]
+            },
+        {
+             title:"ํRamen Champion",
+             item_url:"",
+             image_url:"https://www.yayoirestaurants.com/uploads/image/8D6E1B28-3E20-4865-86D0-493F1254C795.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatRamenChampion"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataRamenChampion"
+               }]
+            },
+        {
+            title:"คอหมูย่าง",
+            item_url:"",
+            image_url:"https://3.bp.blogspot.com/-AOL0RYCwIFg/Vv8-bEVDvwI/AAAAAAAADCw/bgeu32RDx1UoxImeH-zAU0z5IYz4nAicg/s1600/12670891_953230498124388_7147210296053861375_n.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ ต้องการทานสิ่งนี้",
+                payload:"eatGrilledPork"
+              },
+              {
+                type:"postback",
+                title:"🔔 ข้อมูลอาหาร",
+                payload:"dataGrilledPork"
+              }]
+           },
+           {
+             title:"ขาหมูทอดกรอบ",
+             item_url:"",
+             image_url:"http://img.painaidii.com/images/20120930_127_1349021565_291754.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:" ✅ ต้องการทานสิ่งนี้",
+                 payload:"eatPigFried"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataPigFried"
+               }]
+            },
+          {
+             title:"ํเป็ดทรงเครื่อง",
+             item_url:"",
+             image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2014/08/29/a52128d66bb24e7080839cda4f45a36f.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatDuck"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataDuck"
+               }]
+            },
+        {
+             title:"ํยำปลาหมึก",
+             item_url:"",
+             image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2016/06/11/bfed5f221ced417e9994156960471aaa.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatSquid"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataSquid"
+               }]
+            },
+        {
+             title:"ํผัดเผ็ดหมูป่า",
+             item_url:"",
+             image_url:"http://www.kidtam.com/wp-content/uploads/2016/09/12-3.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatPigSpicy"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataPigSpicy"
+               }]
+            },
+        {
+             title:"ํต้มยำกุ้งเล็ก",
+             item_url:"",
+             image_url:"http://www.doodiza.com/images/1605_1447997622.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatTomyumkung"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataTomyumkung"
+               }]
+            }]
+      }
+    }
+    }
+  };
+  callSendAPI(messageData);
 }
 
 //เมนูร้านcafe kantary
@@ -323,7 +541,8 @@ function menuFoodCafeKantary(recipientId, messageText) {
                  title:"🔔 ข้อมูลอาหาร",
                  payload:"dataCafeFifth"
                }]
-        }]
+        },
+        ]
       }
     }
   }
