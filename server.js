@@ -382,6 +382,57 @@ function everyWhere(recipientId, messageText) {
                  title:"🔔 ข้อมูลอาหาร",
                  payload:"dataCafeThird"
                }]
+            },
+          {
+             title:"ํคาราเมล วาฟเฟิล ",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/example/w2_b.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeThird"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeThird"
+               }]
+            },
+          {
+             title:"ํคาราเมล วาฟเฟิล ",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/example/w2_b.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeThird"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeThird"
+               }]
+            },
+          {
+             title:"ํคาราเมล วาฟเฟิล ",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/example/w2_b.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeThird"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeThird"
+               }]
             }
           ]
       }
