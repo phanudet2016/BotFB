@@ -185,7 +185,7 @@ function receivedPostback(event) {
       if(payload == 'Add'){var restaurant="มีหลากหลายเมนูที่ร้านแอ๊ด ข้าวต้ม กบินทร์บุรี"}
       if(payload == 'PalmSweetHome'){var restaurant="มีหลากหลายเมนูที่ร้านอาหาร ปาล์มสวีทโฮม กบินทร์บุรี ปราจีนบุรี"}
       if(payload == 'NamHiang'){var restaurant="มีหลากหลายเมนูที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ร้านอร่อยที่กบินทร์บุรี"}
-      if(payload == 'CafeKantary'){var restaurant="มีหลากหลายเมนูที่ร้าน Cafe Kantary"}
+      if(payload == 'CafeKantary'){sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบกับเบเกอรี่แสนอร่อยที่ร้าน Cafe Kantary ");}
       sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่"+restaurant);
     }, 500)
     setTimeout(function() {
