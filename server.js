@@ -210,7 +210,8 @@ function receivedPostback(event) {
       sendTextMessage(senderID, "คุณชอบรับประทานอาหารประเภทไหนครับ");
     }, 1000)
     setTimeout(function() {
-      everyWhere(senderID);
+       sendTextMessage(senderID, "คุdsdsdsdบ");
+     // everyWhere(senderID);
     }, 1500)
   }else {
     var result = "";
