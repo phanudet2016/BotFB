@@ -179,14 +179,13 @@ function receivedPostback(event) {
   //////////////////////////////////////////////////////////////////
   else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'||payload == 'Add'||payload == 'PalmSweetHome'||payload == 'NamHiang'||payload == 'CafeKantary'){
     setTimeout(function() {
-      if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
-      if(payload == 'baannernnam'){var restaurant="มีหลากหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
-      if(payload == 'ChomChol'){var restaurant="มีหลากหลายเมนูที่ร้านอาหารชมชล"}
-      if(payload == 'Add'){var restaurant="มีหลากหลายเมนูที่ร้านแอ๊ด ข้าวต้ม กบินทร์บุรี"}
-      if(payload == 'PalmSweetHome'){var restaurant="มีหลากหลายเมนูที่ร้านอาหาร ปาล์มสวีทโฮม กบินทร์บุรี ปราจีนบุรี"}
-      if(payload == 'NamHiang'){var restaurant="มีหลากหลายเมนูที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ร้านอร่อยที่กบินทร์บุรี"}
+      if(payload == 'robinson'){sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่โรบินสัน ปราจีนบุรี");}
+      if(payload == 'baannernnam'){sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่มีหลากหลายเมนูที่สวนอาหาร บ้านเนินน้ำ");}
+      if(payload == 'ChomChol'){sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่มีหลากหลายเมนูที่ร้านอาหารชมชล");}
+      if(payload == 'Add'){sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่มีหลากหลายเมนูที่ร้านแอ๊ด ข้าวต้ม กบินทร์บุรี");}
+      if(payload == 'PalmSweetHome')sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่มีหลากหลายเมนูที่ร้านอาหาร ปาล์มสวีทโฮม กบินทร์บุรี ปราจีนบุรี");}
+      if(payload == 'NamHiang'){sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่มีหลากหลายเมนูที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ร้านอร่อยที่กบินทร์บุรี");}
       if(payload == 'CafeKantary'){sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบกับเบเกอรี่แสนอร่อยที่ร้าน Cafe Kantary ");}
-      sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่"+restaurant);
     }, 500)
     setTimeout(function() {
       sendTextMessage(senderID, "คุณชอบรับประทานอาหารประเภทไหนครับ");
