@@ -177,14 +177,15 @@ function receivedPostback(event) {
     }, 1500)
   } 
   //////////////////////////////////////////////////////////////////
-  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'||payload == 'Add'||payload == 'PalmSweetHome'||payload == 'NamHiang'){
+  else if(payload == 'robinson'||payload == 'baannernnam'||payload == 'ChomChol'||payload == 'Add'||payload == 'PalmSweetHome'||payload == 'NamHiang'||payload == 'CafeKantary'){
     setTimeout(function() {
       if(payload == 'robinson'){var restaurant="โรบินสัน ปราจีนบุรี"}
       if(payload == 'baannernnam'){var restaurant="มีหลากหลายเมนูที่สวนอาหาร บ้านเนินน้ำ"}
       if(payload == 'ChomChol'){var restaurant="มีหลากหลายเมนูที่ร้านอาหารชมชล"}
       if(payload == 'Add'){var restaurant="มีหลากหลายเมนูที่ร้านแอ๊ด ข้าวต้ม กบินทร์บุรี"}
       if(payload == 'PalmSweetHome'){var restaurant="มีหลากหลายเมนูที่ร้านอาหาร ปาล์มสวีทโฮม กบินทร์บุรี ปราจีนบุรี"}
-      if(payload == 'NamHiang'){var restaurant="มีหลากหลายเมนูที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ร้านอร่อยที่กบินทร์บุรี "}
+      if(payload == 'NamHiang'){var restaurant="มีหลากหลายเมนูที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ร้านอร่อยที่กบินทร์บุรี"}
+      if(payload == 'CafeKantary'){var restaurant="มีหลากหลายเมนูที่ร้าน Cafe Kantary"}
       sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่"+restaurant);
     }, 500)
     setTimeout(function() {
@@ -197,7 +198,8 @@ function receivedPostback(event) {
       else if(payload == 'Add'){menuFoodAdd(senderID);}
       else if(payload == 'PalmSweetHome'){menuFoodPalmSweetHome(senderID);}
       else if(payload == 'NamHiang'){menuFoodNamHiang(senderID);}
-              else{var result = "";}
+      else if(payload == 'CafeKantary'){menuFoodCafeKantary(senderID);}
+      else{var result = "";}
     }, 1500)
           
   } else {
@@ -208,6 +210,127 @@ function receivedPostback(event) {
   // let them know it was successful
   // sendTextMessage(senderID, emoji);
 }
+
+//เมนูร้านcafe kantary
+function menuFoodCafeKantary(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+  message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ฮันนี่ โทสต์",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/example/HT_choco_whitebig.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ ต้องการทานสิ่งนี้",
+                payload:"eatCafeFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 ข้อมูลอาหาร",
+                payload:"dataCafeFirst"
+              }]
+           },
+           {
+             title:"เบอร์รี่ เบอร์รี่ เครป",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/example/crepe1_B.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:" ✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeSecond"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeSecond"
+               }]
+            },
+          {
+             title:"ํคาราเมล วาฟเฟิล ",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/example/w2_b.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeThird"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeThird"
+               }]
+            },
+        {
+             title:"ํสตรอเบอร์รี่ วาฟเฟิล",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/example/w1_b.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeFourth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeFourth"
+               }]
+            },
+        {
+             title:"ํโอ้ ล้า ลา ฮันนี่ โทสต์",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/cake-update.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeFifth"
+               }]
+            },
+        {
+             title:"ํไอศครีมโฮมเมด",
+             item_url:"",
+             image_url:"http://www.cafekantary.com/images/gelato.jpg",
+             subtitle:"",
+             buttons:[
+               {
+                 type:"postback",
+                 title:"✅ ต้องการทานสิ่งนี้",
+                 payload:"eatCafeFifth"
+               },
+               {
+                 type:"postback",
+                 title:"🔔 ข้อมูลอาหาร",
+                 payload:"dataCafeFifth"
+               }]
+        }]
+      }
+    }
+  }
+};
+callSendAPI(messageData);
+} 
 
 //เมนูร้านน่ำเฮียง
 function menuFoodNamHiang(recipientId, messageText) {
@@ -1017,15 +1140,15 @@ function findRestaurants(recipientId, messageText) {
               }]
            },
            {
-             title:"วงเวียนนเรศวร",
+             title:"Cafe Kantary",
              item_url:"",
-             image_url:"http://image.free.in.th/v/2013/ix/161119071233.jpg",
+             image_url:"http://www.cafekantary.com/images/gallery/pra3.jpg",
              subtitle:"",
              buttons:[
                {
                  type:"postback",
                  title:" ✅เลือกที่นี้",
-                 payload:"circleNaresuan"
+                 payload:"CafeKantary"
                },
                {
                  type:"postback",
