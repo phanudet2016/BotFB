@@ -173,7 +173,7 @@ function receivedPostback(event) {
       sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
     }, 1000)
     setTimeout(function() {
-      needYourHelp(senderID)
+      needYourHelp(senderID);
     }, 1500)
   } 
   //////////////////////////////////////////////////////////////////
@@ -200,8 +200,19 @@ function receivedPostback(event) {
       else if(payload == 'CafeKantary'){menuFoodCafeKantary(senderID);}
       else{var result = "";}
     }, 1500)
-          
-  } else {
+  }
+  //////////////////////////////////////////////////////////////////
+  else if(payload == 'everyWhere'){
+    setTimeout(function() {
+      sendTextMessage(senderID, "แน่นอนครับ! คุณจะพบร้านอาหารที่ปราจีนบุรี");
+    }, 500)
+    setTimeout(function() {
+      sendTextMessage(senderID, "คุณชอบรับประทานอาหารประเภทไหนครับ");
+    }, 1000)
+    setTimeout(function() {
+      everyWhere(senderID);
+    }, 1500)
+  }else {
     var result = "";
   }
 }
