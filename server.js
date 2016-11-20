@@ -332,7 +332,7 @@ function everyWhere(recipientId, messageText) {
                  payload:"dataRamenChampion"
                }]
             },
-           {
+         {
             title:"ฮันนี่ โทสต์",
             item_url:"",
             image_url:"http://www.cafekantary.com/images/example/HT_choco_whitebig.jpg",
@@ -342,8 +342,13 @@ function everyWhere(recipientId, messageText) {
                 type:"postback",
                 title:"✅ ต้องการทานสิ่งนี้",
                 payload:"eatCafeFirst"
-              }
-       ]
+              },
+              {
+                type:"postback",
+                title:"🔔 ข้อมูลอาหาร",
+                payload:"dataCafeFirst"
+              }]
+           }]
       }
     }
   }
