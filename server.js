@@ -1000,12 +1000,12 @@ function sendImageNamHiangFirst(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamFirst"
+                payload:"detailNamHiangFirst"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeNamHiangFood"
               }]
            }]
       }
@@ -1034,12 +1034,12 @@ function sendImageNamHiangSecond(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamSecond"
+                payload:"detailNamHiangSecond"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeNamHiangFood"
               }]
            }]
       }
@@ -1068,12 +1068,12 @@ function sendImageNamHiangThird(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamThird"
+                payload:"detailNamHiangThird"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeNamHiangFood"
               }]
            }]
       }
@@ -1102,12 +1102,12 @@ function sendImageNamHiangFourth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamFourth"
+                payload:"detailNamHiangFourth"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeNamHiangFood"
               }]
            }]
       }
@@ -1136,12 +1136,12 @@ function sendImageNamHiangFifth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamFifth"
+                payload:"detailNamHiangFifth"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeNamHiangFood"
               }]
            }]
       }
@@ -1170,12 +1170,12 @@ function sendImageNamHiangSixth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamSixth"
+                payload:"detailNamHiangSixth"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeNamHiangFood"
               }]
            }]
       }
@@ -1206,12 +1206,12 @@ function sendImageChomCholFirst(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamFirst"
+                payload:"detailChomCholFirst"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeChomCholFood"
               }]
            }]
       }
@@ -1240,12 +1240,12 @@ function sendImageChomCholSecond(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamSecond"
+                payload:"detailChomCholSecond"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeChomCholFood"
               }]
            }]
       }
@@ -1274,12 +1274,12 @@ function sendImageChomCholThird(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamThird"
+                payload:"detailChomCholThird"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeChomCholFood"
               }]
            }]
       }
@@ -1308,12 +1308,12 @@ function sendImageChomCholFourth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamFourth"
+                payload:"detailChomCholFourth"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeChomCholFood"
               }]
            }]
       }
@@ -1342,12 +1342,12 @@ function sendImageChomCholFifth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailBaannernnamFifth"
+                payload:"detailChomCholFifth"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeBaannernnamFood"
+                payload:"changeChomCholFood"
               }]
            }]
       }
