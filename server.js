@@ -258,7 +258,7 @@ function receivedPostback(event) {
 }
 
 ////image food
-function sendImagCafeFirst(recipientId, messageText) {
+function sendImageCafeFirst(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -292,7 +292,7 @@ function sendImagCafeFirst(recipientId, messageText) {
   };
 callSendAPI(messageData);
 }
-function sendImagCafeSecond(recipientId, messageText) {
+function sendImageCafeSecond(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -326,7 +326,7 @@ function sendImagCafeSecond(recipientId, messageText) {
   };
 callSendAPI(messageData);
 }
-function sendImagCafeThird(recipientId, messageText) {
+function sendImageCafeThird(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -360,7 +360,7 @@ function sendImagCafeThird(recipientId, messageText) {
   };
 callSendAPI(messageData);
 }
-function sendImagCafeFourth(recipientId, messageText) {
+function sendImageCafeFourth(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -394,7 +394,7 @@ function sendImagCafeFourth(recipientId, messageText) {
   };
 callSendAPI(messageData);
 }
-function sendImagCafeFifth(recipientId, messageText) {
+function sendImageCafeFifth(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -428,7 +428,7 @@ function sendImagCafeFifth(recipientId, messageText) {
   };
 callSendAPI(messageData);
 }
-function sendImagCafeSixth(recipientId, messageText) {
+function sendImageCafeSixth(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
