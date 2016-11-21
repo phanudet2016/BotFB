@@ -210,22 +210,19 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendImageMessage(senderID)}
-    }, 10)
+      if(payload == 'eatCafeFirst'){sendImageMessage(senderID);}
+    }, 1500)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่ โทสต์");}
     }, 2000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){}///รายละเอียด
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ราคา");}
     }, 2500)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ราคา");}
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : ");}
     }, 3000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : ");}
-    }, 3500)
-    setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่ โทสต์");}
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "วันหยุด");}
     }, 3500)
   }
   else {
