@@ -399,9 +399,266 @@ function receivedPostback(event) {
       if(payload == 'eatChomCholFifth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}     
     }, 3000)
   }
+  /////////////////////////////ต้องการกินสิ่งนี้ น่ำเฮียง โภชนา/////////////////////
+  else if(payload == 'eatNamHiangFirst'||payload == 'eatNamHiangSecond'||payload == 'eatNamHiangThird'||payload == 'eatNamHiangFourth'||payload == 'eatNamHiangFifth'||payload == 'eatNamHiangSixth'){
+    setTimeout(function() {
+      if(payload == 'eatNamHiangFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานกระดูกหมูอ่อนทอดกระเทียมพริกไทยที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ใช่มั้ยครับ");}
+      if(payload == 'eatNamHiangSecond'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานผัดผักกระเฉดชลูดน้ำที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ใช่มั้ยครับ");}
+      if(payload == 'eatNamHiangThird'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานทอดมันกุ้งที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ใช่มั้ยครับ");}
+      if(payload == 'eatNamHiangFourth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานมะระผัดไข่ที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ใช่มั้ยครับ");}
+      if(payload == 'eatNamHiangFifth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานต้มยำไก่บ้านที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ใช่มั้ยครับ");}
+      if(payload == 'eatNamHiangSixth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานปลาซิวทอดกรอบที่ร้านน่ำเฮียง โภชนา (ฟ้ามุ่ย) ใช่มั้ยครับ");}
+    }, 500)
+    setTimeout(function() {
+      if(payload == 'eatNamHiangFirst'){sendTextMessage(senderID, "กระดูกหมูอ่อนทอดกระเทียมพริกไทย คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatNamHiangSecond'){sendTextMessage(senderID, "ผัดผักกระเฉดชลูดน้ำ คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatNamHiangThird'){sendTextMessage(senderID, "ทอดมันกุ้ง คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatNamHiangFourth'){sendTextMessage(senderID, "มะระผัดไข่ คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatNamHiangFifth'){sendTextMessage(senderID, "ต้มยำไก่บ้าน คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatNamHiangSixth'){sendTextMessage(senderID, "ํปลาซิวทอดกรอบ คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+    }, 1000)
+    setTimeout(function() {
+      if(payload == 'eatNamHiangFirst'){sendImageBaannernnamFirst(senderID);}
+      if(payload == 'eatNamHiangSecond'){sendImageBaannernnamSecond(senderID);}
+      if(payload == 'eatNamHiangThird'){sendImageBaannernnamThird(senderID);}
+      if(payload == 'eatNamHiangFourth'){sendImageBaannernnamFourth(senderID);}
+      if(payload == 'eatNamHiangFifth'){sendImageBaannernnamFifth(senderID);}
+      if(payload == 'eatNamHiangSixth'){sendImageBaannernnamSixth(senderID);}
+    }, 1500)
+    setTimeout(function() {
+      if(payload == 'eatNamHiangFirst'){sendTextMessage(senderID, "ราคา : 300 บาท");}
+      if(payload == 'eatNamHiangSecond'){sendTextMessage(senderID, "ราคา : 100-150 บาท");}
+      if(payload == 'eatNamHiangThird'){sendTextMessage(senderID, "ราคา : 300-400 บาท");}
+      if(payload == 'eatNamHiangFourth'){sendTextMessage(senderID, "ราคา : 300 บาท");}
+      if(payload == 'eatNamHiangFifth'){sendTextMessage(senderID, "ราคา : 200 บาท");}
+      if(payload == 'eatNamHiangSixth'){sendTextMessage(senderID, "ราคา : 300 บาท");}
+    }, 2000)
+    setTimeout(function() {
+      if(payload == 'eatNamHiangFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-19.00 น.");} 
+      if(payload == 'eatNamHiangSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-19.00 น.");} 
+      if(payload == 'eatNamHiangThird'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-19.00 น.");} 
+      if(payload == 'eatNamHiangFourth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-19.00 น.");} 
+      if(payload == 'eatNamHiangFifth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-19.00 น.");} 
+      if(payload == 'eatNamHiangSixth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-19.00 น.");} 
+    }, 2500)
+    setTimeout(function() {
+      if(payload == 'eatNamHiangFirst'){sendTextMessage(senderID, "วันหยุด : หยุดไม่แน่นอน");}
+      if(payload == 'eatNamHiangSecond'){sendTextMessage(senderID, "วันหยุด : หยุดไม่แน่นอน");}
+      if(payload == 'eatNamHiangThird'){sendTextMessage(senderID, "วันหยุด : หยุดไม่แน่นอน");}
+      if(payload == 'eatNamHiangFourth'){sendTextMessage(senderID, "วันหยุด : หยุดไม่แน่นอน");}
+      if(payload == 'eatNamHiangFifth'){sendTextMessage(senderID, "วันหยุด : หยุดไม่แน่นอน");}
+      if(payload == 'eatNamHiangSixth'){sendTextMessage(senderID, "วันหยุด : หยุดไม่แน่นอน");}
+    }, 3000)
+  }
   else {
     var result = "";
   }
+}
+
+////image food NamHiang
+function sendImageNamHiangFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"กระดูกหมูอ่อนทอดกระเทียมพริกไทย",
+            item_url:"",
+            image_url:"http://i0.wp.com/s3-ap-southeast-1.amazonaws.com/ungsriwong/wp-content/uploads/2014/05/NumHiang_004.jpg?resize=1024%2C769",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageNamHiangSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ผัดผักกระเฉดชลูดน้ำ",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_005.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamSecond"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageNamHiangThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํํทอดมันกุ้ง",
+            item_url:"",
+            image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_006.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamThird"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageNamHiangFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํมะระผัดไข่",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_007.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamFourth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageNamHiangFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ต้มยำไก่บ้าน",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_008.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamFifth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageNamHiangSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํปลาซิวทอดกรอบ",
+            item_url:"",
+            image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_009.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamSixth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
 }
 
 ////image food ChomCholFifth
@@ -1423,7 +1680,7 @@ function menuFoodNamHiang(recipientId, messageText) {
                {
                  type:"postback",
                  title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatNamHiangFifth"
+                 payload:"eatNamHiangSixth"
                },
                {
                  type:"postback",
