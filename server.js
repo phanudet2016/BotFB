@@ -202,24 +202,54 @@ function receivedPostback(event) {
     }, 1500)
   }
   ///////////////////// ต้องการทานสิ่งนี้ //////////////////////////////////////
-  else if(payload == 'eatCafeFirst'){
+  else if(payload == 'eatCafeFirst'||payload == 'eatCafeSecond'){
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานฮันนี่โทสต์ที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานเบอร์รี่เบอร์รี่เครปที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
+      if(payload == 'eatCafeThird'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานคาราเมลวาฟเฟิลที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
+      if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานสตอเบอร์รี่วาฟเฟิลที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
+      if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานโอ้ล้าลาฮันนี่โทสต์ที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
+      if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานไอศครีมโฮมเมดที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
     }, 500)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เบอร์รี่เบอร์รี่เครปคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatCafeThird'){sendTextMessage(senderID, "คาราเมลวาฟเฟิลคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "สตอเบอร์รี่วาฟเฟิลคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "โอ้ล้าลาฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "ไอศครีมโฮมเมดคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendImageCafeKantary(senderID);}
+      if(payload == 'eatCafeFirst'){sendImageCafeFirst(senderID);}
+      if(payload == 'eatCafeSecond'){sendImageCafeSecond(senderID);}
+      if(payload == 'eatCafeThird'){sendImageCafeThird(senderID);}
+      if(payload == 'eatCafeFourtht'){sendImageCafeFourtht(senderID);}
+      if(payload == 'eatCafeFifth'){sendImageCafeFifth(senderID);}
+      if(payload == 'eatCafeSixth'){sendImageCafeSixth(senderID);}
     }, 1500)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ราคา : 80 บาท");} 
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "ราคา : 69 บาท");}
+      if(payload == 'eatCafeThird'){sendTextMessage(senderID, "ราคา : 69 บาท");}
+      if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "ราคา : 69 บาท");}
+      if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "ราคา : 80 บาท");
+      if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "ราคา : 99 บาท");}
     }, 2000)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");} 
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
     }, 2500)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "วันหยุด : วันอังเวลา 10 โมง");} 
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");} 
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
+      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
     }, 3000)
   }
   else {
@@ -228,7 +258,7 @@ function receivedPostback(event) {
 }
 
 ////image food
-function sendImageCafeKantary(recipientId, messageText) {
+function sendImagCafeFirst(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -248,12 +278,12 @@ function sendImageCafeKantary(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"eatCafeFirst"
+                payload:"detailFirst"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeRestaurant"
+                payload:"changeFood"
               }]
            }]
       }
@@ -262,6 +292,177 @@ function sendImageCafeKantary(recipientId, messageText) {
   };
 callSendAPI(messageData);
 }
+function sendImagCafeSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ฮันนี่ โทสต์",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/example/crepe1_B.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailSecond"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImagCafeThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ฮันนี่ โทสต์",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/example/w2_b.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailThird"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImagCafeFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ฮันนี่ โทสต์",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/example/w1_b.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailFourth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImagCafeFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ฮันนี่ โทสต์",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/cake-update.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailFifth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImagCafeSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ฮันนี่ โทสต์",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/gelato.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailSixth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+
 
 //เมนูร้านcafe kantary
 function menuFoodCafeKantary(recipientId, messageText) {
@@ -369,7 +570,7 @@ function menuFoodCafeKantary(recipientId, messageText) {
                {
                  type:"postback",
                  title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatCafeFifth"
+                 payload:"eatCafeSixth"
                },
                {
                  type:"postback",
