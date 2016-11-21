@@ -202,7 +202,7 @@ function receivedPostback(event) {
     }, 1500)
   }
   ///////////////////// ต้องการทานสิ่งนี้ Cafe//////////////////////////////////////
-  else if(payload == 'eatCafeFirst'||payload == 'eatCafeSecond'||payload == 'eatCafeThird'||payload == 'eatCafeFourtht'||payload == 'eatCafeFifth'||payload == 'eatCafeSixth'){
+  else if(payload == 'eatCafeFirst'||payload == 'eatCafeSecond'||payload == 'eatCafeThird'||payload == 'eatCafeFourth'||payload == 'eatCafeFifth'||payload == 'eatCafeSixth'){
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานฮันนี่โทสต์ที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
       if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานเบอร์รี่เบอร์รี่เครปที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
