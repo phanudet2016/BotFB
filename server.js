@@ -201,10 +201,10 @@ function receivedPostback(event) {
       else{var result = "";}
     }, 1500)
   }
-  ///////////////////// ฉันต้องการทานสิ่งนี้ //////////////////////////////////////
-  else if(payload == 'eatSalang'){
+  ///////////////////// ข้อมูลอาหาร //////////////////////////////////////
+  else if(payload == 'changeRestaurant'){
     setTimeout(function() {
-      sendTextMessage(senderID, "โอเค! คุณต้องารรับประทาน Topokki ที่โรบินสัน ใช่มั้ย");
+      sendTextMessage(senderID, "ฮันนี่โทสต์ ");
     }, 500)
     setTimeout(function() {
       sendTextMessage(senderID, "คุณชอบรับประทานอาหารประเภทไหนครับ"); ///////////////////ค่อยทำต่อ
@@ -216,199 +216,6 @@ function receivedPostback(event) {
     var result = "";
   }
 }
-
-
-
-//ทุกที่ในปาจีน
-function everyWhere(recipientId, messageText) {
-  var messageData = {
-  recipient: {
-    id : recipientId
-  },
-  message:{
-    attachment:{
-      type:"template",
-      payload:{
-        template_type:"generic",
-        elements:[
-          {
-            title:"Topokki",
-            item_url:"",
-            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2015/09/12/e18408e67b634f9d945f7382b27121a7.jpg",
-            subtitle:"",
-            buttons:[
-              {
-                type:"postback",
-                title:"✅ ต้องการทานสิ่งนี้",
-                payload:"eatSalang"
-              },
-              {
-                type:"postback",
-                title:"🔔 ข้อมูลอาหาร",
-                payload:"dataSalang"
-              }]
-           },
-           {
-             title:"Wagyu Steak",
-             item_url:"",
-             image_url:"http://oknation.nationtv.tv/blog/home/user_data/file_data/201301/15/14980c201.jpg",
-             subtitle:"",
-             buttons:[
-               {
-                 type:"postback",
-                 title:" ✅ ต้องการทานสิ่งนี้",
-                 payload:"eatJefferSteak"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataJefferSteak"
-               }]
-            },
-          {
-             title:"ํTakoyaki",
-             item_url:"",
-             image_url:"https://www.yayoirestaurants.com/uploads/image/96BE41CD-F01D-4E9B-85D1-6AB8B84A4C02.jpg",
-             subtitle:"",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatYayoi"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataYayoi"
-               }]
-            },
-        {
-             title:"ํHot Pot Buffet",
-             item_url:"",
-             image_url:"http://2.bp.blogspot.com/-rtL6WPiASvM/Vn6w4mfVHuI/AAAAAAAABlI/6ygYNRreW4Q/s1600/%25E0%25B8%25AA%25E0%25B8%25A1%25E0%25B8%25B1%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%2BPart%2BTime%2BHOT%2BPOT%2B%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%2582%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%258B%25E0%25B9%2587%25E0%25B8%25A5%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%25A5%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2599%25E0%25B8%25B2%2B45%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%258A%25E0%25B8%25A1..jpg",
-             subtitle:"",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatHotPot"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataHotPot"
-               }]
-            },
-        {
-             title:"ํTempura Somen",
-             item_url:"",
-             image_url:"https://www.yayoirestaurants.com/uploads/image/F5D45267-6E7A-46B2-81D2-81F2F96C1C23.jpg",
-             subtitle:"",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatTempura"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataTempura"
-               }]
-            },
-        {
-             title:"ํRamen Champion",
-             item_url:"",
-             image_url:"https://www.yayoirestaurants.com/uploads/image/8D6E1B28-3E20-4865-86D0-493F1254C795.jpg",
-             subtitle:"",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatRamenChampion"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataRamenChampion"
-               }]
-            },
-         {
-            title:"ฮันนี่ โทสต์",
-            item_url:"",
-            image_url:"http://www.cafekantary.com/images/example/HT_choco_whitebig.jpg",
-            subtitle:"",
-            buttons:[
-              {
-                type:"postback",
-                title:"✅ ต้องการทานสิ่งนี้",
-                payload:"eatCafeFirst"
-              },
-              {
-                type:"postback",
-                title:"🔔 ข้อมูลอาหาร",
-                payload:"dataCafeFirst"
-              }]
-           },
-        {
-             title:"เบอร์รี่ เบอร์รี่ เครป",
-             item_url:"",
-             image_url:"http://www.cafekantary.com/images/example/crepe1_B.jpg",
-             subtitle:"",
-             buttons:[
-               {
-                 type:"postback",
-                 title:" ✅ ต้องการทานสิ่งนี้",
-                 payload:"eatCafeSecond"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataCafeSecond"
-               }]
-            },
-          {
-             title:"ํคาราเมล วาฟเฟิล ",
-             item_url:"",
-             image_url:"http://www.cafekantary.com/images/example/w2_b.jpg",
-             subtitle:"",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatCafeThird"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataCafeThird"
-               }]
-            },
-          {
-             title:"ํคาราเมล วาฟเฟิล ",
-             item_url:"",
-             image_url:"http://www.cafekantary.com/images/example/w2_b.jpg",
-             subtitle:"",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatCafeThird"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataCafeThird"
-               }]
-            }
-          ]
-      }
-    }
-  }
-};
-callSendAPI(messageData);
-} 
-
 
 //เมนูร้านcafe kantary
 function menuFoodCafeKantary(recipientId, messageText) {
@@ -435,8 +242,8 @@ function menuFoodCafeKantary(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ข้อมูลอาหาร",
-                payload:"dataCafeFirst"
+                title:"🔔 ต้องการเปลี่ยนร้าน",
+                payload:"changeRestaurant"
               }]
            },
            {
@@ -452,8 +259,8 @@ function menuFoodCafeKantary(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataCafeSecond"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
           {
@@ -469,8 +276,8 @@ function menuFoodCafeKantary(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataCafeThird"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -486,8 +293,8 @@ function menuFoodCafeKantary(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataCafeFourth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -503,8 +310,8 @@ function menuFoodCafeKantary(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataCafeFifth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -520,8 +327,8 @@ function menuFoodCafeKantary(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataCafeFifth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
         }]
       }
@@ -556,8 +363,8 @@ function menuFoodNamHiang(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ข้อมูลอาหาร",
-                payload:"dataNamHiangFirst"
+                title:"🔔 ต้องการเปลี่ยนร้าน",
+                payload:"changeRestaurant"
               }]
            },
            {
@@ -573,8 +380,8 @@ function menuFoodNamHiang(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataNamHiangSecond"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
           {
@@ -590,8 +397,8 @@ function menuFoodNamHiang(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataNamHiangThird"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -607,8 +414,8 @@ function menuFoodNamHiang(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataNamHiangFourth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -624,8 +431,8 @@ function menuFoodNamHiang(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataNamHiangFifth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -641,8 +448,8 @@ function menuFoodNamHiang(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataNamHiangFifth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
         }]
       }
@@ -677,8 +484,8 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ข้อมูลอาหาร",
-                payload:"dataPalmFirst"
+                title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
               }]
            },
            {
@@ -694,8 +501,8 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataPalmSecond"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
           {
@@ -711,8 +518,8 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataPalmThird"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -728,8 +535,8 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataPalmFourth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -745,8 +552,8 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataPalmFifth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -762,8 +569,8 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataPalmFifth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
         }]
       }
@@ -798,8 +605,8 @@ function menuFoodAdd(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ข้อมูลอาหาร",
-                payload:"dataAddFirst"
+                title:"🔔 ต้องการเปลี่ยนร้าน",
+                payload:"changeRestaurant"
               }]
            },
            {
@@ -815,8 +622,8 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataAddSecond"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
           {
@@ -832,8 +639,8 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataAddThird"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -849,8 +656,8 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataAddFourth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -866,8 +673,8 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataAddFifth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -883,8 +690,8 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataAddFifth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
         },
         {
@@ -900,8 +707,8 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataAddFifth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
         }]
       }
@@ -937,8 +744,8 @@ function menuFoodChomChol(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ข้อมูลอาหาร",
-                payload:"dataChomCholFirst"
+                title:"🔔 ต้องการเปลี่ยนร้าน",
+                payload:"changeRestaurant"
               }]
            },
            {
@@ -954,8 +761,8 @@ function menuFoodChomChol(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataChomCholSecond"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
           {
@@ -971,8 +778,8 @@ function menuFoodChomChol(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataChomCholThird"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -988,8 +795,8 @@ function menuFoodChomChol(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataChomCholFourth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -1005,8 +812,8 @@ function menuFoodChomChol(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataChomCholFifth"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             }]
       }
@@ -1041,8 +848,8 @@ function menuFoodBaannernnam(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ข้อมูลอาหาร",
-                payload:"dataGrilledPork"
+                title:"🔔 ต้องการเปลี่ยนร้าน",
+                payload:"changeRestaurant"
               }]
            },
            {
@@ -1058,8 +865,8 @@ function menuFoodBaannernnam(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataPigFried"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
           {
@@ -1075,8 +882,8 @@ function menuFoodBaannernnam(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataDuck"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -1092,8 +899,8 @@ function menuFoodBaannernnam(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataSquid"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -1109,8 +916,8 @@ function menuFoodBaannernnam(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataPigSpicy"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -1126,8 +933,8 @@ function menuFoodBaannernnam(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataTomyumkung"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             }]
       }
@@ -1162,8 +969,8 @@ function menuFoodRobinson(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ข้อมูลอาหาร",
-                payload:"dataSalang"
+                title:"🔔 ต้องการเปลี่ยนร้าน",
+                payload:"changeRestaurant"
               }]
            },
            {
@@ -1179,8 +986,8 @@ function menuFoodRobinson(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataJefferSteak"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
           {
@@ -1196,8 +1003,8 @@ function menuFoodRobinson(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataYayoi"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -1213,8 +1020,8 @@ function menuFoodRobinson(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataHotPot"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -1230,8 +1037,8 @@ function menuFoodRobinson(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataTempura"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             },
         {
@@ -1247,8 +1054,8 @@ function menuFoodRobinson(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ข้อมูลอาหาร",
-                 payload:"dataRamenChampion"
+                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 payload:"changeRestaurant"
                }]
             }]
       }
