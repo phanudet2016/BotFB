@@ -247,6 +247,8 @@ function sendImageMessage(recipientId, messageText) {
       }
     }
   }
+  };
+callSendAPI(messageData);
 }
 
 //เมนูร้านcafe kantary
