@@ -154,7 +154,7 @@ function receivedPostback(event) {
        sendGreetMessage(senderID);
   }
   ///////////////////////////////////////////////////////////////////
-  else if(payload == 'findRestaurant' || payload == 'I_need_your_help'){
+  else if(payload == 'findRestaurant'||payload == 'I_need_your_help'|| payload == 'changeRestaurant'){
     setTimeout(function() {
       sendTextMessage(senderID, "นี้คือร้านอาหารยอดนิยมในปราจีนบุรี");
     }, 500)
@@ -201,18 +201,34 @@ function receivedPostback(event) {
       else{var result = "";}
     }, 1500)
   }
-  ///////////////////// ข้อมูลอาหาร //////////////////////////////////////
-  else if(payload == 'changeRestaurant'){
+  ///////////////////// ต้องการทานสิ่งนี้ //////////////////////////////////////
+  else if(payload == 'eatCafeFirst'){
     setTimeout(function() {
-      sendTextMessage(senderID, "ฮันนี่โทสต์ ");
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานฮันนี่โทสต์ที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
     }, 500)
     setTimeout(function() {
-      sendTextMessage(senderID, "คุณชอบรับประทานอาหารประเภทไหนครับ"); ///////////////////ค่อยทำต่อ
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
-      eatThis(senderID);
+      if(payload == 'eatCafeFirst'){////รูป}
     }, 1500)
-  }else {
+    setTimeout(function() {
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่ โทสต์");}
+    }, 2000)
+    setTimeout(function() {
+      if(payload == 'eatCafeFirst'){///รายละเอียด}
+    }, 2500)
+    setTimeout(function() {
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ราคา");}
+    }, 3000)
+    setTimeout(function() {
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : ");}
+    }, 3500)
+    setTimeout(function() {
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่ โทสต์");}
+    }, 3500)
+  }
+  else {
     var result = "";
   }
 }
