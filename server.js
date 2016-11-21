@@ -210,8 +210,8 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendImageMessage(senderID);}///รูป
-    }, 500)
+      if(payload == 'eatCafeFirst'){sendImageMessage(senderID)}
+    }, 100)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่ โทสต์");}
     }, 2000)
@@ -243,7 +243,7 @@ function sendImageMessage(recipientId, messageText) {
     "attachment":{
       "type":"image",
       "payload":{
-        "url":"http://www.cafekantary.com/images/example/c1_b.jpg"
+        "url":"http://www.cafekantary.com/images/example/HT_choco_whitebig.jpg"
       }
     }
   }
