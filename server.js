@@ -552,6 +552,16 @@ function receivedPostback(event) {
       if(payload == 'eatPalmSixth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
     }, 3000)
   }
+  /////////ต้องการเปลี่ยนเมนูอาหาร/////////////
+  else if(payload=='changePalmFood'){menuFoodPalmSweetHome(senderID);}
+  else if(payload=='changeAddFood'){menuFoodAdd(senderID);}
+  else if(payload=='changeCafeFood'){menuFoodCafeKantary(senderID);}
+  else if(payload=='changeRobinsonFood'){menuFoodRobinson(senderID);}
+  else if(payload=='changeBaannernnamFood'){menuFoodBaannernnam(senderID);}
+  else if(payload=='changeChomCholFood'){menuFoodChomChol(senderID);}
+  else if(payload=='changeNamHiangFood'){menuFoodNamHiang(senderID);}
+  
+
   else {
     var result = "";
   }
