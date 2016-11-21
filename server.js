@@ -213,11 +213,14 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendImageMessage(senderID)}
     }, 1500)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "555");} 
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ราคา : ");} 
     }, 2000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){needYourHelp(senderID);} 
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : ");} 
     }, 2500)
+    setTimeout(function() {
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "วันหยุด");} 
+    }, 3000)
   }
   else {
     var result = "";
