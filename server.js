@@ -232,7 +232,7 @@ function receivedPostback(event) {
       if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "ราคา : 69 บาท");}
       if(payload == 'eatCafeThird'){sendTextMessage(senderID, "ราคา : 69 บาท");}
       if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "ราคา : 69 บาท");}
-      if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "ราคา : 80 บาท");
+      if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "ราคา : 80 บาท");}
       if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "ราคา : 99 บาท");}
     }, 2000)
     setTimeout(function() {
