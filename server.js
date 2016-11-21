@@ -514,10 +514,10 @@ function receivedPostback(event) {
     setTimeout(function() {
       if(payload == 'eatPalmFirst'){sendTextMessage(senderID, "ไก่มะนาว คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
       if(payload == 'eatPalmSecond'){sendTextMessage(senderID, "ผักบุ้งไฟแดง คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eatPalmThird'){sendTextMessage(senderID, "ํยำกระเฉดชลูดน คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eatPalmFourth'){sendTextMessage(senderID, "ํผัดเผ็ดหมูป่า คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eatPalmFifth'){sendTextMessage(senderID, "ํแกงส้มแป๊ะซะ คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eatPalmSixth'){sendTextMessage(senderID, "ํผัดเผ็ดปลาช่อน คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPalmThird'){sendTextMessage(senderID, "ยำกระเฉดชลูดน คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPalmFourth'){sendTextMessage(senderID, "ผัดเผ็ดหมูป่า คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPalmFifth'){sendTextMessage(senderID, "แกงส้มแป๊ะซะ คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPalmSixth'){sendTextMessage(senderID, "ผัดเผ็ดปลาช่อน คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
       if(payload == 'eatPalmFirst'){sendImagePalmFirst(senderID);}
