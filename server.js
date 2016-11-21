@@ -202,7 +202,7 @@ function receivedPostback(event) {
     }, 1500)
   }
   ///////////////////// ต้องการทานสิ่งนี้ //////////////////////////////////////
-  else if(payload == 'eatCafeFirst'||payload == 'eatCafeSecond'){
+  else if(payload == 'eatCafeFirst'||payload == 'eatCafeSecond'||payload == 'eatCafeThird'||payload == 'eatCafeFourtht'||payload == 'eatCafeFifth'||payload == 'eatCafeSixth'){
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานฮันนี่โทสต์ที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
       if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานเบอร์รี่เบอร์รี่เครปที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
@@ -238,18 +238,18 @@ function receivedPostback(event) {
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");} 
       if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
-      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
-      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
-      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
-      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
+      if(payload == 'eatCafeThird'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
+      if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
+      if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
+      if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
     }, 2500)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");} 
       if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
-      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
-      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
-      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
-      if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
+      if(payload == 'eatCafeThird'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
+      if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
+      if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
+      if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
     }, 3000)
   }
   else {
@@ -304,7 +304,7 @@ function sendImageCafeSecond(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"ฮันนี่ โทสต์",
+            title:"เบอร์รี่ เบอร์รี่ เครป",
             item_url:"",
             image_url:"http://www.cafekantary.com/images/example/crepe1_B.jpg",
             subtitle:"",
@@ -338,7 +338,7 @@ function sendImageCafeThird(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"ฮันนี่ โทสต์",
+            title:"คาราเมล วาฟเฟิล",
             item_url:"",
             image_url:"http://www.cafekantary.com/images/example/w2_b.jpg",
             subtitle:"",
@@ -372,7 +372,7 @@ function sendImageCafeFourth(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"ฮันนี่ โทสต์",
+            title:"สตอเบอร์รี่ วาฟเฟิล",
             item_url:"",
             image_url:"http://www.cafekantary.com/images/example/w1_b.jpg",
             subtitle:"",
@@ -406,7 +406,7 @@ function sendImageCafeFifth(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"ฮันนี่ โทสต์",
+            title:"โอ้ล้า ลา ฮันนี่โทสต์",
             item_url:"",
             image_url:"http://www.cafekantary.com/images/cake-update.jpg",
             subtitle:"",
@@ -440,7 +440,7 @@ function sendImageCafeSixth(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"ฮันนี่ โทสต์",
+            title:"ไอศครีมโฮมเมด",
             item_url:"",
             image_url:"http://www.cafekantary.com/images/gelato.jpg",
             subtitle:"",
