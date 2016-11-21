@@ -501,9 +501,266 @@ function receivedPostback(event) {
       if(payload == 'eatAddSixth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
     }, 3000)
   }
+   /////////////////////////////ต้องการกินสิ่งนี้ ปาล์มสวีทโฮม/////////////////////
+  else if(payload == 'eatPalmFirst'||payload == 'eatPalmSecond'||payload == 'eatPalmThird'||payload == 'eatPalmFourth'||payload == 'eatPalmFifth'||payload == 'eatPalmSixth'){
+    setTimeout(function() {
+      if(payload == 'eatPalmFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานไก่มะนาวที่ร้านอาหาร ปาล์มสวีทโฮม ใช่มั้ยครับ");}
+      if(payload == 'eatPalmSecond'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานผักบุ้งไฟแดงที่ร้านอาหาร ปาล์มสวีทโฮม ใช่มั้ยครับ");}
+      if(payload == 'eatPalmThird'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานยำกระเฉดชลูดนที่ร้านอาหาร ปาล์มสวีทโฮม ใช่มั้ยครับ");}
+      if(payload == 'eatPalmFourth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานผัดเผ็ดหมูป่าที่ร้านอาหาร ปาล์มสวีทโฮม ใช่มั้ยครับ");}
+      if(payload == 'eatPalmFifth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานแกงส้มแป๊ะซะที่ร้านอาหาร ปาล์มสวีทโฮม ใช่มั้ยครับ");}
+      if(payload == 'eatPalmSixth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานผัดเผ็ดปลาช่อนที่ร้านอาหาร ปาล์มสวีทโฮม ใช่มั้ยครับ");}
+    }, 500)
+    setTimeout(function() {
+      if(payload == 'eatPalmFirst'){sendTextMessage(senderID, "ไก่มะนาว คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPalmSecond'){sendTextMessage(senderID, "ผักบุ้งไฟแดง คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPalmThird'){sendTextMessage(senderID, "ํยำกระเฉดชลูดน คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPalmFourth'){sendTextMessage(senderID, "ํผัดเผ็ดหมูป่า คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPalmFifth'){sendTextMessage(senderID, "ํแกงส้มแป๊ะซะ คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPalmSixth'){sendTextMessage(senderID, "ํผัดเผ็ดปลาช่อน คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+    }, 1000)
+    setTimeout(function() {
+      if(payload == 'eatPalmFirst'){sendImagePalmFirst(senderID);}
+      if(payload == 'eatPalmSecond'){sendImagePalmSecond(senderID);}
+      if(payload == 'eatPalmThird'){sendImagePalmThird(senderID);}
+      if(payload == 'eatPalmFourth'){sendImagePalmFourth(senderID);}
+      if(payload == 'eatPalmFifth'){sendImagePalmFifth(senderID);}
+      if(payload == 'eatPalmSixth'){sendImagePalmSixth(senderID);}
+    }, 1500)
+    setTimeout(function() {
+      if(payload == 'eatPalmFirst'){sendTextMessage(senderID, "ราคา : 300 บาท");}
+      if(payload == 'eatPalmSecond'){sendTextMessage(senderID, "ราคา : 300 บาท");}
+      if(payload == 'eatPalmThird'){sendTextMessage(senderID, "ราคา : 300 บาท");}
+      if(payload == 'eatPalmFourth'){sendTextMessage(senderID, "ราคา : 300 บาท");}
+      if(payload == 'eatPalmFifth'){sendTextMessage(senderID, "ราคา : 300 บาท");}
+      if(payload == 'eatPalmSixth'){sendTextMessage(senderID, "ราคา : 300 บาท");}
+    }, 2000)
+    setTimeout(function() {
+      if(payload == 'eatPalmFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-24.00 น.");} 
+      if(payload == 'eatPalmSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-24.00 น.");} 
+      if(payload == 'eatPalmThird'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-24.00 น.");} 
+      if(payload == 'eatPalmFourth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-24.00 น.");} 
+      if(payload == 'eatPalmFifth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-24.00 น.");} 
+      if(payload == 'eatPalmSixth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00-24.00 น.");} 
+    }, 2500)
+    setTimeout(function() {
+      if(payload == 'eatPalmFirst'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatPalmSecond'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatPalmThird'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatPalmFourth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatPalmFifth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatPalmSixth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+    }, 3000)
+  }
   else {
     var result = "";
   }
+}
+
+////image food ปาล์มสวีทโฮม
+function sendImagePalmFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ไก่มะนาว",
+            item_url:"",
+            image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_003.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailPalmFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImagePalmSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ผักบุ้งไฟแดง",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_001.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailPalmSecond"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImagePalmThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํํยำกระเฉดชลูดน้ำ"
+            item_url:"",
+            image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_004.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailPalmThird"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImagePalmFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํผัดเผ็ดหมูป่า"
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_007.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailPalmFourth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImagePalmFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํแกงส้มแป๊ะซะ",
+            item_url:"",
+            image_url:"http://i0.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_005.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailPalmFifth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImagePalmSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ผัดเผ็ดปลาช่อน",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_002.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailPalmSixth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
 }
 
 ////image food แอ็ดข้าวต้ม
@@ -2058,7 +2315,7 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                {
                  type:"postback",
                  title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatPalmFifth"
+                 payload:"eatPalmSixth
                },
                {
                  type:"postback",
