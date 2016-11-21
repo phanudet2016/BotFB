@@ -210,13 +210,13 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){////รูป}
+      if(payload == 'eatCafeFirst'){sendImageMessage(senderID);}///รูป
     }, 1500)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่ โทสต์");}
     }, 2000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){///รายละเอียด}
+      if(payload == 'eatCafeFirst'){}///รายละเอียด
     }, 2500)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ราคา");}
@@ -230,6 +230,22 @@ function receivedPostback(event) {
   }
   else {
     var result = "";
+  }
+}
+
+////iamge food
+function sendImageMessage(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    "message":{
+    "attachment":{
+      "type":"image",
+      "payload":{
+        "url":"http://www.cafekantary.com/images/example/c1_b.jpg"
+      }
+    }
   }
 }
 
