@@ -204,7 +204,9 @@ function receivedPostback(event) {
   ///////////////////// ต้องการทานสิ่งนี้ //////////////////////////////////////
   else if(payload == 'eatCafeFirst'){
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานฮันนี่โทสต์ที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
+      if(payload == 'eatCafeFirst'){menuFoodCafeKantary(senderID);
+       // sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานฮันนี่โทสต์ที่ร้าน Cafe Kantary ใช่มั้ยครับ");
+      }
     }, 500)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
