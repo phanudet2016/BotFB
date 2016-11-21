@@ -303,12 +303,269 @@ function receivedPostback(event) {
       if(payload == 'eatRamenChampion'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
     }, 3000)
   }
+  /////////////////////////////ต้องการกินสิ่งนี้ บ้านเนินน้ำ/////////////////////
+  else if(payload == 'eatGrilledPork'||payload == 'eatPigFried'||payload == 'eatDuck'||payload == 'eatSquid'||payload == 'eatPigSpicy'||payload == 'eatTomyumkung'){
+    setTimeout(function() {
+      if(payload == 'eatGrilledPork'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานคอหมูย่างที่สวนอาหาร บ้านเนินน้ำ ใช่มั้ยครับ");}
+      if(payload == 'eatPigFried'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานขาหมูทอดกรอบที่สวนอาหาร บ้านเนินน้ำ ใช่มั้ยครับ");}
+      if(payload == 'eatDuck'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานเป็ดทรงเครื่องที่สวนอาหาร บ้านเนินน้ำ ใช่มั้ยครับ");}
+      if(payload == 'eatSquid'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานยำปลาหมึกที่สวนอาหาร บ้านเนินน้ำ ใช่มั้ยครับ");}
+      if(payload == 'eatPigSpicy'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานผัดเผ็ดหมูป่าที่สวนอาหาร บ้านเนินน้ำ ใช่มั้ยครับ");}
+      if(payload == 'eatTomyumkung'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานต้มยำกุ้งเล็กที่สวนอาหาร บ้านเนินน้ำ ใช่มั้ยครับ");}
+    }, 500)
+    setTimeout(function() {
+      if(payload == 'eatGrilledPork'){sendTextMessage(senderID, "คอหมูย่าง คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPigFried'){sendTextMessage(senderID, "ขาหมูทอดกรอบ คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatDuck'){sendTextMessage(senderID, "เป็ดทรงเครื่อง คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatSquid'){sendTextMessage(senderID, "ยำปลาหมึก คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatPigSpicy'){sendTextMessage(senderID, "ผัดเผ็ดหมูป่า คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatTomyumkung'){sendTextMessage(senderID, "ต้มยำกุ้งเล็ก คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+    }, 1000)
+    setTimeout(function() {
+      if(payload == 'eatGrilledPork'){sendImageBaannernnamFirst(senderID);}
+      if(payload == 'eatPigFried'){sendImageBaannernnamSecond(senderID);}
+      if(payload == 'eatDuck'){sendImageBaannernnamThird(senderID);}
+      if(payload == 'eatSquid'){sendImageBaannernnamFourth(senderID);}
+      if(payload == 'eatPigSpicy'){sendImageBaannernnamFifth(senderID);}
+      if(payload == 'eatTomyumkung'){sendImageBaannernnamSixth(senderID);}
+    }, 1500)
+    setTimeout(function() {
+      if(payload == 'eatGrilledPork'){sendTextMessage(senderID, "ราคา : 180 บาท");}
+      if(payload == 'eatPigFried'){sendTextMessage(senderID, "ราคา : 380 บาท");}
+      if(payload == 'eatDuck'){sendTextMessage(senderID, "ราคา : 350 บาท");}
+      if(payload == 'eatSquid'){sendTextMessage(senderID, "ราคา : 180 บาท");}
+      if(payload == 'eatPigSpicy'){sendTextMessage(senderID, "ราคา : 180 บาท");}
+      if(payload == 'eatTomyumkung'){sendTextMessage(senderID, "ราคา : 170-220 บาท");}
+    }, 2000)
+    setTimeout(function() {
+      if(payload == 'eatGrilledPork'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 11.00-24.00 น.");} 
+      if(payload == 'eatPigFried'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 11.00-24.00 น.");} 
+      if(payload == 'eatDuck'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 11.00-24.00 น.");} 
+      if(payload == 'eatSquid'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 11.00-24.00 น.");} 
+      if(payload == 'eatPigSpicy'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 11.00-24.00 น.");} 
+      if(payload == 'eatTomyumkung'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 11.00-24.00 น.");} 
+    }, 2500)
+    setTimeout(function() {
+      if(payload == 'eatGrilledPork'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatPigFried'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatDuck'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatSquid'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatPigSpicy'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatTomyumkung'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+    }, 3000)
+  }
   else {
     var result = "";
   }
 }
 
-////image food Cafe
+////image food Baannernnam
+function sendImageBaannernnamFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"คอหมูย่าง",
+            item_url:"",
+            image_url:"https://3.bp.blogspot.com/-AOL0RYCwIFg/Vv8-bEVDvwI/AAAAAAAADCw/bgeu32RDx1UoxImeH-zAU0z5IYz4nAicg/s1600/12670891_953230498124388_7147210296053861375_n.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageBaannernnamSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ขาหมูทอดกรอบ",
+            item_url:"",
+            image_url:"http://img.painaidii.com/images/20120930_127_1349021565_291754.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamSecond"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageBaannernnamThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํเป็ดทรงเครื่อง",
+            item_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2014/08/29/a52128d66bb24e7080839cda4f45a36f.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamThird"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageBaannernnamFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํํยำปลาหมึก",
+            item_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2016/06/11/bfed5f221ced417e9994156960471aaa.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamFourth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageBaannernnamFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํํผัดเผ็ดหมูป่า",
+            item_url:"",
+            image_url:"http://www.kidtam.com/wp-content/uploads/2016/09/12-3.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamFifth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageBaannernnamSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํํต้มยำกุ้งเล็ก",
+            item_url:"",
+            image_url:"http://www.doodiza.com/images/1605_1447997622.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamSixth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+
+////image food Robinson
 function sendImageRobinsonFirst(recipientId, messageText) {
   var messageData = {
   recipient: {
