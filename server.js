@@ -638,7 +638,7 @@ function sendImagePalmThird(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"ํํยำกระเฉดชลูดน้ำ"
+            title:"ํํยำกระเฉดชลูดน้ำ",
             item_url:"",
             image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_004.jpg",
             subtitle:"",
