@@ -2315,7 +2315,7 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                {
                  type:"postback",
                  title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatPalmSixth
+                 payload:"eatPalmSixth"
                },
                {
                  type:"postback",
