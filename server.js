@@ -223,7 +223,7 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendImageCafeFirst(senderID);}
       if(payload == 'eatCafeSecond'){sendImageCafeSecond(senderID);}
       if(payload == 'eatCafeThird'){sendImageCafeThird(senderID);}
-      if(payload == 'eatCafeFourtht'){sendImageCafeFourth(senderID);}
+      if(payload == 'eatCafeFourth'){sendImageCafeFourth(senderID);}
       if(payload == 'eatCafeFifth'){sendImageCafeFifth(senderID);}
       if(payload == 'eatCafeSixth'){sendImageCafeSixth(senderID);}
     }, 1500)
