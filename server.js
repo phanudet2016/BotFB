@@ -224,20 +224,38 @@ function receivedPostback(event) {
   }
 }
 
-////iamge food
+////image food
 function sendImageMessage(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
   },
-    "message":{
-    "attachment":{
-      "type":"image",
-      "payload":{
-        "url":"http://www.cafekantary.com/images/example/HT_choco_whitebig.jpg"
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ฮันนี่ โทสต์",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/example/HT_choco_whitebig.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"eatCafeFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRestaurant"
+              }]
+           }]
+      }
       }
     }
-  }
   };
 callSendAPI(messageData);
 }
