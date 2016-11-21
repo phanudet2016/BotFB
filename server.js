@@ -274,7 +274,7 @@ function receivedPostback(event) {
       if(payload == 'eatSalang'){sendImageRobinsonFirst(senderID);}
       if(payload == 'eatJefferSteak'){sendImageRobinsonSecond(senderID);}
       if(payload == 'eatYayoi'){sendImageRobinsonThird(senderID);}
-      if(payload == 'eatHotPot'){sendImageRobinsonFourtht(senderID);}
+      if(payload == 'eatHotPot'){sendImageRobinsonFourth(senderID);}
       if(payload == 'eatTempura'){sendImageRobinsonFifth(senderID);}
       if(payload == 'eatRamenChampion'){sendImageRobinsonSixth(senderID);}
     }, 1500)
