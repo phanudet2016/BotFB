@@ -672,7 +672,7 @@ function sendImagePalmFourth(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"ํผัดเผ็ดหมูป่า"
+            title:"ํผัดเผ็ดหมูป่า",
             item_url:"",
             image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_007.jpg",
             subtitle:"",
