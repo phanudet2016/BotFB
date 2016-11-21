@@ -418,12 +418,12 @@ function receivedPostback(event) {
       if(payload == 'eatNamHiangSixth'){sendTextMessage(senderID, "ํปลาซิวทอดกรอบ คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
-      if(payload == 'eatNamHiangFirst'){sendImageBaannernnamFirst(senderID);}
-      if(payload == 'eatNamHiangSecond'){sendImageBaannernnamSecond(senderID);}
-      if(payload == 'eatNamHiangThird'){sendImageBaannernnamThird(senderID);}
-      if(payload == 'eatNamHiangFourth'){sendImageBaannernnamFourth(senderID);}
-      if(payload == 'eatNamHiangFifth'){sendImageBaannernnamFifth(senderID);}
-      if(payload == 'eatNamHiangSixth'){sendImageBaannernnamSixth(senderID);}
+      if(payload == 'eatNamHiangFirst'){sendImageNamHiangFirst(senderID);}
+      if(payload == 'eatNamHiangSecond'){sendImageNamHiangSecond(senderID);}
+      if(payload == 'eatNamHiangThird'){sendImageNamHiangThird(senderID);}
+      if(payload == 'eatNamHiangFourth'){sendImageNamHiangFourth(senderID);}
+      if(payload == 'eatNamHiangFifth'){sendImageNamHiangFifth(senderID);}
+      if(payload == 'eatNamHiangSixth'){sendImageNamHiangSixth(senderID);}
     }, 1500)
     setTimeout(function() {
       if(payload == 'eatNamHiangFirst'){sendTextMessage(senderID, "ราคา : 300 บาท");}
