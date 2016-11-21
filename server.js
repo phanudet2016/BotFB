@@ -242,7 +242,7 @@ function menuFoodCafeKantary(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ต้องการเปลี่ยนร้าน",
+                title:"🔔 เปลี่ยนร้านสถานที่",
                 payload:"changeRestaurant"
               }]
            },
@@ -276,7 +276,7 @@ function menuFoodCafeKantary(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -293,7 +293,7 @@ function menuFoodCafeKantary(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -310,7 +310,7 @@ function menuFoodCafeKantary(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -327,7 +327,7 @@ function menuFoodCafeKantary(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
         }]
@@ -363,7 +363,7 @@ function menuFoodNamHiang(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ต้องการเปลี่ยนร้าน",
+                title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                 payload:"changeRestaurant"
               }]
            },
@@ -380,7 +380,7 @@ function menuFoodNamHiang(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -397,7 +397,7 @@ function menuFoodNamHiang(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -414,7 +414,7 @@ function menuFoodNamHiang(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -431,7 +431,7 @@ function menuFoodNamHiang(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -448,7 +448,7 @@ function menuFoodNamHiang(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
         }]
@@ -484,7 +484,7 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ต้องการเปลี่ยนร้าน",
+                title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
               }]
            },
@@ -501,7 +501,7 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -518,7 +518,7 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -535,7 +535,7 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -552,7 +552,7 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -569,7 +569,7 @@ function menuFoodPalmSweetHome(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
         }]
@@ -605,7 +605,7 @@ function menuFoodAdd(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ต้องการเปลี่ยนร้าน",
+                title:"🔔 เปลี่ยนร้านสถานที่",
                 payload:"changeRestaurant"
               }]
            },
@@ -622,7 +622,7 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -639,7 +639,7 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -656,7 +656,7 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -673,7 +673,7 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -690,7 +690,7 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
         },
@@ -707,7 +707,7 @@ function menuFoodAdd(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
         }]
@@ -744,7 +744,7 @@ function menuFoodChomChol(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ต้องการเปลี่ยนร้าน",
+                title:"🔔 เปลี่ยนร้านสถานที่",
                 payload:"changeRestaurant"
               }]
            },
@@ -761,7 +761,7 @@ function menuFoodChomChol(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -778,7 +778,7 @@ function menuFoodChomChol(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -795,7 +795,7 @@ function menuFoodChomChol(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -812,7 +812,7 @@ function menuFoodChomChol(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             }]
@@ -848,7 +848,7 @@ function menuFoodBaannernnam(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ต้องการเปลี่ยนร้าน",
+                title:"🔔 เปลี่ยนร้านสถานที่",
                 payload:"changeRestaurant"
               }]
            },
@@ -865,7 +865,7 @@ function menuFoodBaannernnam(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -882,7 +882,7 @@ function menuFoodBaannernnam(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -899,7 +899,7 @@ function menuFoodBaannernnam(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -916,7 +916,7 @@ function menuFoodBaannernnam(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -933,7 +933,7 @@ function menuFoodBaannernnam(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             }]
@@ -969,7 +969,7 @@ function menuFoodRobinson(recipientId, messageText) {
               },
               {
                 type:"postback",
-                title:"🔔 ต้องการเปลี่ยนร้าน",
+                title:"🔔 เปลี่ยนร้านสถานที่",
                 payload:"changeRestaurant"
               }]
            },
@@ -986,7 +986,7 @@ function menuFoodRobinson(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -1003,7 +1003,7 @@ function menuFoodRobinson(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -1020,7 +1020,7 @@ function menuFoodRobinson(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -1037,7 +1037,7 @@ function menuFoodRobinson(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             },
@@ -1054,7 +1054,7 @@ function menuFoodRobinson(recipientId, messageText) {
                },
                {
                  type:"postback",
-                 title:"🔔 ต้องการเปลี่ยนร้าน",
+                 title:"🔔 เปลี่ยนร้านสถานที่",
                  payload:"changeRestaurant"
                }]
             }]
