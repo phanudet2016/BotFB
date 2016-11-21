@@ -455,7 +455,7 @@ function receivedPostback(event) {
     setTimeout(function() {
       if(payload == 'eatAddFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานกระเฉดชลูดน้ำไฟแดงที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
       if(payload == 'eatAddSecond'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานผักบุ้งไฟแดงที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
-      if(payload == 'eatAddThirdAdd'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานหมูผัดหนำเลี๊ยบที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
+      if(payload == 'eatAddThird'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานหมูผัดหนำเลี๊ยบที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
       if(payload == 'eatAddFourth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานแกงป่าปลาเห็ดโคนที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
       if(payload == 'eatAddFifth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานเกี้ยมฉ่ายกระเพาะหมูที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
       if(payload == 'eatAddSixth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานปลาสลิดทอดที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
