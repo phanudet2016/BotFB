@@ -255,20 +255,20 @@ function receivedPostback(event) {
   /////////////////////////////ต้องการกินสิ่งนี้ Robinson/////////////////////
   else if(payload == 'eatSalang'||payload == 'eatJefferSteak'||payload == 'eatYayoi'||payload == 'eatHotPot'||payload == 'eatTempura'||payload == 'eatRamenChampion'){
     setTimeout(function() {
-      if(payload == 'eatSalangt'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานฮันนี่โทสต์ที่โรบินสันใช่มั้ยครับ");}
-      if(payload == 'eatJefferSteak'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานเบอร์รี่เบอร์รี่เครปที่โรบินสันใช่มั้ยครับ");}
-      if(payload == 'eatYayoi'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานคาราเมลวาฟเฟิลที่โรบินสันใช่มั้ยครับ");}
-      if(payload == 'eatHotPot'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานสตอเบอร์รี่วาฟเฟิลที่โรบินสันใช่มั้ยครับ");}
-      if(payload == 'eatTempura'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานโอ้ล้าลาฮันนี่โทสต์ที่โรบินสันใช่มั้ยครับ");}
-      if(payload == 'eatRamenChampion'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานไอศครีมโฮมเมดที่โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatSalang'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทาน Topokki โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatJefferSteak'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทาน Wagyu Steak ที่โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatYayoi'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทาน Takoyaki ที่โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatHotPot'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทาน Hot Pot ที่โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatTempura'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทาน Tempura Somen ที่โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatRamenChampion'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทาน Ramen Champion ที่โรบินสันใช่มั้ยครับ");}
     }, 500)
     setTimeout(function() {
-      if(payload == 'eatSalang'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eatJefferSteak'){sendTextMessage(senderID, "เบอร์รี่เบอร์รี่เครปคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eatYayoi'){sendTextMessage(senderID, "คาราเมลวาฟเฟิลคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eatHotPot'){sendTextMessage(senderID, "สตอเบอร์รี่วาฟเฟิลคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eaTempura'){sendTextMessage(senderID, "โอ้ล้าลาฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eatRamenChampion'){sendTextMessage(senderID, "ไอศครีมโฮมเมดคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatSalang'){sendTextMessage(senderID, "Topokki คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatJefferSteak'){sendTextMessage(senderID, "Wagyu Steak คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatYayoi'){sendTextMessage(senderID, "Takoyaki คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatHotPot'){sendTextMessage(senderID, "Hot Pot คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eaTempura'){sendTextMessage(senderID, "Tempura Somen คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatRamenChampion'){sendTextMessage(senderID, "Ramen Champion คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
       if(payload == 'eatSalang'){sendImageRobinsonFirst(senderID);}
