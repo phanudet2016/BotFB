@@ -213,7 +213,7 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendImageMessage(senderID);} 
     }, 1500)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){{sendTextMessage(senderID, "555");} 
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "555");} 
     }, 2000)
   }
   else {
