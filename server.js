@@ -210,16 +210,16 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendImageMessage(senderID)}
+      if(payload == 'eatCafeFirst'){sendImageCafeKantary(senderID);}
     }, 1500)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ราคา : ");} 
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ราคา : 80 บาท");} 
     }, 2000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : ");} 
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");} 
     }, 2500)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "วันหยุด");} 
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "วันหยุด : วันอังเวลา 10 โมง");} 
     }, 3000)
   }
   else {
@@ -228,7 +228,7 @@ function receivedPostback(event) {
 }
 
 ////image food
-function sendImageMessage(recipientId, messageText) {
+function sendImageCafeKantary(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
