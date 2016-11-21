@@ -210,7 +210,7 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendImageMessage(senderID);}
+      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ควย");} //sendImageMessage(senderID);
     }, 100)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่ โทสต์");}
