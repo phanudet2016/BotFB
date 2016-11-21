@@ -207,7 +207,7 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานฮันนี่โทสต์ที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
       if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานเบอร์รี่เบอร์รี่เครปที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
       if(payload == 'eatCafeThird'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานคาราเมลวาฟเฟิลที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
-      if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานสตอเบอร์รี่วาฟเฟิลที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
+      if(payload == 'eatCafeFourth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานสตอเบอร์รี่วาฟเฟิลที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
       if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานโอ้ล้าลาฮันนี่โทสต์ที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
       if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานไอศครีมโฮมเมดที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
     }, 500)
@@ -215,7 +215,7 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
       if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เบอร์รี่เบอร์รี่เครปคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
       if(payload == 'eatCafeThird'){sendTextMessage(senderID, "คาราเมลวาฟเฟิลคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "สตอเบอร์รี่วาฟเฟิลคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatCafeFourth'){sendTextMessage(senderID, "สตอเบอร์รี่วาฟเฟิลคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
       if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "โอ้ล้าลาฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
       if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "ไอศครีมโฮมเมดคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
@@ -231,7 +231,7 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ราคา : 80 บาท");} 
       if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "ราคา : 69 บาท");}
       if(payload == 'eatCafeThird'){sendTextMessage(senderID, "ราคา : 69 บาท");}
-      if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "ราคา : 69 บาท");}
+      if(payload == 'eatCafeFourth'){sendTextMessage(senderID, "ราคา : 69 บาท");}
       if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "ราคา : 80 บาท");}
       if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "ราคา : 99 บาท");}
     }, 2000)
@@ -239,7 +239,7 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");} 
       if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
       if(payload == 'eatCafeThird'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
-      if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
+      if(payload == 'eatCafeFourth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
       if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
       if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 23.00 น.");}
     }, 2500)
@@ -247,7 +247,7 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");} 
       if(payload == 'eatCafeSecond'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
       if(payload == 'eatCafeThird'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
-      if(payload == 'eatCafeFourtht'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
+      if(payload == 'eatCafeFourth'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
       if(payload == 'eatCafeFifth'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
       if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
     }, 3000)
