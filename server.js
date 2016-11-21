@@ -210,14 +210,14 @@ function receivedPostback(event) {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
-      if(payload == 'eatCafeFirst'){
+      if(payload == 'eatCafeFirst'){sendImageMessage(senderID)}
     }, 1500)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "555");} 
     }, 2000)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){needYourHelp(senderID);} 
-    }, 1500)
+    }, 2500)
   }
   else {
     var result = "";
