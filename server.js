@@ -212,18 +212,6 @@ function receivedPostback(event) {
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendImageMessage(senderID);} 
     }, 100)
-    setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่ โทสต์");}
-    }, 2000)
-    setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ราคา");}
-    }, 2500)
-    setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : ");}
-    }, 3000)
-    setTimeout(function() {
-      if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "วันหยุด");}
-    }, 3500)
   }
   else {
     var result = "";
