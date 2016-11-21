@@ -211,7 +211,7 @@ function receivedPostback(event) {
     }, 1000)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendImageMessage(senderID)}
-    }, 100)
+    }, 10)
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "ฮันนี่ โทสต์");}
     }, 2000)
