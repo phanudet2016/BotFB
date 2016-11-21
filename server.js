@@ -450,9 +450,266 @@ function receivedPostback(event) {
       if(payload == 'eatNamHiangSixth'){sendTextMessage(senderID, "วันหยุด : หยุดไม่แน่นอน");}
     }, 3000)
   }
+  /////////////////////////////ต้องการกินสิ่งนี้ แอ๊ดข้าวต้ม/////////////////////
+  else if(payload == 'eatAddFirst'||payload == 'eatAddSecond'||payload == 'eatAddThird'||payload == 'eatAddFourth'||payload == 'eatAddFifth'||payload == 'eatAddSixth'){
+    setTimeout(function() {
+      if(payload == 'eatAddFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานกระเฉดชลูดน้ำไฟแดงที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
+      if(payload == 'eatAddSecond'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานผักบุ้งไฟแดงที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
+      if(payload == 'eatAddThirdAdd'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานหมูผัดหนำเลี๊ยบที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
+      if(payload == 'eatAddFourth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานแกงป่าปลาเห็ดโคนที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
+      if(payload == 'eatAddFifth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานเกี้ยมฉ่ายกระเพาะหมูที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
+      if(payload == 'eatAddSixth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานปลาสลิดทอดที่ร้านแอ๊ด ข้าวต้ม ใช่มั้ยครับ");}
+    }, 500)
+    setTimeout(function() {
+      if(payload == 'eatAddFirst'){sendTextMessage(senderID, "กระเฉดชลูดน้ำไฟแดง คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatAddSecond'){sendTextMessage(senderID, "ผักบุ้งไฟแดง คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatAddThird'){sendTextMessage(senderID, "หมูผัดหนำเลี๊ยบ คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatAddFourth'){sendTextMessage(senderID, "แกงป่าปลาเห็ดโคน คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatAddFifth'){sendTextMessage(senderID, "เกี้ยมฉ่ายกระเพาะหมู คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatAddSixth'){sendTextMessage(senderID, "ํปลาสลิดทอด คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+    }, 1000)
+    setTimeout(function() {
+      if(payload == 'eatAddFirst'){sendImageAddFirst(senderID);}
+      if(payload == 'eatAddSecond'){sendImageAddSecond(senderID);}
+      if(payload == 'eatAddThird'){sendImageAddThird(senderID);}
+      if(payload == 'eatAddFourth'){sendImageAddFourth(senderID);}
+      if(payload == 'eatAddFifth'){sendImageAddFifth(senderID);}
+      if(payload == 'eatAddSixth'){sendImageAddSixth(senderID);}
+    }, 1500)
+    setTimeout(function() {
+      if(payload == 'eatAddFirst'){sendTextMessage(senderID, "ราคา : 40-60 บาท");}
+      if(payload == 'eatAddSecond'){sendTextMessage(senderID, "ราคา : 30-60 บาท");}
+      if(payload == 'eatAddThird'){sendTextMessage(senderID, "ราคา : 60 บาท");}
+      if(payload == 'eatAddFourth'){sendTextMessage(senderID, "ราคา : 60 บาท");}
+      if(payload == 'eatAddFifth'){sendTextMessage(senderID, "ราคา : 40-60 บาท");}
+      if(payload == 'eatAddSixth'){sendTextMessage(senderID, "ราคา : 60 บาท");}
+    }, 2000)
+    setTimeout(function() {
+      if(payload == 'eatAddFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 17.00-04.00 น.");} 
+      if(payload == 'eatAddSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 17.00-04.00 น.");} 
+      if(payload == 'eatAddThird'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 17.00-04.00 น.");} 
+      if(payload == 'eatAddFourth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 17.00-04.00 น.");} 
+      if(payload == 'eatAddFifth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 17.00-04.00 น.");} 
+      if(payload == 'eatAddSixth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 17.00-04.00 น.");} 
+    }, 2500)
+    setTimeout(function() {
+      if(payload == 'eatAddFirst'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatAddSecond'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatAddThird'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatAddFourth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatAddFifth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatAddSixth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+    }, 3000)
+  }
   else {
     var result = "";
   }
+}
+
+////image food แอ็ดข้าวต้ม
+function sendImageAddFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"กระเฉดชลูดน้ำไฟแดง",
+            item_url:"",
+            image_url:"http://i2.wp.com/s3-ap-southeast-1.amazonaws.com/ungsriwong/wp-content/uploads/2014/05/AddKabin_004.jpg?resize=1024%2C768",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailAddFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeAddFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageAddSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ผักบุ้งไฟแดง",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_005.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailAddSecond"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeAddFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageAddThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํหมูผัดหนำเลี๊ยบ",
+            item_url:"",
+            image_url:"http://i0.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_007.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailAddThird"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeAddFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageAddFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํํแกงป่า ปลาเห็ดโคน",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_008.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailAddFourth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeAddFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageAddFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํเกี้ยมฉ่ายกระเพาะหม",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_010.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailAddFifth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeAddFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageAddSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ปลาสลิดทอด",
+            item_url:"",
+            image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_009.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailAddSixth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeAddFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
 }
 
 ////image food NamHiang
@@ -1922,24 +2179,7 @@ function menuFoodAdd(recipientId, messageText) {
                {
                  type:"postback",
                  title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatAddFifth"
-               },
-               {
-                 type:"postback",
-                 title:"🔔 เปลี่ยนสถานที่",
-                 payload:"changeRestaurant"
-               }]
-        },
-        {
-             title:"ํข้าวต้ม",
-             item_url:"",
-             image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/AddKabin_006.jpg",
-             subtitle:"",
-             buttons:[
-               {
-                 type:"postback",
-                 title:"✅ ต้องการทานสิ่งนี้",
-                 payload:"eatAddFifth"
+                 payload:"eatAddSixth"
                },
                {
                  type:"postback",
