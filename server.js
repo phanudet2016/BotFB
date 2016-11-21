@@ -201,7 +201,7 @@ function receivedPostback(event) {
       else{var result = "";}
     }, 1500)
   }
-  ///////////////////// ต้องการทานสิ่งนี้ //////////////////////////////////////
+  ///////////////////// ต้องการทานสิ่งนี้ Cafe//////////////////////////////////////
   else if(payload == 'eatCafeFirst'||payload == 'eatCafeSecond'||payload == 'eatCafeThird'||payload == 'eatCafeFourtht'||payload == 'eatCafeFifth'||payload == 'eatCafeSixth'){
     setTimeout(function() {
       if(payload == 'eatCafeFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานฮันนี่โทสต์ที่ร้าน Cafe Kantary ใช่มั้ยครับ");}
@@ -252,12 +252,270 @@ function receivedPostback(event) {
       if(payload == 'eatCafeSixth'){sendTextMessage(senderID, "วันหยุด : วันอังคารเวลา 10 โมง");}
     }, 3000)
   }
+  /////////////////////////////ต้องการกินสิ่งนี้ Robinson/////////////////////
+  else if(payload == 'eatSalang'||payload == 'eatJefferSteak'||payload == 'eatYayoi'||payload == 'eatHotPot'||payload == 'eatTempura'||payload == 'eatRamenChampion'){
+    setTimeout(function() {
+      if(payload == 'eatSalangt'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานฮันนี่โทสต์ที่โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatJefferSteak'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานเบอร์รี่เบอร์รี่เครปที่โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatYayoi'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานคาราเมลวาฟเฟิลที่โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatHotPot'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานสตอเบอร์รี่วาฟเฟิลที่โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatTempura'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานโอ้ล้าลาฮันนี่โทสต์ที่โรบินสันใช่มั้ยครับ");}
+      if(payload == 'eatRamenChampion'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานไอศครีมโฮมเมดที่โรบินสันใช่มั้ยครับ");}
+    }, 500)
+    setTimeout(function() {
+      if(payload == 'eatSalang'){sendTextMessage(senderID, "ฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatJefferSteak'){sendTextMessage(senderID, "เบอร์รี่เบอร์รี่เครปคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatYayoi'){sendTextMessage(senderID, "คาราเมลวาฟเฟิลคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatHotPot'){sendTextMessage(senderID, "สตอเบอร์รี่วาฟเฟิลคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eaTempura'){sendTextMessage(senderID, "โอ้ล้าลาฮันนี่โทสต์คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatRamenChampion'){sendTextMessage(senderID, "ไอศครีมโฮมเมดคนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+    }, 1000)
+    setTimeout(function() {
+      if(payload == 'eatSalang'){sendImageRobinsonFirst(senderID);}
+      if(payload == 'eatJefferSteak'){sendImageRobinsonSecond(senderID);}
+      if(payload == 'eatYayoi'){sendImageRobinsonThird(senderID);}
+      if(payload == 'eatHotPot'){sendImageRobinsonFourtht(senderID);}
+      if(payload == 'eatTempura'){sendImageRobinsonFifth(senderID);}
+      if(payload == 'eatRamenChampion'){sendImageRobinsonSixth(senderID);}
+    }, 1500)
+    setTimeout(function() {
+      if(payload == 'eatSalang'){sendTextMessage(senderID, "ราคา : 250-500 บาท");}
+      if(payload == 'eatJefferSteak'){sendTextMessage(senderID, "ราคา : 179-199 บาท");}
+      if(payload == 'eatYayoi'){sendTextMessage(senderID, "ราคา : 125 บาท");}
+      if(payload == 'eatHotPot'){sendTextMessage(senderID, "ราคา : 299 บาท");}
+      if(payload == 'eatTempura'){sendTextMessage(senderID, "ราคา : 142 บาท");}
+      if(payload == 'eatRamenChampion'){sendTextMessage(senderID, "ราคา : 155 บาท");}
+    }, 2000)
+    setTimeout(function() {
+      if(payload == 'eatSalang'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00 - 21.00 น.");} 
+      if(payload == 'eatJefferSteak'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 10.00 - 21.00 น.");} 
+      if(payload == 'eatYayoi'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 10.00 - 21.00 น.");} 
+      if(payload == 'eatHotPot'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 10.00 - 21.00 น.");} 
+      if(payload == 'eatTempura'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 10.00 - 21.00 น.");} 
+      if(payload == 'eatRamenChampion'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 - 10.00 - 21.00 น.");} 
+    }, 2500)
+    setTimeout(function() {
+      if(payload == 'eatSalang'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatJefferSteak'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatYayoi'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatHotPot'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatTempura'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatRamenChampion'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+    }, 3000)
+  }
   else {
     var result = "";
   }
 }
 
-////image food
+////image food Cafe
+function sendImageRobinsonFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"Topokki",
+            item_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2015/09/12/e18408e67b634f9d945f7382b27121a7.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailRobinsonFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageRobinsonSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"Wagyu Steak",
+            item_url:"",
+            image_url:"http://oknation.nationtv.tv/blog/home/user_data/file_data/201301/15/14980c201.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailRobinsonSecond"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageRobinsonThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"Takoyaki",
+            item_url:"",
+            image_url:"https://www.yayoirestaurants.com/uploads/image/96BE41CD-F01D-4E9B-85D1-6AB8B84A4C02.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailRobinsonThird"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageRobinsonFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํHot Pot Buffet",
+            item_url:"",
+            image_url:"http://2.bp.blogspot.com/-rtL6WPiASvM/Vn6w4mfVHuI/AAAAAAAABlI/6ygYNRreW4Q/s1600/%25E0%25B8%25AA%25E0%25B8%25A1%25E0%25B8%25B1%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%2BPart%2BTime%2BHOT%2BPOT%2B%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%2582%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%258B%25E0%25B9%2587%25E0%25B8%25A5%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%25A5%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2599%25E0%25B8%25B2%2B45%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%258A%25E0%25B8%25A1..jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailRobinsonFourth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageRobinsonFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํTempura Somen",
+            item_url:"",
+            image_url:"https://www.yayoirestaurants.com/uploads/image/F5D45267-6E7A-46B2-81D2-81F2F96C1C23.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailRobinsonFifth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageRobinsonSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํRamen Champion",
+            item_url:"",
+            image_url:"https://www.yayoirestaurants.com/uploads/image/8D6E1B28-3E20-4865-86D0-493F1254C795.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailRobinsonSixth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+
+
+////image food Cafe
 function sendImageCafeFirst(recipientId, messageText) {
   var messageData = {
   recipient: {
@@ -278,12 +536,12 @@ function sendImageCafeFirst(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailFirst"
+                payload:"detailCafeFirst"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeFood"
+                payload:"changeCafeFood"
               }]
            }]
       }
@@ -312,12 +570,12 @@ function sendImageCafeSecond(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailSecond"
+                payload:"detailCafeSecond"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeFood"
+                payload:"changeCafeFood"
               }]
            }]
       }
@@ -346,12 +604,12 @@ function sendImageCafeThird(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailThird"
+                payload:"detailCafeThird"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeFood"
+                payload:"changeCafeFood"
               }]
            }]
       }
@@ -380,12 +638,12 @@ function sendImageCafeFourth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailFourth"
+                payload:"detailCafeFourth"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeFood"
+                payload:"changeCafeFood"
               }]
            }]
       }
@@ -414,12 +672,12 @@ function sendImageCafeFifth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailFifth"
+                payload:"detailCafeFifth"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeFood"
+                payload:"changeCafeFood"
               }]
            }]
       }
@@ -448,12 +706,12 @@ function sendImageCafeSixth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แสดงรายละเอียด",
-                payload:"detailSixth"
+                payload:"detailCafeSixth"
               },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changeFood"
+                payload:"changeCafeFood"
               }]
            }]
       }
