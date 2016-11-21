@@ -466,7 +466,7 @@ function receivedPostback(event) {
       if(payload == 'eatAddThird'){sendTextMessage(senderID, "หมูผัดหนำเลี๊ยบ คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
       if(payload == 'eatAddFourth'){sendTextMessage(senderID, "แกงป่าปลาเห็ดโคน คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
       if(payload == 'eatAddFifth'){sendTextMessage(senderID, "เกี้ยมฉ่ายกระเพาะหมู คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
-      if(payload == 'eatAddSixth'){sendTextMessage(senderID, "ํปลาสลิดทอด คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatAddSixth'){sendTextMessage(senderID, "ปลาสลิดทอด คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
     }, 1000)
     setTimeout(function() {
       if(payload == 'eatAddFirst'){sendImageAddFirst(senderID);}
