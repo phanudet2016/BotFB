@@ -354,9 +354,226 @@ function receivedPostback(event) {
       if(payload == 'eatTomyumkung'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
     }, 3000)
   }
+   /////////////////////////////ต้องการกินสิ่งนี้ ร้านชลชล/////////////////////
+  else if(payload == 'eatChomCholFirst'||payload == 'ChomCholSecond'||payload == 'eatChomCholThird'||payload == 'eatChomCholFourth'||payload == 'eatChomCholFifth'){
+    setTimeout(function() {
+      if(payload == 'eatChomCholFirst'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานส้มตำปูม้าที่ร้านอาหารชมชล ใช่มั้ยครับ");}
+      if(payload == 'ChomCholSecond'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานลาบปลาช่อนทอดที่ร้านอาหารชมชล ใช่มั้ยครับ");}
+      if(payload == 'eatChomCholThird'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานทอดมันปลากรายที่ร้านอาหารชมชล ใช่มั้ยครับ");}
+      if(payload == 'eatChomCholFourth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานต้มยำกุ้งน้ำข้นที่ร้านอาหารชมชล ใช่มั้ยครับ");}
+      if(payload == 'eatChomCholFifth'){sendTextMessage(senderID, "โอเคครับ! คุณต้องการรับประทานปลาเนื้ออ่อนทอดกระเทียมที่ร้านอาหารชมชล ใช่มั้ยครับ");}
+    }, 500)
+    setTimeout(function() {
+      if(payload == 'eatChomCholFirst'){sendTextMessage(senderID, "ส้มตำปูม้า คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'ChomCholSecond'){sendTextMessage(senderID, "ลาบปลาช่อนทอด คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatChomCholThird'){sendTextMessage(senderID, "ทอดมันปลากราย คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatChomCholFourth'){sendTextMessage(senderID, "ต้มยำกุ้งน้ำข้น คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+      if(payload == 'eatChomCholFifth'){sendTextMessage(senderID, "ปลาเนื้ออ่อนทอดกระเทียม คนส่วนใหญ่ชอบรับประทานกันมากครับ :)");}
+    }, 1000)
+    setTimeout(function() {
+      if(payload == 'eatChomCholFirst'){sendImageChomCholFirst(senderID);}
+      if(payload == 'ChomCholSecond'){sendImageChomCholSecond(senderID);}
+      if(payload == 'eatChomCholThird'){sendImageChomCholThird(senderID);}
+      if(payload == 'eatChomCholFourth'){sendImageChomCholFourth(senderID);}
+      if(payload == 'eatChomCholFifth'){sendImageChomCholFifth(senderID);}
+    }, 1500)
+    setTimeout(function() {
+      if(payload == 'eatChomCholFirst'){sendTextMessage(senderID, "ราคา : 180 บาท");}
+      if(payload == 'ChomCholSecond'){sendTextMessage(senderID, "ราคา : 180 บาท");}
+      if(payload == 'eatChomCholThird'){sendTextMessage(senderID, "ราคา : 150 บาท");}
+      if(payload == 'eatChomCholFourth'){sendTextMessage(senderID, "ราคา : 200 บาท");}
+      if(payload == 'eatChomCholFifth'){sendTextMessage(senderID, "ราคา : 180 บาท");}
+    }, 2000)
+    setTimeout(function() {
+      if(payload == 'eatChomCholFirst'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 – 22.00 น.");} 
+      if(payload == 'ChomCholSecond'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 – 22.00 น.");} 
+      if(payload == 'eatChomCholThird'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 – 22.00 น.");} 
+      if(payload == 'eatChomCholFourth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 – 22.00 น.");} 
+      if(payload == 'eatChomCholFifth'){sendTextMessage(senderID, "เวลาเปิด-ปิด : 09.00 – 22.00 น.");}    
+    }, 2500)
+    setTimeout(function() {
+      if(payload == 'eatChomCholFirst'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'ChomCholSecond'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatChomCholThird'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatChomCholFourth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}
+      if(payload == 'eatChomCholFifth'){sendTextMessage(senderID, "วันหยุด : เปิดให้บริการทุกวัน");}     
+    }, 3000)
+  }
   else {
     var result = "";
   }
+}
+
+////image food ChomCholFifth
+function sendImageChomCholFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ส้มตำปูม้า",
+            item_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2015/01/03/82eeb8edf2404be0b4c96b2d81d809a7.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageChomCholSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ลาบปลาช่อนทอด",
+            item_url:"",
+            image_url:"http://lenoircafe.net/wp-content/uploads/2013/03/%E0%B8%A5%E0%B8%B2%E0%B8%9A%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%8A%E0%B9%88%E0%B8%AD%E0%B8%993-650.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamSecond"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageChomCholThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํํทอดมันปลากราย",
+            item_url:"",
+            image_url:"http://archeep.smeleader.com/wp-content/uploads/2014/11/%E0%B8%97%E0%B8%AD%E0%B8%94%E0%B8%A1%E0%B8%B1%E0%B8%99%E0%B8%9B%E0%B8%A5%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%A202-Medium.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamThird"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageChomCholFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํต้มยำกุ้งน้ำข้น",
+            item_url:"",
+            image_url:"http://food.mthai.com/app/uploads/2014/04/184615110-1.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamFourth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function sendImageChomCholFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํํปลาเนื้ออ่อนทอดกระเทียม",
+            item_url:"",
+            image_url:"http://f.ptcdn.info/922/041/000/o5vl43d99sVRvnpZsgm-o.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แสดงรายละเอียด",
+                payload:"detailBaannernnamFifth"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
 }
 
 ////image food Baannernnam
