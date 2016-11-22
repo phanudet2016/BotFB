@@ -563,9 +563,12 @@ function receivedPostback(event) {
   /////////////แสดงรายละเอียด///////////////
   else if(payload=='detailPalmFirst'){
     setTimeout(function() {
-        if(payload=='detailPalmFirst'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
+        if(payload=='detailPalmFirst'){sendTextMessage(senderID, "คุณสามารถชมรีวิวร้านอาหารได้ทีนี้"+"\n"+"http://www.teerapat.com/2014/05/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B8%9B%E0%B8%B2%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B8%A7%E0%B8%B5%E0%B8%97%E0%B9%82%E0%B8%AE%E0%B8%A1-%E0%B8%81%E0%B8%9A%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5/");}
       }, 500)
-      setTimeout(function() {
+    setTimeout(function() 
+        if(payload=='detailPalmFirst'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
+      }, 1000)
+    setTimeout(function() {
         if(payload=='detailPalmFirst'){detailPalmFirst(senderID);}
       }, 1000)
   }
@@ -600,11 +603,6 @@ function detailPalmFirst(recipientId, messageText) {
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changePalmFood"
-              },
-              {
-                type:"postback",
-                title:"🔔 รีวิว",
                 payload:"changePalmFood"
               },
               {
