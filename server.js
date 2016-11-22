@@ -569,7 +569,12 @@ function receivedPostback(event) {
         if(payload=='detailPalmFirst'||payload=='detailPalmSecond'||payload=='detailPalmThird'||payload=='detailPalmFourth'||payload=='detailPalmFifth'||payload=='detailPalmSixth'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
       }, 1000)
     setTimeout(function() {
-      if(payload=='detailPalmFirst'||payload=='detailPalmSecond'||payload=='detailPalmThird'||payload=='detailPalmFourth'||payload=='detailPalmFifth'||payload=='detailPalmSixth'){detailPalm(senderID);}
+      if(payload == 'detailPalmFirst'){detailPalmFirst(senderID);}
+      if(payload == 'detailPalmSecond'){detailPalmSecond(senderID);}
+      if(payload == 'detailPalmThird'){detailPalmThird(senderID);}
+      if(payload == 'detailPalmFourth'){detailPalmFourth(senderID);}
+      if(payload == 'detailPalmFifth'){detailPalmFifth(senderID);}
+      if(payload == 'detailPalmSixth'){detailPalmSixth(senderID);}
       }, 1000)
   }
   else {
@@ -578,7 +583,7 @@ function receivedPostback(event) {
 }
 
 ////แสดงรายละเอียดปามสวีทโอม
-function detailPalm(recipientId, messageText) {
+function detailPalmFirst(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
@@ -593,6 +598,176 @@ function detailPalm(recipientId, messageText) {
             title:"ไก่มะนาว",
             item_url:"",
             image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_003.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"surePalmFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailPalmSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ผักบุ้งไฟแดง",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_001.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"surePalmFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailPalmThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ยำกระเฉดชลูดน้ำ",
+            item_url:"",
+            image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_004.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"surePalmFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailPalmFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ผัดเผ็ดหมูป่า",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_007.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"surePalmFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailPalmFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"แกงส้มแป๊ะซะ",
+            item_url:"",
+            image_url:"http://i0.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_005.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"surePalmFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailPalmSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ผัดเผ็ดปลาช่อน",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_002.jpg",
             subtitle:"",
             buttons:[
               {
@@ -721,7 +896,7 @@ function sendImagePalmThird(recipientId, messageText) {
         template_type:"generic",
         elements:[
           {
-            title:"ํํยำกระเฉดชลูดน้ำ",
+            title:"ยำกระเฉดชลูดน้ำ",
             item_url:"",
             image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_004.jpg",
             subtitle:"",
