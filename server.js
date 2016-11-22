@@ -684,7 +684,7 @@ function receivedPostback(event) {
       }, 1500)
   }
   ///////ไปร้านนี้แน่นอน
-  else if(payload=='sureRobinsonFirst'||payload=='sureCafeFirst'||payload=='sureBaannernnamFirst'||payload=='sureChomCholFirst'||payload=='sureNamHiangFirst'||payload=='sureAddFirst'){
+  else if(payload=='sureRobinsonFirst'||payload=='sureCafeFirst'||payload=='sureBaannernnamFirst'||payload=='sureChomCholFirst'||payload=='sureNamHiangFirst'||payload=='sureAddFirst'||payload=='surePalmFirst'){
     setTimeout(function() {
       sendTextMessage(senderID, "ขอให้รับประทานให้อร่อยนะครับ :)");
       }, 500)
