@@ -669,7 +669,7 @@ function receivedPostback(event) {
       if(payload == 'detailRobinsonThird'){mapReviewYayoi(senderID);}
       if(payload == 'detailRobinsonFourth'){mapReviewHotPot(senderID);}
       if(payload == 'detailRobinsonFifth'){mapReviewYayoi(senderID);}
-      if(payload == 'detailRobinsonSixth'){mapReviewYayoi(senderID);}  
+      if(payload == 'detailRobinsonSixth'){mapReviewRamenChampion(senderID);}  
       }, 500)
     setTimeout(function() { 
         if(payload=='detailRobinsonFirst'||payload=='detailRobinsonSecond'||payload=='detailRobinsonThird'||payload=='detailRobinsonFourth'||payload=='detailRobinsonFifth'||payload=='detailRobinsonSixth'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
@@ -920,7 +920,7 @@ function mapReviewSalang(recipientId, messageText) {
   };
   callSendAPI(messageData);
 }
-function mapReviewSalang(recipientId, messageText) {
+function mapReviewRamenChampion(recipientId, messageText) {
   var messageData = {
     recipient: {
       id: recipientId
@@ -933,7 +933,7 @@ function mapReviewSalang(recipientId, messageText) {
           text : "คุณสามารถชมรีวิวร้านอาหารและแผ่นที่ ที่จะพาคุณไปยังร้านอาหารแห่งนี้ได้ที่นี้",
             buttons: [{
               type:"web_url",
-              url:"https://www.wongnai.com/restaurants/234323FX-salang-tokpokki-%E0%B9%82%E0%B8%A3%E0%B8%9A%E0%B8%B4%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%99-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5",
+              url:"https://www.wongnai.com/restaurants/184043kY-yayoi-%E0%B9%82%E0%B8%A3%E0%B8%9A%E0%B8%B4%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%99-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5",
               title:"🎈 รีวิวร้านอาหาร"
             },
             {
