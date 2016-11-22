@@ -561,7 +561,7 @@ function receivedPostback(event) {
   else if(payload=='changeChomCholFood'){menuFoodChomChol(senderID);}
   else if(payload=='changeNamHiangFood'){menuFoodNamHiang(senderID);}
   /////////////แสดงรายละเอียดปามสวีทโอม///////////////
-  else ifpayload=='detailPalmFirst'||payload=='detailPalmSecond'||payload=='detailPalmThird'||payload=='detailPalmFourth'||payload=='detailPalmFifth'||payload=='detailPalmSixth'){
+  else if(payload=='detailPalmFirst'||payload=='detailPalmSecond'||payload=='detailPalmThird'||payload=='detailPalmFourth'||payload=='detailPalmFifth'||payload=='detailPalmSixth'){
     setTimeout(function() {
       if(payload=='detailPalmFirst'||payload=='detailPalmSecond'||payload=='detailPalmThird'||payload=='detailPalmFourth'||payload=='detailPalmFifth'||payload=='detailPalmSixth'){mapReviewPalm(senderID);}  
       }, 500)
