@@ -598,9 +598,9 @@ function detailPalmFirst(recipientId, messageText) {
                 payload:"surePalmFirst"
               },
               {
-                type:"postback",
-                title:"📖 รีวิวร้าน",
-                payload:"reviewPalmFirst"
+                type:"web_url",
+                url:"",
+                title:"📖 รีวิวร้าน"
               },
               {
                 type:"web_url",
