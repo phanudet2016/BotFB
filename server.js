@@ -644,10 +644,261 @@ function receivedPostback(event) {
       if(payload == 'detailBaannernnamSixth'){detailBaannernnamSixth(senderID);}
       }, 1500)
   }
+  /////////////แสดงรายละเอียด cafe kantary///////////////
+  else if(payload=='detailCafeFirst'||payload=='detailCafeSecond'||payload=='detailCafeThird'||payload=='detailCafeFourth'||payload=='detailCafeFifth'||payload=='detailCafeSixth'){
+    setTimeout(function() {
+      if(payload=='detailCafeFirst'||payload=='detailCafeSecond'||payload=='detailCafeThird'||payload=='detailCafeFourth'||payload=='detailCafeFifth'||payload=='detailCafeSixth'){mapReviewCafe(senderID);}  
+      }, 500)
+    setTimeout(function() { 
+        if(payload=='detailCafeFirst'||payload=='detailCafeSecond'||payload=='detailCafeThird'||payload=='detailCafeFourth'||payload=='detailCafeFifth'||payload=='detailCafeSixth'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
+      }, 1000)
+    setTimeout(function() {
+      if(payload == 'detailCafeFirst'){detailCafeFirst(senderID);}
+      if(payload == 'detailCafeSecond'){detailCafeSecond(senderID);}
+      if(payload == 'detailCafeThird'){detailCafeThird(senderID);}
+      if(payload == 'detailCafeFourth'){detailCafeFourth(senderID);}
+      if(payload == 'detailCafeFifth'){detailCafeFifth(senderID);}
+      if(payload == 'detailCafeSixth'){detailCafeSixth(senderID);}
+      }, 1500)
+  }
   else {
     var result = "";
   }
 }
+
+ /////////////แสดงรายละเอียดน cafe kantary///////////////
+function detailCafeFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ฮันนี่ โทสต",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/example/HT_choco_whitebig.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureCafeFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeCafeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailCafeSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"เบอร์รี่ เบอร์รี่ เครป",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/example/crepe1_B.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureCafeFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeCafeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailCafeThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํคาราเมล วาฟเฟิล",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/example/w2_b.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureCafeFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeCafeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailCafeFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"สตอเบอร์รี่ วาฟเฟิล",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/example/w1_b.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureCafeFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeCafeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailCafeFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"โอ้ล้า ลา ฮันนี่โทสต์",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/cake-update.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureCafeFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeCafeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailCafeSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ไอศครีมโฮมเมด",
+            item_url:"",
+            image_url:"http://www.cafekantary.com/images/gelato.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureCafeFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeCafeFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function mapReviewCafe(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "คุณสามารถชมรีวิวร้านอาหารและแผ่นที่ ที่จะพาคุณไปยังร้านอาหารแห่งนี้ได้ที่นี้",
+            buttons: [{
+              type:"web_url",
+              url:"http://pantip.com/topic/34017140",
+              title:"🎈 รีวิวร้านอาหาร"
+            },
+            {
+              type:"web_url",
+              url:"https://www.google.co.th/maps/place/13%C2%B054'14.6%22N+101%C2%B034'39.2%22E/@13.904049,101.5753723,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d13.904049!4d101.577561",
+              title:"🎯 แผ่นที่"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
+}
+
 
   /////////////แสดงรายละเอียดนำเฮียง///////////////
 function detailBaannernnamFirst(recipientId, messageText) {
