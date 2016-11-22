@@ -560,16 +560,16 @@ function receivedPostback(event) {
   else if(payload=='changeBaannernnamFood'){menuFoodBaannernnam(senderID);}
   else if(payload=='changeChomCholFood'){menuFoodChomChol(senderID);}
   else if(payload=='changeNamHiangFood'){menuFoodNamHiang(senderID);}
-  /////////////แสดงรายละเอียด///////////////
-  else if(payload=='detailPalmFirst'){
+  /////////////แสดงรายละเอียดปามสวีทโอม///////////////
+  else ifpayload=='detailPalmFirst'||payload=='detailPalmSecond'||payload=='detailPalmThird'||payload=='detailPalmFourth'||payload=='detailPalmFifth'||payload=='detailPalmSixth'){
     setTimeout(function() {
-        if(payload=='detailPalmFirst'){mapReviewPalm(senderID);}
+      if(payload=='detailPalmFirst'||payload=='detailPalmSecond'||payload=='detailPalmThird'||payload=='detailPalmFourth'||payload=='detailPalmFifth'||payload=='detailPalmSixth'){mapReviewPalm(senderID);}  
       }, 500)
     setTimeout(function() { 
-        if(payload=='detailPalmFirst'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
+        if(payload=='detailPalmFirst'||payload=='detailPalmSecond'||payload=='detailPalmThird'||payload=='detailPalmFourth'||payload=='detailPalmFifth'||payload=='detailPalmSixth'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
       }, 1000)
     setTimeout(function() {
-        if(payload=='detailPalmFirst'){detailPalmFirst(senderID);}
+      if(payload=='detailPalmFirst'||payload=='detailPalmSecond'||payload=='detailPalmThird'||payload=='detailPalmFourth'||payload=='detailPalmFifth'||payload=='detailPalmSixth'){detailPalm(senderID);}
       }, 1000)
   }
   else {
@@ -578,7 +578,7 @@ function receivedPostback(event) {
 }
 
 ////แสดงรายละเอียดปามสวีทโอม
-function detailPalmFirst(recipientId, messageText) {
+function detailPalm(recipientId, messageText) {
   var messageData = {
   recipient: {
     id : recipientId
