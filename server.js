@@ -586,12 +586,12 @@ function receivedPostback(event) {
         if(payload=='detailAddFirst'||payload=='detailAddSecond'||payload=='detailAddThird'||payload=='detailAddFourth'||payload=='detailAddFifth'||payload=='detailAddSixth'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
       }, 1000)
     setTimeout(function() {
-      if(payload == 'detailPalmFirst'){detailAddFirst(senderID);}
-      if(payload == 'detailPalmSecond'){detailAddSecond(senderID);}
-      if(payload == 'detailPalmThird'){detailAddThird(senderID);}
-      if(payload == 'detailPalmFourth'){detailAddFourth(senderID);}
-      if(payload == 'detailPalmFifth'){detailAddFifth(senderID);}
-      if(payload == 'detailPalmSixth'){detailAddSixth(senderID);}
+      if(payload == 'detailAddFirst'){detailAddFirst(senderID);}
+      if(payload == 'detailAddSecond'){detailAddSecond(senderID);}
+      if(payload == 'detailAddThird'){detailAddThird(senderID);}
+      if(payload == 'detailAddFourth'){detailAddFourth(senderID);}
+      if(payload == 'detailAddFifth'){detailAddFifth(senderID);}
+      if(payload == 'detailAddSixth'){detailAddSixth(senderID);}
       }, 1500)
   }
   else {
