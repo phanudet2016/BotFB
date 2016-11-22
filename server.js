@@ -594,23 +594,23 @@ function detailPalmFirst(recipientId, messageText) {
             buttons:[
               {
                 type:"postback",
-                title:"✅ แน่นอน! ไปที่นั้น",
+                title:"✅ แน่นอน! จะไปที่นั้น",
                 payload:"surePalmFirst"
               }, 
-              {
-                type:"web_url",
-                url:"https://www.google.co.th/maps/place/%E0%B8%9B%E0%B8%B2%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B8%A7%E0%B8%B5%E0%B8%97%E0%B9%82%E0%B8%AE%E0%B8%A1+(Palm+sweet+home)/@13.9831288,101.7684302,15z/data=!4m5!3m4!1s0x0:0x530a91dc0a6a290!8m2!3d13.9831288!4d101.7684302",
-                title:"🎯 แผ่นที่"
-              },
-              {
-                type:"web_url",
-                url:"https://www.google.co.th/maps/place/%E0%B8%9B%E0%B8%B2%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B8%A7%E0%B8%B5%E0%B8%97%E0%B9%82%E0%B8%AE%E0%B8%A1+(Palm+sweet+home)/@13.9831288,101.7684302,15z/data=!4m5!3m4!1s0x0:0x530a91dc0a6a290!8m2!3d13.9831288!4d101.7684302",
-                title:"🎯 แผ่นที่"
-              },
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
                 payload:"changePalmFood"
+              },
+              {
+                type:"postback",
+                title:"🔔 รีวิว",
+                payload:"changePalmFood"
+              },
+              {
+                type:"web_url",
+                url:"https://www.google.co.th/maps/place/%E0%B8%9B%E0%B8%B2%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B8%A7%E0%B8%B5%E0%B8%97%E0%B9%82%E0%B8%AE%E0%B8%A1+(Palm+sweet+home)/@13.9831288,101.7684302,15z/data=!4m5!3m4!1s0x0:0x530a91dc0a6a290!8m2!3d13.9831288!4d101.7684302",
+                title:"🎯 แผ่นที่"
               }]
            }]
       }
