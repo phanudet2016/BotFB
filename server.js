@@ -563,7 +563,7 @@ function receivedPostback(event) {
   /////////////แสดงรายละเอียด///////////////
   else if(payload=='detailPalmFirst'){
     setTimeout(function() {
-        if(payload=='detailPalmFirst'){sendTextMessage(senderID, "คุณสามารถชมรีวิวร้านอาหารได้ทีนี้ http://www.teerapat.com/2014/05/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B8%9B%E0%B8%B2%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B8%A7%E0%B8%B5%E0%B8%97%E0%B9%82%E0%B8%AE%E0%B8%A1-%E0%B8%81%E0%B8%9A%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5/");}
+        if(payload=='detailPalmFirst'){sendTextMessage(senderID, "นี้คือแผ่นที่ร้านอาหารที่จะพาคุณไปยังร้านอาหารแห่งนี้ https://www.google.co.th/maps/place/%E0%B8%9B%E0%B8%B2%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B8%A7%E0%B8%B5%E0%B8%97%E0%B9%82%E0%B8%AE%E0%B8%A1+(Palm+sweet+home)/@13.9831288,101.7684302,15z/data=!4m5!3m4!1s0x0:0x530a91dc0a6a290!8m2!3d13.9831288!4d101.7684302");}
       }, 500)
     setTimeout(function() { 
         if(payload=='detailPalmFirst'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
@@ -597,7 +597,7 @@ function detailPalmFirst(recipientId, messageText) {
             buttons:[
               {
                 type:"postback",
-                title:"✅ แน่นอน! จะไปที่นั้น",
+                title:"✅ แน่นอน! ไปที่นี้",
                 payload:"surePalmFirst"
               }, 
               {
@@ -607,8 +607,8 @@ function detailPalmFirst(recipientId, messageText) {
               },
               {
                 type:"web_url",
-                url:"https://www.google.co.th/maps/place/%E0%B8%9B%E0%B8%B2%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B8%A7%E0%B8%B5%E0%B8%97%E0%B9%82%E0%B8%AE%E0%B8%A1+(Palm+sweet+home)/@13.9831288,101.7684302,15z/data=!4m5!3m4!1s0x0:0x530a91dc0a6a290!8m2!3d13.9831288!4d101.7684302",
-                title:"🎯 แผ่นที่"
+                url:"http://www.teerapat.com/2014/05/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3-%E0%B8%9B%E0%B8%B2%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B8%A7%E0%B8%B5%E0%B8%97%E0%B9%82%E0%B8%AE%E0%B8%A1-%E0%B8%81%E0%B8%9A%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5/",
+                title:"🎯 รีวิวร้านอาหาร"
               }]
            }]
       }
