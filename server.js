@@ -625,12 +625,261 @@ function receivedPostback(event) {
       if(payload == 'detailChomCholThird'){detailChomCholThird(senderID);}
       if(payload == 'detailChomCholFourth'){detailChomCholFourth(senderID);}
       if(payload == 'detailChomCholFifth'){detailChomCholFifth(senderID);}
-     
+     }, 1500)
+  }
+  /////////////แสดงรายละเอียดบ้านเนินน้ำ///////////////
+  else if(payload=='detailBaannernnamFirst'||payload=='detailBaannernnamSecond'||payload=='detailBaannernnamThird'||payload=='detailBaannernnamFourth'||payload=='detailBaannernnamFifth'||payload=='detailBaannernnamSixth'){
+    setTimeout(function() {
+      if(payload=='detailBaannernnamFirst'||payload=='detailBaannernnamSecond'||payload=='detailBaannernnamThird'||payload=='detailBaannernnamFourth'||payload=='detailBaannernnamFifth'||payload=='detailBaannernnamSixth'){mapReviewBaannernnam(senderID);}  
+      }, 500)
+    setTimeout(function() { 
+        if(payload=='detailBaannernnamFirst'||payload=='detailBaannernnamSecond'||payload=='detailBaannernnamThird'||payload=='detailBaannernnamFourth'||payload=='detailBaannernnamFifth'||payload=='detailBaannernnamSixth'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
+      }, 1000)
+    setTimeout(function() {
+      if(payload == 'detailBaannernnamFirst'){detailBaannernnamFirst(senderID);}
+      if(payload == 'detailBaannernnamSecond'){detailBaannernnamSecond(senderID);}
+      if(payload == 'detailBaannernnamThird'){detailBaannernnamThird(senderID);}
+      if(payload == 'detailBaannernnamFourth'){detailBaannernnamFourth(senderID);}
+      if(payload == 'detailBaannernnamFifth'){detailBaannernnamFifth(senderID);}
+      if(payload == 'detailBaannernnamSixth'){detailBaannernnamSixth(senderID);}
       }, 1500)
   }
   else {
     var result = "";
   }
+}
+
+  /////////////แสดงรายละเอียดนำเฮียง///////////////
+function detailBaannernnamFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"คอหมูย่าง",
+            item_url:"",
+            image_url:"https://3.bp.blogspot.com/-AOL0RYCwIFg/Vv8-bEVDvwI/AAAAAAAADCw/bgeu32RDx1UoxImeH-zAU0z5IYz4nAicg/s1600/12670891_953230498124388_7147210296053861375_n.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureBaannernnamFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailBaannernnamSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ขาหมูทอดกรอบ",
+            item_url:"",
+            image_url:"http://img.painaidii.com/images/20120930_127_1349021565_291754.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureBaannernnamFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailBaannernnamThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํเป็ดทรงเครื่อง",
+            item_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2014/08/29/a52128d66bb24e7080839cda4f45a36f.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureBaannernnamFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailBaannernnamFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ยำปลาหมึก",
+            item_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2016/06/11/bfed5f221ced417e9994156960471aaa.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureBaannernnamFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailBaannernnamFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ผัดเผ็ดหมูป่า",
+            item_url:"",
+            image_url:"http://www.kidtam.com/wp-content/uploads/2016/09/12-3.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureBaannernnamFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailBaannernnamSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ต้มยำกุ้งเล็ก",
+            item_url:"",
+            image_url:"http://www.doodiza.com/images/1605_1447997622.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureBaannernnamFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeBaannernnamFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function mapReviewBaannernnam(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "คุณสามารถชมรีวิวร้านอาหารและแผ่นที่ ที่จะพาคุณไปยังร้านอาหารแห่งนี้ได้ที่นี้",
+            buttons: [{
+              type:"web_url",
+              url:"https://www.wongnai.com/restaurants/86808vQ-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%B4%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%B3",
+              title:"🎈 รีวิวร้านอาหาร"
+            },
+            {
+              type:"web_url",
+              url:"https://www.google.co.th/maps/place/%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%B2%E0%B8%AB%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%99%E0%B8%B4%E0%B8%99%E0%B8%99%E0%B9%89%E0%B8%B3/@13.9883639,101.7635005,15z/data=!4m5!3m4!1s0x0:0xbd56af87c21ab227!8m2!3d13.9883639!4d101.7635005",
+              title:"🎯 แผ่นที่"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
 }
 
 /////////////แสดงรายละเอียดชมชล///////////////
