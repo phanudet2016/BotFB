@@ -129,7 +129,7 @@ function receivedMessage(event) {
         sendQuickReply(senderID);
         break;
       default:
-        sendTextMessage(senderID, messageText);
+        sendTextMessage(senderID, "GG");
     }
   } 
   else if (messageAttachments) {
