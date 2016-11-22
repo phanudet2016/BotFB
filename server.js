@@ -620,7 +620,7 @@ function receivedPostback(event) {
         if(payload=='detailChomCholFirst'||payload=='detailChomCholSecond'||payload=='detailChomCholThird'||payload=='detailChomCholFourth'||payload=='detailChomCholFifth'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
       }, 1000)
     setTimeout(function() {
-      if(payload == 'detaiChomCholFirst'){detailChomCholFirst(senderID);}
+      if(payload == 'detailChomCholFirst'){detailChomCholFirst(senderID);}
       if(payload == 'detailChomCholSecond'){detailChomCholSecond(senderID);}
       if(payload == 'detailChomCholThird'){detailChomCholThird(senderID);}
       if(payload == 'detailChomCholFourth'){detailChomCholFourth(senderID);}
