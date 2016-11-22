@@ -126,7 +126,6 @@ function receivedMessage(event) {
         sendGreetMessage(senderID);
         break;
       default:
-        sendTextMessage(senderID, "¯\_(ツ)_/¯ มีอะไรให้ช่วยมั้ย!");
         needYourHelpDefault(senderID);
     }
   } 
@@ -5162,7 +5161,7 @@ function needYourHelpDefault(recipientId, messageText) {
         type: "template",
         payload: {
           template_type: "button",
-          text : "",
+          text : "¯\_(ツ)_/¯ มีอะไรให้ช่วยมั้ย!",
             buttons: [{
               type: "postback",
               title: "🍣 ค้นหาร้านอาหาร",
