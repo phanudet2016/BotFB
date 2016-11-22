@@ -688,8 +688,8 @@ function receivedPostback(event) {
     setTimeout(function() {
       sendTextMessage(senderID, "ขอให้รับประทานให้อร่อยนะครับ :)");
       }, 500)
-    setTimeout(function() {needYourHelp
-      sendTextMessage(needYourHelpEnd(senderID););
+    setTimeout(function() {
+      sendTextMessage(needYourHelpEnd(senderID);)
       }, 1000)
   }
   else {
