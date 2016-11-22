@@ -683,6 +683,15 @@ function receivedPostback(event) {
       if(payload == 'detailRobinsonSixth'){detailRobinsonSixth(senderID);}
       }, 1500)
   }
+  ///////ไปร้านนี้แน่นอน
+  else if(payload=='sureRobinsonFirst'||payload=='sureCafeFirst'||payload=='sureBaannernnamFirst'||payload=='sureChomCholFirst'||payload=='sureNamHiangFirst'||payload=='sureAddFirst'){
+    setTimeout(function() {
+      sendTextMessage(senderID, "ขอให้รับประทานให้อร่อยนะครับ :)");
+      }, 500)
+    setTimeout(function() {needYourHelp
+      sendTextMessage(needYourHelpEnd(senderID););
+      }, 1000)
+  }
   else {
     var result = "";
   }
@@ -5111,6 +5120,33 @@ function needYourHelp(recipientId, messageText) {
               type: "postback",
               title: "⚡️ ต้องการให้คุณช่วย",
               payload: "I_need_your_help"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
+}
+function needYourHelpEnd(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย",
+            buttons: [{
+              type: "postback",
+              title: "🍣 ค้นหาร้านอาหาร",
+              payload: "findRestaurant"
+            },
+            {
+              type: "postback",
+              title: "❌ ไม่เป็นไร ขอบคุณ",
+              payload: "noThank"
             }]
         }
       }
