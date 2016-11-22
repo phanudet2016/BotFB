@@ -689,7 +689,7 @@ function receivedPostback(event) {
       sendTextMessage(senderID, "ขอให้รับประทานให้อร่อยนะครับ :)");
       }, 500)
     setTimeout(function() {
-      sendTextMessage(needYourHelpEnd(senderID);)
+      needYourHelpEnd(senderID);
       }, 1000)
   }
   else {
