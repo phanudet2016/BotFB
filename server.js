@@ -661,9 +661,399 @@ function receivedPostback(event) {
       if(payload == 'detailCafeSixth'){detailCafeSixth(senderID);}
       }, 1500)
   }
+  /////////////แสดงรายละเอียดโรบินสัน///////////////
+  else if(payload=='detailRobinsonFirst'||payload=='detailRobinsonSecond'||payload=='detailRobinsonThird'||payload=='detailRobinsonFourth'||payload=='detailRobinsonFifth'||payload=='detailRobinsonSixth'){
+    setTimeout(function() {
+      if(payload == 'detailRobinsonFirst'){mapReviewTakoyaki(senderID);}
+      if(payload == 'detailRobinsonSecond'){mapReviewJefferSteak(senderID);}
+      if(payload == 'detailRobinsonThird'){mapReviewYayoi(senderID);}
+      if(payload == 'detailRobinsonFourth'){mapReviewHotPot(senderID);}
+      if(payload == 'detailRobinsonFifth'){mapReviewYayoi(senderID);}
+      if(payload == 'detailRobinsonSixth'){mapReviewYayoi(senderID);}  
+      }, 500)
+    setTimeout(function() { 
+        if(payload=='detailRobinsonFirst'||payload=='detailRobinsonSecond'||payload=='detailRobinsonThird'||payload=='detailRobinsonFourth'||payload=='detailRobinsonFifth'||payload=='detailRobinsonSixth'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
+      }, 1000)
+    setTimeout(function() {
+      if(payload == 'detailRobinsonFirst'){detailRobinsonFirst(senderID);}
+      if(payload == 'detailRobinsonSecond'){detailRobinsonSecond(senderID);}
+      if(payload == 'detailRobinsonThird'){detailRobinsonThird(senderID);}
+      if(payload == 'detailRobinsonFourth'){detailRobinsonFourth(senderID);}
+      if(payload == 'detailRobinsonFifth'){detailRobinsonFifth(senderID);}
+      if(payload == 'detailRobinsonSixth'){detailRobinsonSixth(senderID);}
+      }, 1500)
+  }
   else {
     var result = "";
   }
+}
+
+  /////////////แสดงรายละเอียดโรบินสัน///////////////
+function detailRobinsonFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"Topokki",
+            item_url:"",
+            image_url:"https://s3-ap-southeast-1.amazonaws.com/photo.wongnai.com/photos/2015/09/12/e18408e67b634f9d945f7382b27121a7.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureRobinsonFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailRobinsonSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"Wagyu Steak",
+            item_url:"",
+            image_url:"http://oknation.nationtv.tv/blog/home/user_data/file_data/201301/15/14980c201.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureRobinsonFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailRobinsonThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํTakoyaki",
+            item_url:"",
+            image_url:"https://www.yayoirestaurants.com/uploads/image/96BE41CD-F01D-4E9B-85D1-6AB8B84A4C02.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureRobinsonFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailRobinsonFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํHot Pot Buffet",
+            item_url:"",
+            image_url:"http://2.bp.blogspot.com/-rtL6WPiASvM/Vn6w4mfVHuI/AAAAAAAABlI/6ygYNRreW4Q/s1600/%25E0%25B8%25AA%25E0%25B8%25A1%25E0%25B8%25B1%25E0%25B8%2584%25E0%25B8%25A3%25E0%25B8%2587%25E0%25B8%25B2%25E0%25B8%2599%2BPart%2BTime%2BHOT%2BPOT%2B%25E0%25B8%25AA%25E0%25B8%25B2%25E0%25B8%2582%25E0%25B8%25B2%25E0%25B9%2580%25E0%25B8%258B%25E0%25B9%2587%25E0%25B8%25A5%25E0%25B8%2597%25E0%25B8%25A3%25E0%25B8%25B1%25E0%25B8%25A5%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2587%25E0%25B8%2599%25E0%25B8%25B2%2B45%25E0%25B8%259A%25E0%25B8%25B2%25E0%25B8%2597%25E0%25B8%258A%25E0%25B8%25A1..jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureRobinsonFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailRobinsonFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"Tempura Somen",
+            item_url:"",
+            image_url:"https://www.yayoirestaurants.com/uploads/image/F5D45267-6E7A-46B2-81D2-81F2F96C1C23.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureRobinsonFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailRobinsonSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ํRamen Champion",
+            item_url:"",
+            image_url:"https://www.yayoirestaurants.com/uploads/image/8D6E1B28-3E20-4865-86D0-493F1254C795.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureRobinsonFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeRobinsonFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function mapReviewSalang(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "คุณสามารถชมรีวิวร้านอาหารและแผ่นที่ ที่จะพาคุณไปยังร้านอาหารแห่งนี้ได้ที่นี้",
+            buttons: [{
+              type:"web_url",
+              url:"https://www.wongnai.com/restaurants/234323FX-salang-tokpokki-%E0%B9%82%E0%B8%A3%E0%B8%9A%E0%B8%B4%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%99-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5",
+              title:"🎈 รีวิวร้านอาหาร"
+            },
+            {
+              type:"web_url",
+              url:"https://www.google.co.th/webhp?sourceid=chrome-instant&rlz=1C1NHXL_thTH718TH718&ion=1&espv=2&ie=UTF-8#q=robinson+%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5&rflfq=1&rlha=0&rllag=14058997,101393556,280&tbm=lcl&tbs=lf:1,lf_ui:2,lf_pqs:EAE",
+              title:"🎯 แผ่นที่"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
+}
+function mapReviewSalang(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "คุณสามารถชมรีวิวร้านอาหารและแผ่นที่ ที่จะพาคุณไปยังร้านอาหารแห่งนี้ได้ที่นี้",
+            buttons: [{
+              type:"web_url",
+              url:"https://www.wongnai.com/restaurants/234323FX-salang-tokpokki-%E0%B9%82%E0%B8%A3%E0%B8%9A%E0%B8%B4%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%99-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5",
+              title:"🎈 รีวิวร้านอาหาร"
+            },
+            {
+              type:"web_url",
+              url:"https://www.google.co.th/webhp?sourceid=chrome-instant&rlz=1C1NHXL_thTH718TH718&ion=1&espv=2&ie=UTF-8#q=robinson+%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5&rflfq=1&rlha=0&rllag=14058997,101393556,280&tbm=lcl&tbs=lf:1,lf_ui:2,lf_pqs:EAE",
+              title:"🎯 แผ่นที่"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
+}
+function mapReviewYayoi(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "คุณสามารถชมรีวิวร้านอาหารและแผ่นที่ ที่จะพาคุณไปยังร้านอาหารแห่งนี้ได้ที่นี้",
+            buttons: [{
+              type:"web_url",
+              url:"https://www.wongnai.com/restaurants/184043kY-yayoi-%E0%B9%82%E0%B8%A3%E0%B8%9A%E0%B8%B4%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%99-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5",
+              title:"🎈 รีวิวร้านอาหาร"
+            },
+            {
+              type:"web_url",
+              url:"https://www.google.co.th/webhp?sourceid=chrome-instant&rlz=1C1NHXL_thTH718TH718&ion=1&espv=2&ie=UTF-8#q=robinson+%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5&rflfq=1&rlha=0&rllag=14058997,101393556,280&tbm=lcl&tbs=lf:1,lf_ui:2,lf_pqs:EAE",
+              title:"🎯 แผ่นที่"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
+}
+function mapReviewJefferSteak(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "คุณสามารถชมรีวิวร้านอาหารและแผ่นที่ ที่จะพาคุณไปยังร้านอาหารแห่งนี้ได้ที่นี้",
+            buttons: [{
+              type:"web_url",
+              url:"http://oknation.nationtv.tv/blog/Joseph/2013/01/15/entry-1",
+              title:"🎈 รีวิวร้านอาหาร"
+            },
+            {
+              type:"web_url",
+              url:"https://www.google.co.th/webhp?sourceid=chrome-instant&rlz=1C1NHXL_thTH718TH718&ion=1&espv=2&ie=UTF-8#q=robinson+%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5&rflfq=1&rlha=0&rllag=14058997,101393556,280&tbm=lcl&tbs=lf:1,lf_ui:2,lf_pqs:EAE",
+              title:"🎯 แผ่นที่"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
+}
+function mapReviewTakoyaki(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "คุณสามารถชมรีวิวร้านอาหารและแผ่นที่ ที่จะพาคุณไปยังร้านอาหารแห่งนี้ได้ที่นี้",
+            buttons: [{
+              type:"web_url",
+              url:"https://www.wongnai.com/restaurants/184043kY-yayoi-%E0%B9%82%E0%B8%A3%E0%B8%9A%E0%B8%B4%E0%B8%99%E0%B8%AA%E0%B8%B1%E0%B8%99-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5",
+              title:"🎈 รีวิวร้านอาหาร"
+            },
+            {
+              type:"web_url",
+              url:"https://www.google.co.th/webhp?sourceid=chrome-instant&rlz=1C1NHXL_thTH718TH718&ion=1&espv=2&ie=UTF-8#q=robinson+%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5&rflfq=1&rlha=0&rllag=14058997,101393556,280&tbm=lcl&tbs=lf:1,lf_ui:2,lf_pqs:EAE",
+              title:"🎯 แผ่นที่"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
+}
+function mapReviewHotPot(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "คุณสามารถชมรีวิวร้านอาหารและแผ่นที่ ที่จะพาคุณไปยังร้านอาหารแห่งนี้ได้ที่นี้",
+            buttons: [{
+              type:"web_url",
+              url:"http://hotpot.co.th/",
+              title:"🎈 รีวิวร้านอาหาร"
+            },
+            {
+              type:"web_url",
+              url:"https://www.google.co.th/webhp?sourceid=chrome-instant&rlz=1C1NHXL_thTH718TH718&ion=1&espv=2&ie=UTF-8#q=robinson+%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5&rflfq=1&rlha=0&rllag=14058997,101393556,280&tbm=lcl&tbs=lf:1,lf_ui:2,lf_pqs:EAE",
+              title:"🎯 แผ่นที่"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
 }
 
  /////////////แสดงรายละเอียดน cafe kantary///////////////
