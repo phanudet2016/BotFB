@@ -125,11 +125,11 @@ function receivedMessage(event) {
       case '':
         sendGreetMessage(senderID);
         break;
-      /*case 'quick reply':
+      case 'quick reply':
         sendQuickReply(senderID);
         break;
       default:
-        sendTextMessage(senderID, messageText);*/
+        sendTextMessage(senderID, messageText);
     }
   } 
   else if (messageAttachments) {
