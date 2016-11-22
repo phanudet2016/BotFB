@@ -664,7 +664,7 @@ function receivedPostback(event) {
   /////////////แสดงรายละเอียดโรบินสัน///////////////
   else if(payload=='detailRobinsonFirst'||payload=='detailRobinsonSecond'||payload=='detailRobinsonThird'||payload=='detailRobinsonFourth'||payload=='detailRobinsonFifth'||payload=='detailRobinsonSixth'){
     setTimeout(function() {
-      if(payload == 'detailRobinsonFirst'){mapReviewTakoyaki(senderID);}
+      if(payload == 'detailRobinsonFirst'){mapReviewSalang(senderID);}
       if(payload == 'detailRobinsonSecond'){mapReviewJefferSteak(senderID);}
       if(payload == 'detailRobinsonThird'){mapReviewYayoi(senderID);}
       if(payload == 'detailRobinsonFourth'){mapReviewHotPot(senderID);}
