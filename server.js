@@ -122,14 +122,11 @@ function receivedMessage(event) {
     // If we receive a text message, check to see if it matches a keyword
     // and send back the example. Otherwise, just echo the text we received.
     switch (messageText) {
-      case '':
+      case 'hello':
         sendGreetMessage(senderID);
         break;
-      case 'quick reply':
-        sendQuickReply(senderID);
-        break;
       default:
-        sendTextMessage(senderID, "GG");
+        needYourHelpDefault(senderID);
     }
   } 
   else if (messageAttachments) {
@@ -5138,6 +5135,33 @@ function needYourHelpEnd(recipientId, messageText) {
         payload: {
           template_type: "button",
           text : "หากคุณต้องการมองหาร้านอาหารในปราจีนบุรีอีก เพียงแค่ให้ผมช่วย",
+            buttons: [{
+              type: "postback",
+              title: "🍣 ค้นหาร้านอาหาร",
+              payload: "findRestaurant"
+            },
+            {
+              type: "postback",
+              title: "❌ ไม่เป็นไร ขอบคุณ",
+              payload: "noThank"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
+}
+function needYourHelpDefault(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "¯\_(ツ)_/¯ มีอะไรให้ช่วยมั้ย!",
             buttons: [{
               type: "postback",
               title: "🍣 ค้นหาร้านอาหาร",
