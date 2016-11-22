@@ -560,11 +560,62 @@ function receivedPostback(event) {
   else if(payload=='changeBaannernnamFood'){menuFoodBaannernnam(senderID);}
   else if(payload=='changeChomCholFood'){menuFoodChomChol(senderID);}
   else if(payload=='changeNamHiangFood'){menuFoodNamHiang(senderID);}
-  
-
+  /////////////แสดงรายละเอียด///////////////
+  else if(payload=='detailPalmFirst'){
+    setTimeout(function() {
+        if(payload=='detailPalmFirst'){sendTextMessage(senderID, "นี้คือแผ่นที่ร้าน ที่จะพาคุณไปยังร้านอาหารสิ่งนี้ https://www.google.co.th/maps/place/%E0%B8%9B%E0%B8%B2%E0%B8%A5%E0%B9%8C%E0%B8%A1%E0%B8%AA%E0%B8%A7%E0%B8%B5%E0%B8%97%E0%B9%82%E0%B8%AE%E0%B8%A1+(Palm+sweet+home)/@13.9831288,101.7684302,15z/data=!4m5!3m4!1s0x0:0x530a91dc0a6a290!8m2!3d13.9831288!4d101.7684302");}
+      }, 500)
+      setTimeout(function() {
+        if(payload=='detailPalmFirst'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
+      }, 1000)
+      setTimeout(function() {
+        if(payload=='detailPalmFirst'){detailPalmFirst(senderID);}
+      }, 1500)
+  }
   else {
     var result = "";
   }
+}
+
+////แสดงรายละเอียดปามสวีทโอม
+function detailPalmFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ไก่มะนาว",
+            item_url:"",
+            image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/PalmSweetHome_003.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ฉันจะไปที่นี้",
+                payload:"surePalmFirst"
+              },
+              {
+                type:"postback",
+                title:"🐧 รีวิวร้าน",
+                payload:"reviewPalmFirst"
+              },
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changePalmFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
 }
 
 ////image food ปาล์มสวีทโฮม
