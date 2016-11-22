@@ -625,7 +625,7 @@ function detailAddFirst(recipientId, messageText) {
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changePalmFood"
+                payload:"changeAddFood"
               }]
            }]
       }
@@ -659,7 +659,7 @@ function detailAddSecond(recipientId, messageText) {
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changePalmFood"
+                payload:"changeAddFood"
               }]
            }]
       }
@@ -693,7 +693,7 @@ function detailAddThird(recipientId, messageText) {
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changePalmFood"
+                payload:"changeAddFood"
               }]
            }]
       }
@@ -727,7 +727,7 @@ function detailAddFourth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changePalmFood"
+                payload:"changeAddFood"
               }]
            }]
       }
@@ -761,7 +761,7 @@ function detailAddFifth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changePalmFood"
+                payload:"changeAddFood"
               }]
            }]
       }
@@ -795,7 +795,7 @@ function detailAddSixth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"🔔 เปลี่ยนเมนูอาหาร",
-                payload:"changePalmFood"
+                payload:"changeAddFood"
               }]
            }]
       }
