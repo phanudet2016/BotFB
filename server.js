@@ -594,9 +594,259 @@ function receivedPostback(event) {
       if(payload == 'detailAddSixth'){detailAddSixth(senderID);}
       }, 1500)
   }
+  /////////////แสดงรายละเอียดนำเฮียง///////////////
+  else if(payload=='detailNamHiangFirst'||payload=='detailNamHiangSecond'||payload=='detailNamHiangThird'||payload=='detailNamHiangFourth'||payload=='detailNamHiangFifth'||payload=='detailNamHiangSixth'){
+    setTimeout(function() {
+      if(payload=='detailNamHiangFirst'||payload=='detailNamHiangSecond'||payload=='detailNamHiangThird'||payload=='detailNamHiangFourth'||payload=='detailNamHiangFifth'||payload=='detailNamHiangSixth'){mapReviewNamHiang(senderID);}  
+      }, 500)
+    setTimeout(function() { 
+        if(payload=='detailNamHiangFirst'||payload=='detailNamHiangSecond'||payload=='detailNamHiangThird'||payload=='detailNamHiangFourth'||payload=='detailNamHiangFifth'||payload=='detailNamHiangSixth'){sendTextMessage(senderID, "นี้คือสิ่งที่คุณจะไป 🏠");}
+      }, 1000)
+    setTimeout(function() {
+      if(payload == 'detailNamHiangFirst'){detailNamHiangFirst(senderID);}
+      if(payload == 'detailNamHiangSecond'){detailNamHiangSecond(senderID);}
+      if(payload == 'detailNamHiangThird'){detailNamHiangThird(senderID);}
+      if(payload == 'detailNamHiangFourth'){detailNamHiangFourth(senderID);}
+      if(payload == 'detailNamHiangFifth'){detailNamHiangFifth(senderID);}
+      if(payload == 'detailNamHiangSixth'){detailNamHiangSixth(senderID);}
+      }, 1500)
+  }
   else {
     var result = "";
   }
+}
+
+/////////////แสดงรายละเอียดนำเฮียง///////////////
+function detailNamHiangFirst(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"กระดูกหมูอ่อนทอดกระเทียมพริกไทย",
+            item_url:"",
+            image_url:"http://i0.wp.com/s3-ap-southeast-1.amazonaws.com/ungsriwong/wp-content/uploads/2014/05/NumHiang_004.jpg?resize=1024%2C769",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureNamHiangFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeNamHiangFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailNamHiangSecond(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ผัดผักกระเฉดชลูดน",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_005.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureNamHiangFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeNamHiangFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailNamHiangThird(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ทอดมันกุ้ง",
+            item_url:"",
+            image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_006.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureNamHiangFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeNamHiangFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailNamHiangFourth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"มะระผัดไข่",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_007.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureNamHiangFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeNamHiangFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailNamHiangFifth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ต้มยำไก่บ้าน",
+            item_url:"",
+            image_url:"http://i2.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_008.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureNamHiangFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeNamHiangFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function detailNamHiangSixth(recipientId, messageText) {
+  var messageData = {
+  recipient: {
+    id : recipientId
+  },
+    message:{
+    attachment:{
+      type:"template",
+      payload:{
+        template_type:"generic",
+        elements:[
+          {
+            title:"ปลาซิวทอดกรอบ",
+            item_url:"",
+            image_url:"http://i1.wp.com/ungsriwong.s3.amazonaws.com/wp-content/uploads/2014/05/NumHiang_009.jpg",
+            subtitle:"",
+            buttons:[
+              {
+                type:"postback",
+                title:"✅ แน่นอน! ไปที่นี้",
+                payload:"sureNamHiangFirst"
+              }, 
+              {
+                type:"postback",
+                title:"🔔 เปลี่ยนเมนูอาหาร",
+                payload:"changeNamHiangFood"
+              }]
+           }]
+      }
+      }
+    }
+  };
+callSendAPI(messageData);
+}
+function mapReviewNamHiang(recipientId, messageText) {
+  var messageData = {
+    recipient: {
+      id: recipientId
+    },
+    message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text : "คุณสามารถชมรีวิวร้านอาหารและแผ่นที่ ที่จะพาคุณไปยังร้านอาหารแห่งนี้ได้ที่นี้",
+            buttons: [{
+              type:"web_url",
+              url:"http://www.teerapat.com/2014/05/%E0%B8%99%E0%B9%88%E0%B8%B3%E0%B9%80%E0%B8%AE%E0%B8%B5%E0%B8%A2%E0%B8%87-%E0%B9%82%E0%B8%A0%E0%B8%8A%E0%B8%99%E0%B8%B2-%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%B8%E0%B9%88%E0%B8%A2-%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AD%E0%B8%A3%E0%B9%88%E0%B8%AD%E0%B8%A2%E0%B8%97%E0%B8%B5%E0%B9%88-%E0%B8%81%E0%B8%9A%E0%B8%B4%E0%B8%99%E0%B8%97%E0%B8%A3%E0%B9%8C%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5-%E0%B8%9B%E0%B8%A3%E0%B8%B2%E0%B8%88%E0%B8%B5%E0%B8%99%E0%B8%9A%E0%B8%B8%E0%B8%A3%E0%B8%B5/",
+              title:"🎈 รีวิวร้านอาหาร"
+            },
+            {
+              type:"web_url",
+              url:"https://www.google.co.th/maps/place/%E0%B8%99%E0%B9%88%E0%B8%B3%E0%B9%80%E0%B8%AE%E0%B8%B5%E0%B8%A2%E0%B8%87%E0%B9%82%E0%B8%A0%E0%B8%8A%E0%B8%99%E0%B8%B2+(%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%B8%E0%B9%88%E0%B8%A2)/@13.9837664,101.7612909,15z/data=!4m2!3m1!1s0x0:0xf77cfe02a66acb5c?sa=X&ved=0ahUKEwiRwsyK7LzQAhWHl5QKHdoECQUQ_BIIdzAK",
+              title:"🎯 แผ่นที่"
+            }]
+        }
+      }
+    }
+  };
+  callSendAPI(messageData);
 }
 
 ////แสดงรายละเอียดแอ๊ดข้าวต้ม
@@ -620,7 +870,7 @@ function detailAddFirst(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แน่นอน! ไปที่นี้",
-                payload:"surePalmFirst"
+                payload:"sureAddFirst"
               }, 
               {
                 type:"postback",
@@ -654,7 +904,7 @@ function detailAddSecond(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แน่นอน! ไปที่นี้",
-                payload:"surePalmFirst"
+                payload:"sureAddFirst"
               }, 
               {
                 type:"postback",
@@ -688,7 +938,7 @@ function detailAddThird(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แน่นอน! ไปที่นี้",
-                payload:"surePalmFirst"
+                payload:"sureAddFirst"
               }, 
               {
                 type:"postback",
@@ -722,7 +972,7 @@ function detailAddFourth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แน่นอน! ไปที่นี้",
-                payload:"surePalmFirst"
+                payload:"sureAddFirst"
               }, 
               {
                 type:"postback",
@@ -756,7 +1006,7 @@ function detailAddFifth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แน่นอน! ไปที่นี้",
-                payload:"surePalmFirst"
+                payload:"sureAddFirst"
               }, 
               {
                 type:"postback",
@@ -790,7 +1040,7 @@ function detailAddSixth(recipientId, messageText) {
               {
                 type:"postback",
                 title:"✅ แน่นอน! ไปที่นี้",
-                payload:"surePalmFirst"
+                payload:"sureAddFirst"
               }, 
               {
                 type:"postback",
