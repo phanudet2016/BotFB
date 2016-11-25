@@ -125,6 +125,17 @@ function receivedMessage(event) {
       case 'hello':
         sendGreetMessage(senderID);
         break;
+      case 'ไม่':
+        setTimeout(function() {
+          sendTextMessage(senderID, ":(");
+        }, 500)
+        setTimeout(function() {
+          sendTextMessage(senderID, "แน่ใจนะครับ! คุณจะไม่หิวตอนนี้ใช่มั้ย");
+        }, 1000)
+        setTimeout(function() {
+          needYourHelp(senderID);
+        }, 1500)
+        break;
       default:
         needYourHelpDefault(senderID);
     }
@@ -162,7 +173,7 @@ function receivedPostback(event) {
       findRestaurants(senderID);
     }, 1500)
   }
-  else if(payload == 'noThank'||payload == 'ไม่'){
+  else if(payload == 'noThank'){
     setTimeout(function() {
       sendTextMessage(senderID, ":(");
     }, 500)
