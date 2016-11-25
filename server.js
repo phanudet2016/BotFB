@@ -162,7 +162,7 @@ function receivedPostback(event) {
       findRestaurants(senderID);
     }, 1500)
   }
-  else if(payload == 'noThank'){
+  else if(payload == 'noThank'||payload == 'ไม่'){
     setTimeout(function() {
       sendTextMessage(senderID, ":(");
     }, 500)
