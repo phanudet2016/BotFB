@@ -141,7 +141,7 @@ function receivedMessage(event) {
     }
   } 
   else if (messageAttachments) {
-    sendTextMessage(senderID, "Message with attachment received");
+    sendTextMessage(senderID, "Message with attachment received"); /////ปุ่มกดไลน์ ค่อยทำต่อ
   }
 }
 
